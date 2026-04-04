@@ -62,3 +62,12 @@ footer { padding: 50px; text-align: center; background: #0a0a0a; color: #666; fo
     .menu { display: none; } /* En una fase futura añadiremos menú móvil hamburguesa */
     .hero { height: auto; padding: 100px 20px; }
 }
+/* Estilos específicos para artículos */
+.article-page { background: var(--blanco); }
+.article-content { max-width: 800px; margin: 60px auto; padding: 20px; }
+.article-header { margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.article-header h1 { font-size: 2.5rem; margin-top: 10px; }
+.body-text { font-size: 1.2rem; line-height: 1.8; color: #333; }
+.body-text p { margin-bottom: 25px; }
+.article-tag { background: var(--rojo); color: white; padding: 4px 10px; font-size: 0.7rem; font-weight: 700; display: inline-block; margin-bottom: 10px; }
+blockquote { border-left: 4px solid var(--rojo); padding-left: 20px; font-style: italic; color: #555; margin: 40px 0; font-size: 1.4rem; }
