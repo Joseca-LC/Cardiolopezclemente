@@ -1,73 +1,221 @@
+/* PALETA DE COLORES CARDIO-PREMIUM */
 :root {
-    --rojo: #b80101;
-    --negro: #000000;
-    --gris-oscuro: #1a1a1a;
-    --blanco: #ffffff;
-    --gris-luz: #f9f9f9;
+    --rojo-principal: #b80101;     /* Tu rojo corporativo */
+    --negro-titulos: #1a1a1a;      /* Rigor y autoridad */
+    --gris-texto: #333333;         /* Legibilidad médica */
+    --blanco-fondo: #ffffff;       /* Limpieza quirúrgica */
+    --gris-nieve: #f8f9fa;         /* Separación sutil de secciones */
+    --gris-suave: #e9ecef;         /* Bordes y detalles */
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; color: var(--negro); line-height: 1.6; scroll-behavior: smooth; }
+/* CONFIGURACIÓN BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Navegación */
-nav { background: var(--blanco); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-weight: 700; font-size: 1.2rem; letter-spacing: -0.5px; }
-.menu a { text-decoration: none; color: var(--negro); margin-left: 25px; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
-.menu a:hover { color: var(--rojo); }
-.nav-btn { background: var(--rojo); color: white !important; padding: 0.6rem 1.2rem; border-radius: 4px; }
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--blanco-fondo);
+    color: var(--gris-texto);
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
 
-/* Hero */
-.hero { height: 90vh; background: var(--negro); color: var(--blanco); display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; }
-.hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 10px; }
-.text-red { color: var(--rojo); }
-.subtitle { font-size: 1.5rem; font-weight: 300; margin-bottom: 5px; opacity: 0.9; }
-.hero-desc { font-weight: 300; max-width: 600px; margin: 0 auto 30px; opacity: 0.7; }
+/* NAVEGACIÓN (Limpia y Blanca) */
+nav {
+    background: var(--blanco-fondo);
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--gris-suave);
+}
 
-/* Botones */
-.btn-main, .btn-sub { display: inline-block; padding: 1rem 2rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: 0.3s; margin: 10px; }
-.btn-main { background: var(--rojo); color: white; border: 2px solid var(--rojo); }
-.btn-sub { border: 2px solid var(--blanco); color: var(--blanco); }
-.btn-main:hover { background: transparent; color: var(--rojo); }
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-/* Secciones */
-.section { padding: 100px 20px; }
-.container { max-width: 1000px; margin: 0 auto; }
-.section-title { font-size: 2.2rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; border-bottom: 3px solid var(--rojo); display: inline-block; }
-.bg-light { background: var(--gris-luz); }
-.bg-dark { background: var(--negro); color: white; }
-.text-center { text-align: center; }
+.logo {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--negro-titulos);
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
 
-/* Bio */
-.bio-flex { display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
-.bio-text { flex: 1; min-width: 300px; }
-.bio-text p { margin-bottom: 20px; font-size: 1.1rem; color: #444; }
-.attributes { font-weight: 700; color: var(--rojo); letter-spacing: 1px; }
-.bio-img { flex: 1; min-width: 300px; position: relative; }
-.bio-img img { width: 100%; border-radius: 8px; filter: grayscale(100%); transition: 0.5s; }
-.bio-img img:hover { filter: grayscale(0%); }
-.img-fallback { width: 100%; height: 400px; background: #eee; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 8px; }
+.menu a {
+    text-decoration: none;
+    color: var(--negro-titulos);
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
 
-/* Grid Servicios y Artículos */
-.services-grid, .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-.service-card, .article-card { background: white; padding: 40px; border: 1px solid #eee; transition: 0.3s; }
-.service-card:hover, .article-card:hover { border-color: var(--rojo); transform: translateY(-5px); }
-.service-card h3, .article-card h3 { margin-bottom: 15px; font-size: 1.3rem; }
-.read-more { color: var(--rojo); text-decoration: none; font-weight: 700; margin-top: 15px; display: inline-block; }
+.menu a:hover {
+    color: var(--rojo-principal);
+}
 
-/* Footer */
-footer { padding: 50px; text-align: center; background: #0a0a0a; color: #666; font-size: 0.8rem; }
+.nav-btn {
+    background: var(--rojo-principal);
+    color: white !important;
+    padding: 0.7rem 1.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
 
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(184, 1, 1, 0.2);
+}
+
+/* HERO SECTION (Sin fondos oscuros) */
+.hero {
+    padding: 120px 20px;
+    background: var(--blanco-fondo);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--negro-titulos);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.text-red {
+    color: var(--rojo-principal);
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: var(--gris-texto);
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* SECCIONES */
+.section {
+    padding: 100px 20px;
+}
+
+.bg-light {
+    background-color: var(--gris-nieve);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--negro-titulos);
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--rojo-principal);
+}
+
+/* BIO / SOBRE MÍ */
+.bio-flex {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bio-text {
+    flex: 1;
+    min-width: 320px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border: 1px solid var(--rojo-principal);
+    color: var(--rojo-principal);
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-right: 10px;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+.bio-img img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 20px 20px 0px var(--gris-nieve);
+}
+
+/* GRID DE SERVICIOS (Tarjetas Blancas sobre fondo Gris Nieve) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--blanco-fondo);
+    padding: 40px;
+    border-radius: 8px;
+    border-top: 4px solid var(--rojo-principal);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: var(--negro-titulos);
+}
+
+/* FOOTER LEGAL */
+footer {
+    background: var(--negos-titulos);
+    color: #888;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid var(--gris-suave);
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: var(--rojo-principal);
+}
+
+/* RESPONSIVO */
 @media (max-width: 768px) {
-    .menu { display: none; } /* En una fase futura añadiremos menú móvil hamburguesa */
-    .hero { height: auto; padding: 100px 20px; }
+    .menu { display: none; } /* Oculto para móvil hasta añadir menú hamburguesa */
+    .hero { padding: 60px 20px; }
 }
-/* Estilos específicos para artículos */
-.article-page { background: var(--blanco); }
-.article-content { max-width: 800px; margin: 60px auto; padding: 20px; }
-.article-header { margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-.article-header h1 { font-size: 2.5rem; margin-top: 10px; }
-.body-text { font-size: 1.2rem; line-height: 1.8; color: #333; }
-.body-text p { margin-bottom: 25px; }
-.article-tag { background: var(--rojo); color: white; padding: 4px 10px; font-size: 0.7rem; font-weight: 700; display: inline-block; margin-bottom: 10px; }
-blockquote { border-left: 4px solid var(--rojo); padding-left: 20px; font-style: italic; color: #555; margin: 40px 0; font-size: 1.4rem; }
