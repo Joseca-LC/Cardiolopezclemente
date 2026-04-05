@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. López Clemente | Cardiólogo y Nutricionista en Murcia y Alicante</title>
-    <meta name="description" content="Cardiolopezclemente. Especialista en Cardiología y Nutrición Humana. Prevención, diagnóstico y tratamiento cardiovascular avanzado.">
-    
+    <title>Dr. López Clemente | Cardiología y Nutrición en Murcia y Alicante</title>
+    <meta name="description" content="Especialista en Cardiología y Nutrición. Prevención, diagnóstico y tratamiento cardiovascular avanzado en Murcia y Alicante.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
         <div class="nav-container">
-            <span class="logo">Dr. López Clemente</span>
+            <a href="index.html" class="logo-area">
+                <img src="img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+                <span class="logo-text">Dr. López Clemente</span>
+            </a>
             <div class="menu">
                 <a href="#sobre-mi">Sobre mí</a>
                 <a href="#servicios">Servicios</a>
-                <a href="#divulgacion">Artículos</a>
+                <a href="#articulos">Artículos</a>
                 <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
             </div>
         </div>
@@ -25,10 +27,8 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>Dr. López Clemente <br><span class="text-red">Cardiólogo</span></h1>
-            <p class="subtitle">Cardiolopezclemente. <br>Cardiología centrada en ti.</p>
-            <p class="hero-desc">Prevención, diagnóstico y tratamiento. <br>Por tu salud cardiovascular.</p>
-            
+            <h1>Cardiología <span class="text-red">centrada en ti</span></h1>
+            <p class="subtitle">Prevención, diagnóstico y tratamiento cardiovascular integral.</p>
             <div class="cta-group">
                 <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Cita en Doctoralia</a>
                 <a href="https://clinicaelchesalud.com/" target="_blank" class="btn-sub">Clínica Elche Salud</a>
@@ -36,96 +36,93 @@
         </div>
     </header>
 
-    <section id="sobre-mi" class="section">
-        <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
-            <div class="bio-flex">
-                <div class="bio-text">
-                    <p>Me llamo <strong>José Carlos López Clemente</strong>. Soy graduado en Medicina, especialista en Cardiología y graduado en Nutrición Humana y Dietética. Desarrollo mi actividad asistencial entre <strong>Murcia y Alicante</strong>.</p>
-                    <p>Mi práctica se centra en el diagnóstico, seguimiento y tratamiento de la enfermedad cardiovascular. Mi visión integra la cardiología de vanguardia con la nutrición para evitar la aparición de la enfermedad o detectarla en sus etapas más precoces.</p>
-                    
-                    <div class="attributes">
-                        <span class="tag">CERCANÍA</span>
-                        <span class="tag">VANGUARDIA</span>
-                        <span class="tag">RIGOR</span>
-                    </div>
+    <section id="sobre-mi" class="section container">
+        <div class="bio-flex">
+            <div class="bio-text">
+                <h2 class="section-title">Sobre mí</h2>
+                <p>Me llamo <strong>José Carlos López Clemente</strong>. Soy graduado en Medicina y especialista en Cardiología, además de graduado en Nutrición Humana y Dietética. Desarrollo mi actividad profesional entre Murcia y Alicante.</p>
+                <p>Mi enfoque une la vanguardia técnica con la prevención nutricional, detectando precozmente la enfermedad cardiovascular para actuar antes de que aparezca el daño.</p>
+                <div class="attributes">
+                    <span class="tag">CERCANÍA</span>
+                    <span class="tag">VANGUARDIA</span>
+                    <span class="tag">RIGOR</span>
                 </div>
-                <div class="bio-img">
-                    <img src="img/perfil.webp" alt="Dr. José Carlos López Clemente" onerror="this.parentElement.classList.add('placeholder-active');">
-                    <div class="img-fallback">Cardiología & Nutrición</div>
-                </div>
+            </div>
+            <div class="bio-img">
+                <img src="img/perfil.webp" alt="Dr. José Carlos López Clemente" onerror="this.src='https://via.placeholder.com/400x500?text=Cardiologia+Nutricion'">
             </div>
         </div>
     </section>
 
     <section id="servicios" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Servicios y Pruebas</h2>
-            <div class="services-grid">
-                
-                <div class="service-card">
-                    <div class="card-icon">01</div>
-                    <h3>Diagnóstico Avanzado</h3>
-                    <p>ECG, Ecocardiograma Doppler color y Holter de ECG para una valoración estructural y eléctrica precisa.</p>
+            <h2 class="section-title">Servicios Especializados</h2>
+            <div class="services-two-blocks">
+                <div class="service-block">
+                    <h3>Diagnóstico y Valoración Funcional</h3>
+                    <p class="block-desc">Precisión diagnóstica mediante tecnología de vanguardia para una visión integral estructural y eléctrica.</p>
+                    <ul>
+                        <li>ECG e interpretación de analíticas</li>
+                        <li>Ecocardiograma Doppler color</li>
+                        <li>Holter de ECG</li>
+                        <li>Valoración integral</li>
+                    </ul>
                 </div>
-
-                <div class="service-card">
-                    <div class="card-icon">02</div>
-                    <h3>Riesgo Cardiovascular</h3>
-                    <p>Valoración integral y manejo de Hipertensión, Diabetes, Obesidad, Dislipemia y Síndrome Metabólico.</p>
+                <div class="service-block">
+                    <h3>Tratamiento y Prevención Metabólica</h3>
+                    <p class="block-desc">Manejo experto de patologías y factores de riesgo para una longevidad cardiovascular activa.</p>
+                    <ul>
+                        <li><strong>Patología Clínica:</strong> Arritmias, valvulopatías e insuficiencia cardiaca.</li>
+                        <li><strong>Riesgo Cardiovascular:</strong> Manejo de HTA, Diabetes, Obesidad y Dislipemia.</li>
+                        <li><strong>Estilo de Vida:</strong> Deporte, salud y cambios de hábito.</li>
+                    </ul>
                 </div>
-
-                <div class="service-card">
-                    <div class="card-icon">03</div>
-                    <h3>Patología Clínica</h3>
-                    <p>Tratamiento especializado en arritmias, patología valvular e insuficiencia cardiaca.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="card-icon">04</div>
-                    <h3>Prevención y Nutrición</h3>
-                    <p>Reconocimiento precoz y planes de nutrición clínica orientados a la salud del corazón.</p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <section id="divulgacion" class="section">
-        <div class="container">
-            <h2 class="section-title">Divulgación Médica</h2>
-            <p>Contenido actualizado sobre salud cardiovascular y nutrición clínica.</p>
-            
-            <div class="articles-grid">
-                
-                <article class="article-card">
-                    <span class="article-category">Prevención</span>
-                    <h3>¿Cómo influye la dieta en tu salud cardiovascular?</h3>
-                    <p>Análisis sobre la importancia de los hábitos nutricionales en la prevención de eventos cardíacos...</p>
-                    <a href="articulos/ejemplo.html" class="read-more">Leer artículo completo →</a>
-                </article>
-
-                </div>
+    <section id="articulos" class="section container">
+        <h2 class="section-title">Divulgación y Salud</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <h3>Dieta DASH para la Hipertensión</h3>
+                <p>Análisis del patrón alimentario con mayor evidencia en el control de la presión arterial.</p>
+                <a href="articulos/dieta-dash.html" class="read-more">Leer artículo →</a>
+            </article>
+            <article class="article-card">
+                <h3>Apnea del sueño</h3>
+                <p>Por qué no es solo "roncar fuerte": el daño directo a tu sistema cardiovascular.</p>
+                <a href="articulos/apnea-sueno.html" class="read-more">Leer artículo →</a>
+            </article>
+            <article class="article-card">
+                <h3>Dieta Japonesa</h3>
+                <p>¿Es realmente el secreto de la longevidad cardiovascular? Mitos y realidades.</p>
+                <a href="articulos/dieta-japonesa.html" class="read-more">Leer artículo →</a>
+            </article>
         </div>
     </section>
 
-    <section class="section bg-dark">
-        <div class="container text-center">
-            <h2 class="text-white">Divulgación en Redes Sociales</h2>
-            <p class="text-white opacity-70">Sigue mi actividad diaria y consejos de salud en Instagram.</p>
-            <div class="social-box">
-                <a href="https://www.instagram.com/cardiolopezclemente/" target="_blank" class="btn-main">@cardiolopezclemente</a>
+    <section id="instagram" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">@cardiolopezclemente</h2>
+            <div class="instagram-grid">
+                <a href="https://www.instagram.com/p/DVO4z3LCA_1/" target="_blank" class="ig-item"><img src="img/ig-1.webp" alt="Post 1"></a>
+                <a href="https://www.instagram.com/p/DUEK5-jiIKp/" target="_blank" class="ig-item"><img src="img/ig-2.webp" alt="Post 2"></a>
+                <a href="https://www.instagram.com/p/DTqdYtMiHKC/" target="_blank" class="ig-item"><img src="img/ig-3.webp" alt="Post 3"></a>
+                <a href="https://www.instagram.com/p/DVEkow6CJcO/" target="_blank" class="ig-item"><img src="img/ig-4.webp" alt="Post 4"></a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <p>Cardiología & Nutrición | Murcia - Alicante</p>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Todos los derechos reservados.</p>
+            <p><strong>Dr. José Carlos López Clemente</strong> | Cardiología & Nutrición</p>
+            <div class="footer-links">
+                <a href="legal/aviso-legal.html">Aviso Legal</a>
+                <a href="legal/privacidad.html">Privacidad</a>
+                <a href="legal/cookies.html">Cookies</a>
             </div>
+            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
         </div>
     </footer>
 
