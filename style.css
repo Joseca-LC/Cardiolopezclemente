@@ -1,4 +1,4 @@
-/* VARIABLES DE DISEÑO PREMIUM */
+/* VARIABLES Y ESTILOS BASE */
 :root {
     --rojo: #b80101;
     --negro: #1a1a1a;
@@ -31,7 +31,7 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .h1-subtitle { font-weight: 700; font-size: 1.3rem; color: var(--negro); margin-bottom: 10px; }
 .hero-p { font-size: 1.1rem; color: #666; margin-bottom: 35px; }
 
-/* BOTONES RESTAURADOS */
+/* BOTONES */
 .cta-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
 .btn-main, .btn-sub { padding: 14px 28px; border-radius: 4px; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; border: 2px solid transparent; }
 .btn-main { background: var(--rojo); color: white; border-color: var(--rojo); }
@@ -46,25 +46,15 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .bio-img img { width: 100%; max-width: 400px; border-radius: 4px; box-shadow: 20px 20px 0 #eee; }
 .bio-text { flex: 1.5; }
 .bio-text p { margin-bottom: 15px; color: #444; }
+.highlight-line { font-weight: 600; color: var(--negro); margin: 20px 0 !important; border: none !important; background: transparent !important; padding: 0 !important; }
 
-/* FIX: Segundo párrafo limpio */
-.highlight-line { 
-    font-weight: 600; 
-    color: var(--negro); 
-    margin: 20px 0 !important; 
-    padding: 0 !important; 
-    background: transparent !important; 
-    border-left: none !important; 
-}
-
-/* FIX: Iconos de contacto */
+/* Contacto */
 .contact-area { margin-top: 25px; display: flex; flex-direction: column; gap: 12px; }
-.contact-link { text-decoration: none; color: var(--texto); font-weight: 600; display: flex; align-items: center; transition: 0.2s; }
-.contact-link:hover { color: var(--rojo); }
+.contact-link { text-decoration: none; color: var(--texto); font-weight: 600; display: flex; align-items: center; }
 .contact-icon { margin-right: 12px; font-size: 1.2rem; display: inline-block; width: 24px; text-align: center; }
 
-/* FIX INSTAGRAM: NO MÁS IMÁGENES CORTADAS */
-.instagram-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 30px; }
+/* SOLUCIÓN INSTAGRAM: Muestra la imagen completa sin cortes */
+.instagram-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 30px; }
 .ig-item { 
     display: flex; 
     align-items: center; 
@@ -74,11 +64,12 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
     border-radius: 8px; 
     overflow: hidden; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    padding: 10px; /* Un pequeño margen interno para que el texto no toque el borde */
 }
 .ig-item img { 
     max-width: 100%; 
     max-height: 100%; 
-    object-fit: contain; /* Esto asegura que la gráfica completa sea visible */
+    object-fit: contain; /* Muestra toda la imagen dentro del recuadro */
     display: block; 
     transition: 0.4s;
 }
@@ -96,7 +87,7 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 .article-card { background: white; padding: 30px; border: 1px solid #eee; border-radius: 4px; transition: 0.3s; text-decoration: none; color: inherit; display: block; }
 .article-card:hover { border-color: var(--rojo); transform: translateY(-5px); box-shadow: var(--sombra); }
-.read-more { display: inline-block; margin-top: 15px; text-decoration: none; color: var(--rojo); font-weight: 700; }
+.read-more { display: inline-block; margin-top: 15px; color: var(--rojo); font-weight: 700; }
 
 /* Footer */
 footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; }
