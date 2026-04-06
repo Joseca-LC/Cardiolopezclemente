@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /legal/
+
+# Enlace directo al índice de contenidos
+Sitemap: https://cardiolopezclemente.com/sitemap.xml
