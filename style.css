@@ -1,40 +1,43 @@
+/* VARIABLES Y FUENTES */
 :root {
     --rojo: #cc0000;
     --negro: #1a1a1a;
     --gris-oscuro: #333333;
-    --gris-claro: #f4f4f4;
+    --gris-claro: #f8f9fa;
     --blanco: #ffffff;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     color: var(--gris-oscuro);
-    line-height: 1.6;
+    line-height: 1.7;
     background-color: var(--blanco);
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     color: var(--negro);
+    line-height: 1.2;
 }
 
-/* Navegación */
+/* NAVEGACIÓN PREMIUM */
 nav {
     background: var(--blanco);
-    border-bottom: 1px solid #eee;
-    padding: 20px 0;
+    padding: 25px 0;
+    border-bottom: 1px solid #f0f0f0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -48,89 +51,90 @@ nav {
 
 .logo-text {
     font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--negro);
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
 }
 
 .menu a {
     text-decoration: none;
-    color: var(--gris-oscuro);
-    margin-left: 25px;
+    color: var(--negro);
+    margin-left: 30px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    transition: color 0.3s;
 }
 
 .nav-btn {
     background: var(--rojo);
     color: white !important;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 4px;
+    transition: opacity 0.3s;
 }
 
-/* Secciones Generales */
+/* SECCIÓN SOBRE MÍ (RESTAURADA) */
 .section {
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-/* Sobre Mí - Limpieza del fondo rojo */
 .sobre-mi-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
     align-items: center;
 }
 
 .bio-text {
-    font-size: 1.1rem;
-    color: #444;
+    font-size: 1.15rem;
     margin-bottom: 25px;
-    /* Aseguramos que no haya fondos ni bordes molestos */
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
+    color: #444;
 }
 
+/* EL ARREGLO: Segundo párrafo sin fondo rojo ni línea */
 .bio-destacado {
-    font-weight: 600;
+    font-size: 1.15rem;
     color: var(--negro);
-    border-left: 3px solid var(--rojo);
-    padding-left: 20px;
-    margin: 30px 0;
+    font-weight: 600;
+    margin-top: 30px;
+    background: transparent !important; /* Forzamos limpieza */
+    border: none !important;           /* Quitamos línea vertical */
+    padding: 0 !important;              /* Quitamos padding */
 }
 
-/* Feed de Instagram - Corrección de cortes */
+/* SECCIÓN INSTAGRAM / ARTÍCULOS (CON AIRE VERTICAL) */
 .instagram-section {
-    background: #fafafa;
+    background-color: #fafafa;
+    padding: 120px 0; /* Más espacio arriba y abajo */
+}
+
+.section-title {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .instagram-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-    padding-bottom: 40px; /* Espacio extra para evitar cortes */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px; /* Evita que el contenido toque el fondo */
 }
 
 .insta-card {
-    background: white;
+    background: var(--blanco);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
     text-decoration: none;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     display: flex;
     flex-direction: column;
-    height: 100%; /* Estira la tarjeta al alto del grid */
+    height: 100%;
 }
 
 .insta-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
 
 .insta-card img {
@@ -140,38 +144,38 @@ nav {
 }
 
 .insta-content {
-    padding: 20px;
-    flex-grow: 1; /* Empuja el contenido para llenar espacio */
+    padding: 30px;
+    flex-grow: 1;
 }
 
 .insta-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: var(--negro);
+    font-size: 1.3rem;
+    margin-bottom: 12px;
 }
 
 .insta-content p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #666;
+    line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* RESPONSIVE */
+@media (max-width: 992px) {
     .sobre-mi-grid {
         grid-template-columns: 1fr;
+        gap: 50px;
     }
-    
     .section-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
+}
 
+@media (max-width: 600px) {
     .nav-container {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
     }
-
     .menu a {
         margin: 0 10px;
-        font-size: 0.85rem;
     }
 }
