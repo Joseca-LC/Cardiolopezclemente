@@ -1,21 +1,22 @@
+/* VARIABLES DE DISEÑO PREMIUM */
 :root {
     --rojo: #b80101;
     --negro: #1a1a1a;
     --texto: #333;
     --blanco: #fff;
-    --gris: #f8f9fa;
-    --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
+    --gris-fondo: #f8f9fa;
+    --sombra: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; color: var(--texto); line-height: 1.6; overflow-x: hidden; }
+body { font-family: 'Inter', sans-serif; color: var(--texto); line-height: 1.6; overflow-x: hidden; background-color: var(--blanco); }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .section { padding: 90px 0; }
-.bg-light { background: var(--gris); }
+.bg-light { background: var(--gris-fondo); }
 
 /* Navegación */
 nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
-.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
 .logo-area { display: flex; align-items: center; text-decoration: none; }
 .logo-img { height: 35px; margin-right: 12px; }
 .logo-text { font-weight: 700; text-transform: uppercase; font-size: 0.85rem; color: var(--negro); letter-spacing: 1px; }
@@ -44,9 +45,9 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .bio-img { flex: 1; text-align: center; }
 .bio-img img { width: 100%; max-width: 400px; border-radius: 4px; box-shadow: 20px 20px 0 #eee; }
 .bio-text { flex: 1.5; }
-.bio-text p { margin-bottom: 15px; }
+.bio-text p { margin-bottom: 15px; color: #444; }
 
-/* FIX: Segundo párrafo limpio sin fondo rojo ni línea */
+/* FIX: Segundo párrafo limpio */
 .highlight-line { 
     font-weight: 600; 
     color: var(--negro); 
@@ -56,21 +57,36 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
     border-left: none !important; 
 }
 
-/* FIX: Iconos con espaciado */
-.contact-area { margin-top: 25px; display: flex; flex-direction: column; gap: 15px; }
+/* FIX: Iconos de contacto */
+.contact-area { margin-top: 25px; display: flex; flex-direction: column; gap: 12px; }
 .contact-link { text-decoration: none; color: var(--texto); font-weight: 600; display: flex; align-items: center; transition: 0.2s; }
 .contact-link:hover { color: var(--rojo); }
 .contact-icon { margin-right: 12px; font-size: 1.2rem; display: inline-block; width: 24px; text-align: center; }
 
-/* FIX: Instagram sin recortes */
+/* FIX INSTAGRAM: NO MÁS IMÁGENES CORTADAS */
 .instagram-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 30px; }
-.ig-item { display: block; overflow: hidden; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-.ig-item img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; transition: 0.4s; }
+.ig-item { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background: #fff; 
+    aspect-ratio: 1/1; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+}
+.ig-item img { 
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; /* Esto asegura que la gráfica completa sea visible */
+    display: block; 
+    transition: 0.4s;
+}
 .ig-item:hover img { transform: scale(1.05); }
 
 /* Servicios */
 .services-two-blocks { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-.service-block { background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-soft); border-top: 6px solid var(--rojo); }
+.service-block { background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--sombra); border-top: 6px solid var(--rojo); }
 .service-img { width: 100%; height: 220px; object-fit: cover; }
 .service-block h3 { padding: 25px 25px 10px; font-size: 1.5rem; color: var(--negro); }
 .service-block ul { padding: 0 25px 35px 45px; }
@@ -79,7 +95,7 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 /* Artículos */
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 .article-card { background: white; padding: 30px; border: 1px solid #eee; border-radius: 4px; transition: 0.3s; text-decoration: none; color: inherit; display: block; }
-.article-card:hover { border-color: var(--rojo); transform: translateY(-5px); box-shadow: var(--shadow-soft); }
+.article-card:hover { border-color: var(--rojo); transform: translateY(-5px); box-shadow: var(--sombra); }
 .read-more { display: inline-block; margin-top: 15px; text-decoration: none; color: var(--rojo); font-weight: 700; }
 
 /* Footer */
@@ -96,6 +112,6 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; }
     .bio-flex { flex-direction: column; }
     .bio-img { order: -1; width: 100%; margin-bottom: 30px; }
     .instagram-grid { grid-template-columns: 1fr 1fr; }
-    .cta-group { flex-direction: column; width: 100%; max-width: 300px; margin: 30px auto 0; }
+    .cta-group { flex-direction: column; gap: 10px; }
     .btn-main, .btn-sub { text-align: center; width: 100%; }
 }
