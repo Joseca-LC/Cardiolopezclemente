@@ -51,10 +51,13 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .contact-link { text-decoration: none; color: var(--texto); font-weight: 600; display: flex; align-items: center; }
 .contact-icon { margin-right: 12px; font-size: 1.2rem; }
 
-/* INSTAGRAM SECTION */
-.ig-logo-link { display: inline-block; margin-bottom: 40px; transition: 0.3s; }
-.ig-logo-link:hover { transform: scale(1.05); }
-.ig-section-logo { height: 80px; width: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
+/* INSTAGRAM SECTION (ESTILO VISUAL DEL TÍTULO) */
+.ig-visual-link { text-decoration: none; display: inline-block; margin-bottom: 40px; transition: 0.3s; padding: 5px 15px; border-bottom: 2px solid transparent; }
+.ig-handle-text { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 2.8rem); color: var(--negro); margin: 0; transition: 0.3s; letter-spacing: -1px; }
+.ig-handle-text::after { content: '📸'; font-size: 1.4rem; margin-left: 15px; vertical-align: middle; opacity: 0.6; }
+.ig-visual-link:hover .ig-handle-text { color: var(--rojo); transform: scale(1.02); }
+.ig-visual-link:hover { border-bottom-color: var(--rojo); }
+
 .instagram-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; align-items: start; }
 .ig-item { display: block; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background: #fff; }
 .ig-item img { width: 100% !important; height: auto !important; display: block; transition: 0.4s; }
@@ -99,5 +102,5 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; backgr
     .bio-img img { box-shadow: 10px 10px 0 #eee; }
     .section-title { border-left: none; border-bottom: 4px solid var(--rojo); padding-left: 0; padding-bottom: 10px; display: inline-block; }
     .instagram-grid { grid-template-columns: 1fr 1fr; }
-    .ig-section-logo { height: 60px; }
+    .ig-handle-text { font-size: 1.8rem; }
 }
