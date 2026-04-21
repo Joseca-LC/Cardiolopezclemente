@@ -1,4 +1,4 @@
-/* VARIABLES Y REGLAS BASE */
+/* VARIABLES */
 :root {
     --rojo: #b80101;
     --negro: #1a1a1a;
@@ -8,6 +8,7 @@
     --sombra: 0 12px 30px rgba(0,0,0,0.08);
 }
 
+/* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', sans-serif; color: var(--texto); line-height: 1.6; background-color: var(--blanco); overflow-x: hidden; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
@@ -24,7 +25,7 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .menu a:hover { color: var(--rojo); }
 .nav-btn { background: var(--rojo); color: white !important; padding: 8px 18px; border-radius: 4px; }
 
-/* HERO SECTION */
+/* HERO */
 .hero { padding: 100px 0; text-align: center; background: radial-gradient(circle, #fff 0%, #f9f9f9 100%); }
 .location-top { color: var(--rojo); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 10px; }
 .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 15px; color: var(--negro); }
@@ -40,10 +41,8 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .btn-main:hover { opacity: 0.9; transform: translateY(-2px); }
 .btn-sub:hover { background: var(--negro); color: white; transform: translateY(-2px); }
 
-/* SECCIONES Y TÍTULOS */
-.section-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 40px; border-left: 5px solid var(--rojo); padding-left: 15px; text-transform: uppercase; color: var(--negro); }
-
 /* BIO */
+.section-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 40px; border-left: 5px solid var(--rojo); padding-left: 15px; text-transform: uppercase; color: var(--negro); }
 .bio-flex { display: flex; gap: 50px; align-items: center; }
 .bio-img img { width: 100%; max-width: 400px; border-radius: 4px; box-shadow: 20px 20px 0 #eee; }
 .bio-text { flex: 1.5; }
@@ -52,9 +51,12 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .contact-link { text-decoration: none; color: var(--texto); font-weight: 600; display: flex; align-items: center; }
 .contact-icon { margin-right: 12px; font-size: 1.2rem; }
 
-/* INSTAGRAM (Fix imagen completa) */
-.instagram-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 30px; align-items: start; }
-.ig-item { display: block; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-decoration: none; background: #fff; }
+/* INSTAGRAM SECTION */
+.ig-logo-link { display: inline-block; margin-bottom: 40px; transition: 0.3s; }
+.ig-logo-link:hover { transform: scale(1.05); }
+.ig-section-logo { height: 80px; width: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); }
+.instagram-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; align-items: start; }
+.ig-item { display: block; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background: #fff; }
 .ig-item img { width: 100% !important; height: auto !important; display: block; transition: 0.4s; }
 .ig-item:hover img { transform: scale(1.02); }
 
@@ -71,8 +73,8 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .category-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 30px; position: relative; display: inline-block; color: var(--negro); }
 .category-title::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: var(--rojo); }
 
-/* TARJETAS DE ARTÍCULO */
-.articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+/* TARJETAS DE BLOG */
+.articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
 .article-card { background: white; padding: 35px; border: 1px solid #eee; border-radius: 6px; text-decoration: none; color: inherit; transition: 0.3s; display: flex; flex-direction: column; }
 .article-card:hover { border-color: var(--rojo); transform: translateY(-5px); box-shadow: var(--sombra); }
 .category-tag { color: var(--rojo); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; display: block; }
@@ -97,5 +99,5 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; backgr
     .bio-img img { box-shadow: 10px 10px 0 #eee; }
     .section-title { border-left: none; border-bottom: 4px solid var(--rojo); padding-left: 0; padding-bottom: 10px; display: inline-block; }
     .instagram-grid { grid-template-columns: 1fr 1fr; }
-    .articles-grid { grid-template-columns: 1fr; }
+    .ig-section-logo { height: 60px; }
 }
