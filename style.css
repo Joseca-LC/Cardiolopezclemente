@@ -7,14 +7,14 @@
     --gris-fondo: #f8f9fa;
     --sombra: 0 12px 30px rgba(0,0,0,0.08);
 }
-
+ 
 /* RESET */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', sans-serif; color: var(--texto); line-height: 1.6; background-color: var(--blanco); overflow-x: hidden; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .section { padding: 80px 0; }
 .bg-light { background: var(--gris-fondo); }
-
+ 
 /* NAVEGACIÓN */
 nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
@@ -24,7 +24,7 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .menu a { text-decoration: none; color: var(--negro); margin-left: 20px; font-size: 0.8rem; font-weight: 600; transition: 0.3s; }
 .menu a:hover { color: var(--rojo); }
 .nav-btn { background: var(--rojo); color: white !important; padding: 8px 18px; border-radius: 4px; }
-
+ 
 /* HERO */
 .hero { padding: 100px 0; text-align: center; background: radial-gradient(circle, #fff 0%, #f9f9f9 100%); }
 .location-top { color: var(--rojo); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 10px; }
@@ -32,7 +32,7 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .text-red { color: var(--rojo); }
 .h1-subtitle { font-weight: 700; font-size: 1.3rem; color: var(--negro); margin-bottom: 10px; }
 .hero-p { font-size: 1.1rem; color: #666; margin-bottom: 35px; }
-
+ 
 /* BOTONES */
 .cta-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
 .btn-main, .btn-sub { padding: 14px 28px; border-radius: 4px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
@@ -40,7 +40,7 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .btn-sub { border: 2px solid var(--negro); color: var(--negro); }
 .btn-main:hover { opacity: 0.9; transform: translateY(-2px); }
 .btn-sub:hover { background: var(--negro); color: white; transform: translateY(-2px); }
-
+ 
 /* BIO */
 .section-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 40px; border-left: 5px solid var(--rojo); padding-left: 15px; text-transform: uppercase; color: var(--negro); }
 .bio-flex { display: flex; gap: 50px; align-items: center; }
@@ -50,19 +50,19 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .contact-area { margin-top: 25px; display: flex; flex-direction: column; gap: 15px; }
 .contact-link { text-decoration: none; color: var(--texto); font-weight: 600; display: flex; align-items: center; }
 .contact-icon { margin-right: 12px; font-size: 1.2rem; }
-
+ 
 /* INSTAGRAM SECTION (ESTILO VISUAL DEL TÍTULO) */
 .ig-visual-link { text-decoration: none; display: inline-block; margin-bottom: 40px; transition: 0.3s; padding: 5px 15px; border-bottom: 2px solid transparent; }
 .ig-handle-text { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 2.8rem); color: var(--negro); margin: 0; transition: 0.3s; letter-spacing: -1px; }
 .ig-handle-text::after { content: '📸'; font-size: 1.4rem; margin-left: 15px; vertical-align: middle; opacity: 0.6; }
 .ig-visual-link:hover .ig-handle-text { color: var(--rojo); transform: scale(1.02); }
 .ig-visual-link:hover { border-bottom-color: var(--rojo); }
-
+ 
 .instagram-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; align-items: start; }
 .ig-item { display: block; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background: #fff; }
 .ig-item img { width: 100% !important; height: auto !important; display: block; transition: 0.4s; }
 .ig-item:hover img { transform: scale(1.02); }
-
+ 
 /* SERVICIOS */
 .services-two-blocks { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
 .service-block { background: white; border-radius: 8px; overflow: hidden; box-shadow: var(--sombra); border-top: 6px solid var(--rojo); }
@@ -70,12 +70,12 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .service-block h3 { padding: 25px 25px 10px; font-size: 1.5rem; color: var(--negro); }
 .service-block ul { padding: 0 25px 35px 45px; list-style-type: square; }
 .service-block li { margin-bottom: 10px; font-size: 0.95rem; }
-
+ 
 /* BLOG CATEGORÍAS */
 .blog-category { margin-top: 60px; }
 .category-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 30px; position: relative; display: inline-block; color: var(--negro); }
 .category-title::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 40px; height: 3px; background: var(--rojo); }
-
+ 
 /* TARJETAS DE BLOG */
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
 .article-card { background: white; padding: 35px; border: 1px solid #eee; border-radius: 6px; text-decoration: none; color: inherit; transition: 0.3s; display: flex; flex-direction: column; }
@@ -84,14 +84,14 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .article-card h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 10px; color: var(--negro); }
 .article-card p { font-size: 0.9rem; color: #666; margin-bottom: 20px; flex-grow: 1; }
 .read-more { color: var(--rojo); font-weight: 700; font-size: 0.9rem; }
-
+ 
 /* FOOTER */
 footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; background: #fff; }
 .footer-links { margin-bottom: 20px; }
 .footer-links a { margin: 0 15px; text-decoration: none; color: #888; font-size: 0.8rem; transition: 0.3s; }
 .footer-links a:hover { color: var(--rojo); }
 .copyright { font-size: 0.75rem; color: #bbb; margin-top: 10px; }
-
+ 
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .menu { display: none; }
@@ -103,4 +103,44 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; backgr
     .section-title { border-left: none; border-bottom: 4px solid var(--rojo); padding-left: 0; padding-bottom: 10px; display: inline-block; }
     .instagram-grid { grid-template-columns: 1fr 1fr; }
     .ig-handle-text { font-size: 1.8rem; }
+}
+ 
+/* ============================================
+   PÁGINA SOBRE-MI
+   ============================================ */
+ 
+/* Hero más compacto para páginas internas */
+.hero-page { padding: 70px 0 50px; background: var(--gris-fondo); }
+.hero-page h1 { font-size: clamp(2rem, 6vw, 3.5rem); }
+ 
+/* Cards informativas (trayectoria, acreditaciones) */
+.info-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.info-card { background: white; border-radius: 8px; padding: 30px; box-shadow: var(--sombra); border-top: 6px solid var(--rojo); }
+.info-card h3 { font-size: 1.3rem; color: var(--negro); margin: 5px 0 15px; font-family: 'Playfair Display', serif; }
+.info-card p { margin-bottom: 10px; font-size: 0.95rem; }
+.info-card ul { padding-left: 20px; margin-top: 10px; }
+.info-card li { margin-bottom: 8px; font-size: 0.95rem; }
+ 
+/* Timeline para formación académica */
+.timeline { list-style: none; max-width: 800px; margin: 0 auto; }
+.timeline-item { display: flex; gap: 25px; padding: 18px 0; border-bottom: 1px solid #e5e5e5; }
+.timeline-item:last-child { border-bottom: none; }
+.timeline-year { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--rojo); font-weight: 700; min-width: 80px; flex-shrink: 0; }
+.timeline-content h3 { font-size: 1.05rem; color: var(--negro); margin-bottom: 5px; font-weight: 600; }
+.timeline-content p { font-size: 0.9rem; color: #666; }
+ 
+/* Tags de áreas de práctica */
+.tags-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+.tag { background: var(--blanco); color: var(--negro); padding: 10px 18px; border-radius: 30px; font-size: 0.9rem; font-weight: 600; border: 1px solid #e5e5e5; transition: 0.3s; }
+.tag:hover { border-color: var(--rojo); color: var(--rojo); }
+ 
+/* CTA final centrado */
+.cta-section { text-align: center; }
+.cta-section .section-title { display: inline-block; border-left: none; border-bottom: 4px solid var(--rojo); padding-left: 0; padding-bottom: 10px; }
+.cta-section .lead { font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; color: var(--texto); }
+ 
+/* Responsive timeline */
+@media (max-width: 600px) {
+    .timeline-item { flex-direction: column; gap: 5px; padding: 15px 0; }
+    .timeline-year { min-width: auto; }
 }
