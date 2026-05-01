@@ -51,17 +51,19 @@ nav { background: var(--blanco); padding: 15px 0; position: sticky; top: 0; z-in
 .contact-link { text-decoration: none; color: var(--texto); font-weight: 600; display: flex; align-items: center; }
 .contact-icon { margin-right: 12px; font-size: 1.2rem; }
  
-/* INSTAGRAM SECTION (ESTILO VISUAL DEL TÍTULO) */
-.ig-visual-link { text-decoration: none; display: inline-block; margin-bottom: 40px; transition: 0.3s; padding: 5px 15px; border-bottom: 2px solid transparent; }
+/* INSTAGRAM SECTION */
+.ig-visual-link { text-decoration: none; display: inline-block; margin-bottom: 10px; transition: 0.3s; padding: 5px 15px; border-bottom: 2px solid transparent; }
 .ig-handle-text { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 2.8rem); color: var(--negro); margin: 0; transition: 0.3s; letter-spacing: -1px; }
 .ig-handle-text::after { content: '📸'; font-size: 1.4rem; margin-left: 15px; vertical-align: middle; opacity: 0.6; }
 .ig-visual-link:hover .ig-handle-text { color: var(--rojo); transform: scale(1.02); }
 .ig-visual-link:hover { border-bottom-color: var(--rojo); }
+.ig-subtitle { color: #666; max-width: 500px; margin: 0 auto 40px; font-size: 1rem; }
  
 .instagram-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; align-items: start; }
-.ig-item { display: block; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background: #fff; }
+.ig-item { display: block; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); background: #fff; text-decoration: none; transition: 0.3s; }
+.ig-item:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
 .ig-item img { width: 100% !important; height: auto !important; display: block; transition: 0.4s; }
-.ig-item:hover img { transform: scale(1.02); }
+.ig-caption { display: block; padding: 12px 14px; font-size: 0.85rem; color: var(--negro); font-weight: 600; text-align: left; background: white; }
  
 /* SERVICIOS */
 .services-two-blocks { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
@@ -109,11 +111,9 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; backgr
    PÁGINA SOBRE-MI
    ============================================ */
  
-/* Hero más compacto para páginas internas */
 .hero-page { padding: 70px 0 50px; background: var(--gris-fondo); }
 .hero-page h1 { font-size: clamp(2rem, 6vw, 3.5rem); }
  
-/* Cards informativas (trayectoria, acreditaciones) */
 .info-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
 .info-card { background: white; border-radius: 8px; padding: 30px; box-shadow: var(--sombra); border-top: 6px solid var(--rojo); }
 .info-card h3 { font-size: 1.3rem; color: var(--negro); margin: 5px 0 15px; font-family: 'Playfair Display', serif; }
@@ -121,7 +121,6 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; backgr
 .info-card ul { padding-left: 20px; margin-top: 10px; }
 .info-card li { margin-bottom: 8px; font-size: 0.95rem; }
  
-/* Timeline para formación académica */
 .timeline { list-style: none; max-width: 800px; margin: 0 auto; }
 .timeline-item { display: flex; gap: 25px; padding: 18px 0; border-bottom: 1px solid #e5e5e5; }
 .timeline-item:last-child { border-bottom: none; }
@@ -129,17 +128,14 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; backgr
 .timeline-content h3 { font-size: 1.05rem; color: var(--negro); margin-bottom: 5px; font-weight: 600; }
 .timeline-content p { font-size: 0.9rem; color: #666; }
  
-/* Tags de áreas de práctica */
 .tags-grid { display: flex; flex-wrap: wrap; gap: 12px; }
 .tag { background: var(--blanco); color: var(--negro); padding: 10px 18px; border-radius: 30px; font-size: 0.9rem; font-weight: 600; border: 1px solid #e5e5e5; transition: 0.3s; }
 .tag:hover { border-color: var(--rojo); color: var(--rojo); }
  
-/* CTA final centrado */
 .cta-section { text-align: center; }
 .cta-section .section-title { display: inline-block; border-left: none; border-bottom: 4px solid var(--rojo); padding-left: 0; padding-bottom: 10px; }
 .cta-section .lead { font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; color: var(--texto); }
  
-/* Responsive timeline */
 @media (max-width: 600px) {
     .timeline-item { flex-direction: column; gap: 5px; padding: 15px 0; }
     .timeline-year { min-width: auto; }
