@@ -140,3 +140,26 @@ footer { padding: 60px 0; text-align: center; border-top: 1px solid #eee; backgr
     .timeline-item { flex-direction: column; gap: 5px; padding: 15px 0; }
     .timeline-year { min-width: auto; }
 }
+ 
+/* ============================================
+   PÁGINAS DE SERVICIOS Y MOTIVOS DE CONSULTA
+   Espaciado mejorado para títulos de sección
+   ============================================ */
+ 
+.service-content .section-title {
+    margin-top: 50px;
+}
+ 
+.service-content > h2.section-title:first-of-type {
+    margin-top: 0;
+}
+ 
+.service-list {
+    padding-left: 25px;
+    margin: 20px 0;
+}
+ 
+.service-list li {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
