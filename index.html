@@ -76,11 +76,20 @@
           "name": "Consulta Dr. López Clemente — Clínica Elche Salud",
           "url": "https://clinicaelchesalud.com",
           "image": "https://cardiolopezclemente.com/img/perfil.webp",
+          "telephone": "+34662637540",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Pl. del Bisbe Siuri, Entresuelo B",
             "addressLocality": "Elche",
+            "postalCode": "03201",
             "addressRegion": "Alicante",
             "addressCountry": "ES"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "10:00",
+            "closes": "20:00"
           },
           "medicalSpecialty": "Cardiology",
           "physician": {"@id": "https://cardiolopezclemente.com/#physician"}
@@ -100,6 +109,7 @@
             <div class="menu">
                 <a href="/sobre-mi">Sobre mí</a>
                 <a href="/#servicios">Servicios</a>
+                <a href="/preguntas-frecuentes">FAQ</a>
                 <a href="/#blog">Blog</a>
                 <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
             </div>
@@ -179,6 +189,36 @@
                     <span class="read-more">Ver detalles →</span>
                 </a>
             </div>
+ 
+            <!-- INFORMACIÓN PRÁCTICA -->
+            <div style="margin-top: 60px; padding: 40px 30px; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 30px; text-align: center; color: var(--negro);">Información práctica</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px;">
+ 
+                    <div>
+                        <h4 style="color: var(--rojo); margin-bottom: 10px; font-size: 1.05rem;">📍 Dónde</h4>
+                        <p style="margin: 0; line-height: 1.6;"><strong>Clínica Elche Salud</strong><br>Pl. del Bisbe Siuri, Entresuelo B<br>03201 Elche (Alicante)<br><a href="https://maps.app.goo.gl/oPiZiLRgi6WPPQte8" target="_blank" style="color: var(--rojo); font-weight: 600; font-size: 0.95rem;">Ver en Google Maps →</a></p>
+                    </div>
+ 
+                    <div>
+                        <h4 style="color: var(--rojo); margin-bottom: 10px; font-size: 1.05rem;">📞 Pedir cita</h4>
+                        <p style="margin: 0; line-height: 1.6;">A través de <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" style="color: var(--rojo); font-weight: 600;">Doctoralia</a> o llamando a Clínica Elche Salud: <a href="tel:+34662637540" style="color: var(--rojo); font-weight: 600;">662 63 75 40</a><br><span style="font-size: 0.9rem; color: #666;">Consulta privada particular</span></p>
+                    </div>
+ 
+                    <div>
+                        <h4 style="color: var(--rojo); margin-bottom: 10px; font-size: 1.05rem;">⏱️ Horario y duración</h4>
+                        <p style="margin: 0; line-height: 1.6;">Lunes a viernes<br>10:00 - 20:00<br><span style="font-size: 0.95rem;">Consulta de 60 minutos (o el tiempo que cada caso requiera)</span></p>
+                    </div>
+ 
+                    <div>
+                        <h4 style="color: var(--rojo); margin-bottom: 10px; font-size: 1.05rem;">📋 Qué llevar</h4>
+                        <p style="margin: 0; line-height: 1.6;">Informes y pruebas previas, analíticas recientes, listado de medicación habitual.</p>
+                    </div>
+ 
+                </div>
+            </div>
+            <!-- FIN INFORMACIÓN PRÁCTICA -->
+ 
         </div>
     </section>
  
@@ -224,7 +264,16 @@
         </div>
     </section>
  
-    <section id="instagram" class="section bg-light">
+    <!-- ENLACE A FAQ -->
+    <section class="section bg-light" style="text-align: center;">
+        <div class="container">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <p class="lead" style="margin-bottom: 30px;">Respondemos las dudas más habituales sobre síntomas, pruebas, prevención y tratamiento cardiovascular.</p>
+            <a href="/preguntas-frecuentes" class="btn-main">Ver preguntas frecuentes</a>
+        </div>
+    </section>
+ 
+    <section id="instagram" class="section">
         <div class="container" style="text-align: center;">
             <a href="https://www.instagram.com/cardiolopezclemente" target="_blank" class="ig-visual-link">
                 <h2 class="ig-handle-text">@Cardiolopezclemente</h2>
@@ -252,7 +301,7 @@
         </div>
     </section>
  
-    <section id="blog" class="section container">
+    <section id="blog" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Blog</h2>
  
@@ -318,6 +367,7 @@
             <p style="font-size: 0.85rem; color: #666; margin: 8px 0 18px;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
             <div class="footer-links">
                 <a href="/sobre-mi">Sobre mí</a>
+                <a href="/preguntas-frecuentes">FAQ</a>
                 <a href="/legal/aviso-legal.html">Aviso Legal</a>
                 <a href="/legal/privacidad.html">Privacidad</a>
                 <a href="/legal/cookies.html">Cookies</a>
