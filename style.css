@@ -1197,7 +1197,7 @@ footer p strong {
 
 /* =========================================
    22. MENÚ HAMBURGUESA (MÓVIL)
-   CSS-only via checkbox hack
+   Dropdown bajo el nav, CSS-only
    ========================================= */
 .menu-toggle-input {
     display: none;
@@ -1321,4 +1321,96 @@ footer p strong {
     .nav-container {
         position: relative;
     }
+}
+
+
+/* --- Hamburguesa: oculta en desktop --- */
+.menu-toggle-input { display: none; }
+
+.menu-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+    -webkit-tap-highlight-color: transparent;
+    flex-shrink: 0;
+}
+.menu-toggle-label:hover { background: var(--gris-100); }
+.menu-toggle-label span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--negro);
+    border-radius: 2px;
+    transition: var(--transition);
+    transform-origin: center;
+}
+
+/* Animación hamburguesa → X */
+.menu-toggle-input:checked ~ .menu-toggle-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle-input:checked ~ .menu-toggle-label span:nth-child(2) {
+    opacity: 0; transform: scaleX(0);
+}
+.menu-toggle-input:checked ~ .menu-toggle-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle-label { display: flex; }
+
+    .nav-container { position: relative; flex-wrap: wrap; }
+
+    /* Menú oculto — dropdown bajo el nav */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--blanco);
+        border-top: 1px solid var(--gris-200);
+        border-bottom: 3px solid var(--rojo);
+        box-shadow: var(--sombra-lg);
+        z-index: 998;
+        padding: 8px 0 16px;
+        gap: 0;
+    }
+
+    /* Mostrar al marcar el checkbox */
+    .menu-toggle-input:checked ~ .menu { display: flex; }
+
+    .menu a {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--negro);
+        padding: 14px 24px;
+        border-bottom: 1px solid var(--gris-100);
+        margin-left: 0;
+        width: 100%;
+        display: block;
+    }
+    .menu a:last-child { border-bottom: none; }
+    .menu a::after { display: none !important; }
+    .menu a:hover { background: var(--crema); color: var(--rojo); }
+
+    .menu .nav-btn {
+        margin: 12px 24px 0;
+        background: var(--rojo);
+        color: var(--blanco) !important;
+        text-align: center;
+        padding: 14px 24px;
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        width: calc(100% - 48px);
+    }
+    .menu .nav-btn:hover { background: var(--rojo-oscuro); }
 }
