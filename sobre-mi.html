@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cardiolopezclemente.com/sobre-mi" />
- 
+
     <title>Sobre mí | Dr. José Carlos López Clemente, Cardiólogo en Elche</title>
     <meta name="description" content="Cardiólogo en Elche. Doctor en Ciencias de la Salud y graduado en Nutrición. Especialista en prevención cardiovascular, rehabilitación cardíaca e imagen.">
- 
-    <!-- Open Graph -->
+
     <meta property="og:title" content="Dr. José Carlos López Clemente — Cardiólogo en Elche">
     <meta property="og:description" content="Cardiólogo en Elche con formación dual en Cardiología y Nutrición. Doctor en Ciencias de la Salud.">
     <meta property="og:url" content="https://cardiolopezclemente.com/sobre-mi">
     <meta property="og:type" content="profile">
     <meta property="og:image" content="https://cardiolopezclemente.com/img/perfil.webp">
     <meta name="twitter:card" content="summary_large_image">
- 
+
     <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..600&display=swap" rel="stylesheet"> 
-    <!-- Schema.org Physician -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -52,17 +51,10 @@
         }
       },
       "knowsAbout": [
-        "Riesgo cardiovascular",
-        "Hipertensión arterial",
-        "Cardiopatía isquémica",
-        "Rehabilitación cardíaca",
-        "Insuficiencia cardíaca",
-        "Arritmias",
-        "Fibrilación auricular",
-        "Valvulopatías",
-        "Prevención cardiovascular",
-        "Nutrición clínica",
-        "Ecocardiografía"
+        "Riesgo cardiovascular","Hipertensión arterial","Cardiopatía isquémica",
+        "Rehabilitación cardíaca","Insuficiencia cardíaca","Arritmias",
+        "Fibrilación auricular","Valvulopatías","Prevención cardiovascular",
+        "Nutrición clínica","Ecocardiografía"
       ],
       "sameAs": [
         "https://www.instagram.com/cardiolopezclemente",
@@ -70,22 +62,121 @@
       ]
     }
     </script>
+
+    <style>
+        /* ── Hero con imagen de fondo ── */
+        .hero-sobre {
+            position: relative;
+            padding: 110px 0 80px;
+            text-align: center;
+            overflow: hidden;
+            background-color: var(--crema);
+        }
+
+        /* Imagen de fondo (sobre-hero.webp) */
+        .hero-sobre::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('img/sobre-hero.webp');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.18;   /* Muy sutil — texto legible */
+        }
+
+        /* Gradiente encima de la imagen para garantizar legibilidad */
+        .hero-sobre::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(250,246,240,0.5) 0%,
+                rgba(250,246,240,0.1) 50%,
+                rgba(250,246,240,0.6) 100%
+            );
+        }
+
+        .hero-sobre .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ── Foto de consulta (banner horizontal) ── */
+        .consulta-foto {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-lg);
+            display: block;
+        }
+
+        .consulta-foto-wrap {
+            margin: 0 0 50px;
+            position: relative;
+        }
+
+        /* ── Grid consulta: foto + texto ── */
+        .consulta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .consulta-grid img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-md);
+        }
+
+        .consulta-grid-text h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.7rem;
+            color: var(--negro);
+            margin-bottom: 18px;
+            letter-spacing: -0.015em;
+        }
+
+        .consulta-grid-text p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--gris-700);
+            margin-bottom: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .consulta-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .consulta-grid img {
+                height: 240px;
+            }
+        }
+    </style>
 </head>
 <body>
- 
+
 <nav>
     <div class="nav-container container">
         <a href="/" class="logo-area">
             <img src="img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
             <span class="logo-text">Dr. López Clemente</span>
         </a>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
-        <label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menú de navegación">
+        <button class="menu-btn" aria-label="Abrir menú de navegación"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
             <span></span>
             <span></span>
             <span></span>
-        </label>
-        <div class="menu">
+        </button>
+        <div class="menu" id="main-menu">
             <a href="/sobre-mi">Sobre mí</a>
             <a href="/#servicios">Servicios</a>
             <a href="/preguntas-frecuentes">FAQ</a>
@@ -94,141 +185,188 @@
         </div>
     </div>
 </nav>
- 
-    <header class="hero hero-page">
-        <div class="hero-content container">
-            <p class="location-top">Cardiólogo · Elche</p>
-            <h1>Dr. José Carlos<br class="mobile-br"> <span class="text-red">López Clemente</span></h1>
-            <p class="h1-subtitle">Especialista en Cardiología · Doctor en Ciencias de la Salud</p>
-            <p class="hero-p">Graduado en Nutrición Humana y Dietética</p>
+
+<!-- ══════════════════════════════════════
+     HERO con imagen de fondo sutil
+     IMAGEN: img/sobre-hero.webp (1600×600px)
+     ══════════════════════════════════════ -->
+<header class="hero-sobre">
+    <div class="hero-content container">
+        <p class="location-top">Cardiólogo · Elche</p>
+        <h1>Dr. José Carlos<br class="mobile-br"> <span class="text-red">López Clemente</span></h1>
+        <p class="h1-subtitle">Especialista en Cardiología · Doctor en Ciencias de la Salud</p>
+        <p class="hero-p">Graduado en Nutrición Humana y Dietética</p>
+    </div>
+</header>
+
+<!-- ══════════════════════════════════════
+     FILOSOFÍA + FOTO PERFIL
+     IMAGEN: img/perfil.webp (ya existe)
+     ══════════════════════════════════════ -->
+<section class="section container">
+    <div class="bio-flex">
+        <div class="bio-img">
+            <img src="img/perfil.webp" alt="Dr. José Carlos López Clemente, cardiólogo en Elche">
         </div>
-    </header>
- 
-    <!-- Filosofía -->
-    <section class="section container">
-        <div class="bio-flex">
-            <div class="bio-img">
-                <img src="img/perfil.webp" alt="Dr. José Carlos López Clemente, cardiólogo en Elche">
-            </div>
-            <div class="bio-text">
-                <h2 class="section-title">Filosofía profesional</h2>
-                <p>La práctica clínica se asienta en tres pilares: <strong>cardiología basada en la evidencia</strong>, <strong>prevención como objetivo central</strong> y <strong>nutrición y estilo de vida como herramientas terapéuticas</strong>. La formación dual en Cardiología y en Nutrición Humana y Dietética permite abordar el riesgo cardiovascular desde su origen, no solo desde su consecuencia.</p>
-                <span class="highlight-line">Tiempo para escuchar. Atención al detalle. Planes realistas y sostenibles.</span>
-                <p>Cada consulta busca entender la historia completa del paciente y construir un plan terapéutico que se mantenga en el tiempo. La cercanía no es un añadido: es la condición previa para que un cambio funcione.</p>
-            </div>
+        <div class="bio-text">
+            <h2 class="section-title">Filosofía profesional</h2>
+            <p>La práctica clínica se asienta en tres pilares: <strong>cardiología basada en la evidencia</strong>, <strong>prevención como objetivo central</strong> y <strong>nutrición y estilo de vida como herramientas terapéuticas</strong>. La formación dual en Cardiología y en Nutrición Humana y Dietética permite abordar el riesgo cardiovascular desde su origen, no solo desde su consecuencia.</p>
+            <span class="highlight-line">Tiempo para escuchar. Atención al detalle. Planes realistas y sostenibles.</span>
+            <p>Cada consulta busca entender la historia completa del paciente y construir un plan terapéutico que se mantenga en el tiempo. La cercanía no es un añadido: es la condición previa para que un cambio funcione.</p>
         </div>
-    </section>
- 
-    <!-- Formación -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Formación académica</h2>
-            <ul class="timeline">
-                <li class="timeline-item">
-                    <span class="timeline-year">2026</span>
-                    <div class="timeline-content">
-                        <h3>Máster en Rehabilitación Cardíaca</h3>
-                        <p>Sociedad Española de Rehabilitación Cardio-Respiratoria (SORECAR)</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2025</span>
-                    <div class="timeline-content">
-                        <h3>Doctor en Ciencias de la Salud</h3>
-                        <p>Universidad de Murcia</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2023</span>
-                    <div class="timeline-content">
-                        <h3>Máster en Diagnóstico por Imagen en Cardiología</h3>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2023</span>
-                    <div class="timeline-content">
-                        <h3>Graduado en Nutrición Humana y Dietética</h3>
-                        <p>Universidad Católica San Antonio de Murcia (UCAM) · 2020–2023</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2022</span>
-                    <div class="timeline-content">
-                        <h3>Especialista en Cardiología (vía MIR)</h3>
-                        <p>Hospital General Universitario Santa Lucía, Cartagena · 2017–2022</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2022</span>
-                    <div class="timeline-content">
-                        <h3>Experto en Insuficiencia Cardíaca y Enfermedad Coronaria</h3>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2020</span>
-                    <div class="timeline-content">
-                        <h3>Máster en Avances en Cardiología</h3>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2019</span>
-                    <div class="timeline-content">
-                        <h3>Máster en Investigación en Medicina Clínica</h3>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <span class="timeline-year">2016</span>
-                    <div class="timeline-content">
-                        <h3>Graduado en Medicina</h3>
-                        <p>Universidad de Murcia · 2010–2016</p>
-                    </div>
-                </li>
-            </ul>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FORMACIÓN ACADÉMICA (sin foto)
+     ══════════════════════════════════════ -->
+<section class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Formación académica</h2>
+        <ul class="timeline">
+            <li class="timeline-item">
+                <span class="timeline-year">2026</span>
+                <div class="timeline-content">
+                    <h3>Máster en Rehabilitación Cardíaca</h3>
+                    <p>Sociedad Española de Rehabilitación Cardio-Respiratoria (SORECAR)</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-year">2025</span>
+                <div class="timeline-content">
+                    <h3>Doctor en Ciencias de la Salud</h3>
+                    <p>Universidad de Murcia</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-year">2023</span>
+                <div class="timeline-content">
+                    <h3>Máster en Diagnóstico por Imagen en Cardiología</h3>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-year">2023</span>
+                <div class="timeline-content">
+                    <h3>Graduado en Nutrición Humana y Dietética</h3>
+                    <p>Universidad Católica San Antonio de Murcia (UCAM) · 2020–2023</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-year">2022</span>
+                <div class="timeline-content">
+                    <h3>Especialista en Cardiología (vía MIR)</h3>
+                    <p>Hospital General Universitario Santa Lucía, Cartagena · 2017–2022</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-year">2022</span>
+                <div class="timeline-content">
+                    <h3>Experto en Insuficiencia Cardíaca y Enfermedad Coronaria</h3>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-year">2020</span>
+                <div class="timeline-content">
+                    <h3>Máster en Avances en Cardiología</h3>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-year">2019</span>
+                <div class="timeline-content">
+                    <h3>Máster en Investigación en Medicina Clínica</h3>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <span class="timeline-year">2016</span>
+                <div class="timeline-content">
+                    <h3>Graduado en Medicina</h3>
+                    <p>Universidad de Murcia · 2010–2016</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TRAYECTORIA + FOTO CONSULTA (banner)
+     IMAGEN: img/consulta-1.webp (800×600px, horizontal)
+     ══════════════════════════════════════ -->
+<section class="section container">
+    <h2 class="section-title">Trayectoria profesional</h2>
+
+    <div class="consulta-foto-wrap">
+        <img
+            src="img/consulta-1.webp"
+            alt="Consulta del Dr. López Clemente en Clínica Elche Salud"
+            class="consulta-foto"
+            onerror="this.style.display='none';">
+    </div>
+
+    <div class="info-cards-grid">
+        <div class="info-card">
+            <span class="category-tag">Actividad pública</span>
+            <h3>Hospital Universitario Vega Baja</h3>
+            <p>Cardiólogo de plantilla. Orihuela.</p>
+            <p style="font-size: 0.9rem; color: var(--gris-500); margin-top: 15px;">Previamente: Hospital General Universitario de Alicante, donde mantengo colaboración activa en investigación con su grupo de trabajo.</p>
         </div>
-    </section>
- 
-    <!-- Trayectoria -->
-    <section class="section container">
-        <h2 class="section-title">Trayectoria profesional</h2>
-        <div class="info-cards-grid">
-            <div class="info-card">
-                <span class="category-tag">Actividad pública</span>
-                <h3>Hospital Universitario Vega Baja</h3>
-                <p>Cardiólogo de plantilla. Orihuela.</p>
-                <p style="font-size: 0.9rem; color: #666; margin-top: 15px;">Previamente: Hospital General Universitario de Alicante, donde mantengo colaboración en investigación con su grupo de trabajo.</p>
-            </div>
-            <div class="info-card">
-                <span class="category-tag">Atención privada</span>
-                <h3>Clínica Elche Salud</h3>
-                <p>Consulta presencial de cardiología desde 2024. Elche.</p>
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="read-more" style="margin-top: 15px; display: inline-block;">Pedir cita en Doctoralia →</a>
-            </div>
+        <div class="info-card">
+            <span class="category-tag">Atención privada</span>
+            <h3>Clínica Elche Salud</h3>
+            <p>Consulta presencial de cardiología desde 2024. Elche.</p>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="read-more" style="margin-top: 15px; display: inline-block;">Pedir cita en Doctoralia →</a>
         </div>
-    </section>
- 
-    <!-- Áreas -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Áreas de práctica clínica</h2>
-            <div class="tags-grid">
-                <span class="tag">Riesgo cardiovascular</span>
-                <span class="tag">Hipertensión arterial</span>
-                <span class="tag">Cardiopatía isquémica</span>
-                <span class="tag">Rehabilitación cardíaca</span>
-                <span class="tag">Prevención</span>
-                <span class="tag">Insuficiencia cardíaca</span>
-                <span class="tag">Arritmias</span>
-                <span class="tag">Fibrilación auricular</span>
-                <span class="tag">Valvulopatías</span>
-                <span class="tag">Obesidad y composición corporal</span>
-                <span class="tag">Nutrición clínica</span>
-                <span class="tag">Ejercicio terapéutico</span>
-            </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ÁREAS DE PRÁCTICA CLÍNICA (sin foto)
+     ══════════════════════════════════════ -->
+<section class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Áreas de práctica clínica</h2>
+        <div class="tags-grid">
+            <span class="tag">Riesgo cardiovascular</span>
+            <span class="tag">Hipertensión arterial</span>
+            <span class="tag">Cardiopatía isquémica</span>
+            <span class="tag">Rehabilitación cardíaca</span>
+            <span class="tag">Prevención</span>
+            <span class="tag">Insuficiencia cardíaca</span>
+            <span class="tag">Arritmias</span>
+            <span class="tag">Fibrilación auricular</span>
+            <span class="tag">Valvulopatías</span>
+            <span class="tag">Obesidad y composición corporal</span>
+            <span class="tag">Nutrición clínica</span>
+            <span class="tag">Ejercicio terapéutico</span>
         </div>
-    </section>
- 
-    <!-- Acreditaciones e investigación -->
-    <section class="section container">
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CONSULTA Y EQUIPAMIENTO
+     IMAGEN: img/consulta-2.webp (800×600px)
+     ══════════════════════════════════════ -->
+<section class="section container">
+    <h2 class="section-title">La consulta</h2>
+
+    <div class="consulta-grid">
+        <img
+            src="img/consulta-2.webp"
+            alt="Ecocardiógrafo y equipamiento diagnóstico en consulta privada de cardiología, Elche"
+            onerror="this.style.display='none';">
+        <div class="consulta-grid-text">
+            <h3>Equipamiento diagnóstico propio</h3>
+            <p>La consulta dispone de equipamiento diagnóstico completo: <strong>ecocardiógrafo Doppler color</strong>, <strong>electrocardiógrafo</strong> y equipo de <strong>Holter de ECG</strong> de 24/48 horas, lo que permite realizar la mayoría de las pruebas en el mismo acto de la consulta.</p>
+            <p>La consulta se realiza en <strong>Clínica Elche Salud</strong>, en el centro de Elche, con acceso cómodo y zona de aparcamiento próxima.</p>
+            <p>El tiempo de consulta es de <strong>60 minutos</strong> — o el que el caso requiera. Sin prisas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ACREDITACIONES E INVESTIGACIÓN (sin foto)
+     ══════════════════════════════════════ -->
+<section class="section bg-light">
+    <div class="container">
         <h2 class="section-title">Acreditaciones e investigación</h2>
         <div class="info-cards-grid">
             <div class="info-card">
@@ -244,34 +382,38 @@
                 <span class="category-tag">Investigación y divulgación</span>
                 <p>Publicaciones en revistas científicas indexadas y comunicaciones en congresos nacionales e internacionales de Cardiología.</p>
                 <p>Investigación en colaboración con el grupo de trabajo del Hospital General Universitario de Alicante.</p>
-                <p><strong>Proyecto en marcha:</strong> participación en el desarrollo de una unidad de rehabilitación cardíaca.</p>
+                <p><strong>Proyecto en marcha:</strong> desarrollo de una unidad de rehabilitación cardíaca.</p>
             </div>
         </div>
-    </section>
- 
-    <!-- CTA final -->
-    <section class="section bg-light cta-section">
-        <div class="container">
-            <h2 class="section-title">¿Quieres consultar tu caso?</h2>
-            <p class="lead">Consulta presencial en Elche. Reserva directa a través de Doctoralia.</p>
-            <div class="cta-group">
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita</a>
-                <a href="https://clinicaelchesalud.com/" target="_blank" class="btn-sub">Clínica Elche Salud</a>
-            </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section cta-section">
+    <div class="container">
+        <h2 class="section-title">¿Quieres consultar tu caso?</h2>
+        <p class="lead">Consulta presencial en Elche. Reserva directa a través de Doctoralia.</p>
+        <div class="cta-group">
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita</a>
+            <a href="https://clinicaelchesalud.com/" target="_blank" class="btn-sub">Clínica Elche Salud</a>
         </div>
-    </section>
- 
-    <footer>
-        <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <div class="footer-links">
-                <a href="/legal/aviso-legal.html">Aviso Legal</a>
-                <a href="/legal/privacidad.html">Privacidad</a>
-                <a href="/legal/cookies.html">Cookies</a>
-            </div>
-            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
         </div>
-    </footer>
- 
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>
