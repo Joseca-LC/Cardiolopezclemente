@@ -1194,3 +1194,131 @@ footer p strong {
         font-size: 2.4rem;
     }
 }
+
+/* =========================================
+   22. MENÚ HAMBURGUESA (MÓVIL)
+   CSS-only via checkbox hack
+   ========================================= */
+.menu-toggle-input {
+    display: none;
+}
+
+.menu-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu-toggle-label:hover {
+    background: var(--gris-100);
+}
+
+.menu-toggle-label span {
+    display: block;
+    height: 2px;
+    background: var(--negro);
+    border-radius: 2px;
+    transition: var(--transition);
+    transform-origin: center;
+}
+
+/* Animación a X cuando está abierto */
+.menu-toggle-input:checked ~ .menu-toggle-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle-input:checked ~ .menu-toggle-label span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.menu-toggle-input:checked ~ .menu-toggle-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle-label {
+        display: flex;
+        order: 3;
+    }
+
+    /* El .menu pasa a ser un panel desplegable */
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        /* Oculto por defecto */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--blanco);
+        padding: 90px 32px 40px;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        overflow-y: auto;
+    }
+
+    /* Visible cuando el checkbox está marcado */
+    .menu-toggle-input:checked ~ .menu {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .menu a {
+        font-size: 1.6rem;
+        font-family: var(--font-display);
+        font-weight: 600;
+        color: var(--negro);
+        padding: 18px 0;
+        border-bottom: 1px solid var(--gris-200);
+        letter-spacing: -0.01em;
+        margin-left: 0;
+    }
+
+    .menu a:last-child {
+        border-bottom: none;
+    }
+
+    .menu a::after {
+        display: none !important;
+    }
+
+    .menu a:hover {
+        color: var(--rojo);
+        transform: none;
+    }
+
+    .nav-btn {
+        margin-top: 24px;
+        background: var(--rojo);
+        color: var(--blanco) !important;
+        text-align: center;
+        padding: 18px;
+        font-size: 1.1rem;
+        border-radius: var(--radius-md);
+    }
+
+    /* El nav necesita z-index por encima del menú overlay */
+    nav {
+        z-index: 1001;
+    }
+
+    /* El checkbox necesita estar antes del menú en el DOM para el CSS-only hack */
+    .nav-container {
+        position: relative;
+    }
+}
