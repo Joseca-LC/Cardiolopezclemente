@@ -4,268 +4,383 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cardiolopezclemente.com/motivos/hipertension-arterial-elche" />
- 
+
     <title>Hipertensión Arterial: Control y Tratamiento | Cardiólogo Elche</title>
     <meta name="description" content="HTA: cómo tomar correctamente la tensión en casa, cuándo consultar y cómo controlarla con hábitos y tratamiento. Cardiólogo en Elche.">
- 
+
     <meta property="og:title" content="Hipertensión Arterial: Control y Prevención · Dr. López Clemente">
     <meta property="og:description" content="Guía completa sobre hipertensión arterial: medición correcta en casa, valores normales y tratamiento.">
     <meta property="og:url" content="https://cardiolopezclemente.com/motivos/hipertension-arterial-elche">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://cardiolopezclemente.com/img/perfil.webp">
- 
+
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
       "name": "Hipertensión arterial: control y tratamiento",
       "description": "Información médica sobre hipertensión arterial: cómo medirla correctamente, valores normales y tratamiento.",
+      "author": {"@type": "Physician", "name": "Dr. José Carlos López Clemente"},
       "medicalAudience": ["Patient"],
-      "about": {
-        "@type": "MedicalCondition",
-        "name": "Hipertensión arterial"
-      }
+      "about": {"@type": "MedicalCondition", "name": "Hipertensión arterial"}
     }
     </script>
+
+    <style>
+        /* ── Imagen de cabecera ── */
+        .motivo-img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-lg);
+            display: block;
+            margin-bottom: 60px;
+        }
+
+        /* ── Tabla semáforo de valores ── */
+        .ta-tabla {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--gris-200);
+            margin: 28px 0 36px;
+        }
+        .ta-header {
+            background: var(--negro);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .ta-header span {
+            padding: 14px 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.7);
+        }
+        .ta-fila {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .ta-fila:last-child { border-bottom: none; }
+        .ta-verde   { background: #f0faf4; }
+        .ta-amarillo { background: #fffbf0; }
+        .ta-rojo    { background: #fff5f5; }
+        .ta-cell { padding: 18px 20px; font-size: 0.97rem; line-height: 1.4; }
+        .ta-cat {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--negro);
+        }
+        .ta-dot {
+            width: 11px; height: 11px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .ta-verde   .ta-dot { background: #2d9e5f; }
+        .ta-amarillo .ta-dot { background: #c8890a; }
+        .ta-rojo    .ta-dot { background: #b80101; }
+        .ta-val {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--negro);
+        }
+        .ta-accion { font-size: 0.9rem; color: var(--gris-700); }
+
+        @media (max-width: 600px) {
+            .ta-header { grid-template-columns: 1fr; }
+            .ta-header span:not(:first-child) { display: none; }
+            .ta-fila { grid-template-columns: 1fr; }
+            .ta-cell { padding: 12px 16px; }
+        }
+
+        /* ── Pasos numerados ── */
+        .pasos-lista {
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 28px 0 36px;
+        }
+        .paso {
+            display: grid;
+            grid-template-columns: 64px 1fr;
+            align-items: start;
+            border-bottom: 1px solid var(--gris-200);
+            background: var(--blanco);
+            transition: background 0.2s ease;
+        }
+        .paso:last-child { border-bottom: none; }
+        .paso:hover { background: var(--crema); }
+        .paso-num {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--rojo);
+            padding: 22px 0 22px 24px;
+            line-height: 1;
+        }
+        .paso-body { padding: 20px 24px 20px 0; }
+        .paso-body h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--negro);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .paso-body p {
+            font-size: 0.95rem;
+            color: var(--gris-700);
+            margin: 0;
+            line-height: 1.6;
+        }
+        @media (max-width: 500px) {
+            .paso { grid-template-columns: 48px 1fr; }
+            .paso-num { padding: 18px 0 18px 16px; font-size: 1.2rem; }
+            .paso-body { padding: 16px 16px 16px 0; }
+        }
+    </style>
 </head>
 <body>
- 
-    <nav>
-        <div class="nav-container container">
-            <a href="/" class="logo-area">
-                <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
-                <span class="logo-text">Dr. López Clemente</span>
-            </a>
-            <div class="menu">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/#servicios">Servicios</a>
-                <a href="/#blog">Blog</a>
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+
+<nav>
+    <div class="nav-container container">
+        <a href="/" class="logo-area">
+            <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+            <span class="logo-text">Dr. López Clemente</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú de navegación"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="menu" id="main-menu">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/#servicios">Servicios</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/#blog">Blog</a>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero hero-page">
+    <div class="hero-content container">
+        <p class="location-top">Cardiólogo en Elche · Clínica Elche Salud</p>
+        <h1>Hipertensión Arterial:<br class="mobile-br"> <span class="text-red">Control y Prevención</span></h1>
+        <p class="hero-p">Medición correcta · Valores normales · Tratamiento</p>
+    </div>
+</header>
+
+<section class="section container">
+    <div class="service-content">
+
+        <!-- ══════════════════════════════
+             IMAGEN: ../img/mot-hta.webp
+             Tensiómetro, 800×380px horiz.
+             ══════════════════════════════ -->
+        <img src="../img/mot-hta.webp"
+             alt="Tensiómetro para medir la presión arterial en casa"
+             class="motivo-img"
+             onerror="this.style.display='none';">
+
+        <h2 class="section-title">¿Qué es la hipertensión arterial?</h2>
+        <p>La hipertensión arterial (HTA) es la elevación mantenida de la presión que ejerce la sangre sobre las paredes de las arterias. Cuando el corazón bombea sangre al cuerpo, esta circula por las arterias con una presión determinada. Si esa presión es demasiado alta de forma sostenida, las arterias sufren, se dañan, y aparecen complicaciones cardiovasculares.</p>
+        <p>La hipertensión es uno de los principales factores de riesgo cardiovascular. Aumenta el riesgo de infarto de miocardio, ictus, insuficiencia cardíaca, enfermedad renal crónica, problemas en la retina y deterioro cognitivo. Es una enfermedad muy prevalente que afecta a millones de personas, muchas de las cuales no lo saben.</p>
+
+        <h2 class="section-title">El problema de la hipertensión silente</h2>
+        <p>La hipertensión arterial no duele. No produce síntomas en la inmensa mayoría de los casos. Por eso se la llama "asesino silencioso". Puedes tener la tensión arterial muy elevada durante años y sentirte perfectamente bien, mientras el daño cardiovascular avanza sin que lo notes.</p>
+        <p>No hay síntomas específicos de hipertensión. El dolor de cabeza, el mareo o el sangrado nasal no son signos fiables de tensión alta. La única forma de saber si tienes hipertensión es midiéndola. Por eso es fundamental controlar la tensión arterial de forma regular, especialmente si tienes factores de riesgo.</p>
+
+        <h2 class="section-title">¿Por qué aparece?</h2>
+        <p>En la mayoría de los casos no tiene una causa identificable: se llama hipertensión primaria o esencial, y es multifactorial. Los principales factores que la favorecen son el exceso de peso, el consumo elevado de sal, el sedentarismo, el alcohol, el tabaquismo, el estrés crónico y los antecedentes familiares. La mayoría son modificables.</p>
+        <p>En un pequeño porcentaje de casos, la hipertensión es secundaria a una enfermedad concreta: problemas renales, trastornos endocrinos, apnea del sueño o ciertos fármacos. Identificar y tratar la causa puede resolver o mejorar la hipertensión.</p>
+
+        <!-- ═══════════════════════════════════
+             COMPONENTE: TABLA DE VALORES
+             ═══════════════════════════════════ -->
+        <h2 class="section-title">¿Cuáles son los valores normales?</h2>
+        <p>La presión arterial se expresa con dos números: la sistólica (máxima, cuando el corazón se contrae) y la diastólica (mínima, cuando se relaja). Se mide en milímetros de mercurio (mmHg).</p>
+
+        <div class="ta-tabla">
+            <div class="ta-header">
+                <span>Categoría</span>
+                <span>Valores (mmHg)</span>
+                <span>Qué hacer</span>
+            </div>
+            <div class="ta-fila ta-verde">
+                <div class="ta-cell"><span class="ta-cat"><span class="ta-dot"></span>Óptima</span></div>
+                <div class="ta-cell"><span class="ta-val">&lt; 120 / &lt; 70</span></div>
+                <div class="ta-cell ta-accion">Mantén los buenos hábitos</div>
+            </div>
+            <div class="ta-fila ta-amarillo">
+                <div class="ta-cell"><span class="ta-cat"><span class="ta-dot"></span>Presión elevada</span></div>
+                <div class="ta-cell"><span class="ta-val">120–139 / 70–89</span></div>
+                <div class="ta-cell ta-accion">Cambio de hábitos y seguimiento estrecho</div>
+            </div>
+            <div class="ta-fila ta-rojo">
+                <div class="ta-cell"><span class="ta-cat"><span class="ta-dot"></span>Hipertensión</span></div>
+                <div class="ta-cell"><span class="ta-val">≥ 140 / ≥ 90</span></div>
+                <div class="ta-cell ta-accion">Valoración médica, probablemente tratamiento</div>
             </div>
         </div>
-    </nav>
- 
-    <header class="hero hero-page">
-        <div class="hero-content container">
-            <p class="location-top">Cardiólogo en Elche · Clínica Elche Salud</p>
-            <h1>Hipertensión Arterial:<br class="mobile-br"> <span class="text-red">Control y Prevención</span></h1>
-            <p class="hero-p">Medición correcta · Valores normales · Tratamiento</p>
-        </div>
-    </header>
- 
-    <section class="section container">
-        <div class="service-content">
-            <h2 class="section-title">¿Qué es la hipertensión arterial?</h2>
-            <p>La hipertensión arterial (HTA) es la elevación mantenida de la presión que ejerce la sangre sobre las paredes de las arterias. Cuando el corazón bombea sangre al cuerpo, esta circula por las arterias con una presión determinada. Si esa presión es demasiado alta de forma sostenida, las arterias sufren, se dañan, y aparecen complicaciones cardiovasculares.</p>
- 
-            <p>La hipertensión es uno de los principales factores de riesgo cardiovascular. Aumenta el riesgo de infarto de miocardio, ictus, insuficiencia cardíaca, enfermedad renal crónica, problemas en la retina y deterioro cognitivo. Es una enfermedad muy prevalente que afecta a millones de personas, muchas de las cuales no lo saben.</p>
- 
-            <h2 class="section-title">El problema de la hipertensión silente</h2>
-            <p>La hipertensión arterial no duele. No produce síntomas en la inmensa mayoría de los casos. Por eso se la llama "asesino silencioso". Puedes tener la tensión arterial muy elevada durante años y sentirte perfectamente bien, mientras el daño cardiovascular avanza sin que lo notes.</p>
- 
-            <p>No hay síntomas específicos de hipertensión. El dolor de cabeza, el mareo o el sangrado nasal no son signos fiables de tensión alta. La única forma de saber si tienes hipertensión es midiéndola. Por eso es fundamental controlar la tensión arterial de forma regular, especialmente si tienes factores de riesgo.</p>
- 
-            <h2 class="section-title">¿Por qué aparece la hipertensión arterial?</h2>
-            <p>En la mayoría de los casos, la hipertensión arterial no tiene una causa identificable. Se llama hipertensión primaria o esencial, y es multifactorial: está relacionada con los hábitos de vida, el ambiente, la genética, el envejecimiento y otros factores que interactúan entre sí.</p>
- 
-            <p>Los principales factores que favorecen la hipertensión son el exceso de peso, el consumo elevado de sal, el sedentarismo, el consumo excesivo de alcohol, el tabaquismo, el estrés crónico y los antecedentes familiares. Estos factores son modificables en su mayoría, lo que convierte la prevención y el tratamiento no farmacológico en pilares fundamentales del control de la hipertensión.</p>
- 
-            <p>En un pequeño porcentaje de casos, la hipertensión es secundaria a una enfermedad concreta: problemas renales, trastornos endocrinos como el hipertiroidismo o el síndrome de Cushing, apnea del sueño, o el consumo de ciertos fármacos. En estos casos, identificar y tratar la causa puede resolver o mejorar la hipertensión.</p>
- 
-            <h2 class="section-title">Cómo tomar correctamente la tensión arterial en casa</h2>
-            <p>Medir la tensión arterial en casa es más fiable que una medición puntual en consulta, siempre que se haga correctamente. La medición en consulta puede estar influida por el nerviosismo, la prisa, el efecto de "bata blanca", o simplemente puede no reflejar la tensión arterial habitual. La medida domiciliaria, bien hecha, ofrece múltiples valores en el entorno habitual del paciente, lo que proporciona una imagen más real del control de la presión arterial.</p>
- 
-            <p>Para que las medidas en casa sean válidas, hay que seguir una técnica correcta. Estas son las claves:</p>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>El equipamiento: un tensiómetro validado</h3>
-                <p><strong>Tensiómetro de brazo, no de muñeca.</strong> Los tensiómetros de brazo son más precisos que los de muñeca. Elige un tensiómetro automático validado, con un manguito de la talla adecuada a tu brazo. Si el manguito es demasiado pequeño o demasiado grande, las medidas serán incorrectas.</p>
-                <p>Conseguir un tensiómetro fiable es económico y sencillo. No necesitas un aparato de última generación, solo uno validado y con el manguito de tu talla.</p>
+
+        <p>Estos valores son orientativos. El objetivo puede variar según la edad y las enfermedades asociadas. Una sola toma en consulta no es suficiente para diagnosticar hipertensión: se necesitan medidas repetidas y preferiblemente registros domiciliarios.</p>
+
+        <!-- ═══════════════════════════════════
+             COMPONENTE: PASOS PARA MEDIR
+             ═══════════════════════════════════ -->
+        <h2 class="section-title">Cómo tomar correctamente la tensión en casa</h2>
+        <p>Medir en casa es más fiable que una medición puntual en consulta, siempre que se haga bien. Evita el efecto "bata blanca" y ofrece múltiples valores en condiciones habituales.</p>
+
+        <div class="pasos-lista">
+            <div class="paso">
+                <div class="paso-num">1</div>
+                <div class="paso-body">
+                    <h4>Tensiómetro validado de brazo</h4>
+                    <p>Usa tensiómetro de brazo (no de muñeca), validado, con manguito de la talla correcta. Un manguito inadecuado invalida la medida.</p>
+                </div>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>La preparación: los 30 minutos previos son clave</h3>
-                <p>Lo que haces en la media hora antes de medir la tensión influye directamente en el resultado. Evita antes de medir:</p>
-                <ul class="service-list">
-                    <li><strong>Café y estimulantes:</strong> No tomes café, té, bebidas energéticas ni otros estimulantes en los 30 minutos previos.</li>
-                    <li><strong>Ejercicio físico:</strong> No hagas ejercicio justo antes de medir la tensión. Espera al menos 30 minutos después de cualquier actividad física intensa.</li>
-                    <li><strong>Tabaco:</strong> No fumes en los 30 minutos previos.</li>
-                    <li><strong>Ganas de ir al baño:</strong> Vacía la vejiga antes de medir. La necesidad de orinar puede elevar la tensión.</li>
-                </ul>
-                <p>Además, 5 minutos antes de la medición, siéntate tranquilamente y reposa. Este reposo previo es fundamental para que la tensión baje a su nivel basal.</p>
+            <div class="paso">
+                <div class="paso-num">2</div>
+                <div class="paso-body">
+                    <h4>30 min antes: sin café, ejercicio ni tabaco</h4>
+                    <p>Evita estimulantes, ejercicio intenso y tabaco en los 30 minutos previos. Vacía la vejiga. Siéntate tranquilamente 5 minutos antes de medir.</p>
+                </div>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>La postura: ni suelto ni apretado</h3>
-                <p>La postura correcta es fundamental para que la medida sea fiable:</p>
-                <ul class="service-list">
-                    <li><strong>Espalda apoyada:</strong> Siéntate en una silla con la espalda bien apoyada en el respaldo.</li>
-                    <li><strong>Brazo apoyado a la altura del corazón:</strong> Apoya el brazo sobre una mesa, de forma que el manguito quede a la altura del corazón. El brazo debe estar relajado, ni colgando ni elevado.</li>
-                    <li><strong>Piernas descruzadas:</strong> Los pies deben estar apoyados en el suelo, sin cruzar las piernas.</li>
-                    <li><strong>En silencio:</strong> No hables durante la toma. Mantente relajado y tranquilo.</li>
-                </ul>
+            <div class="paso">
+                <div class="paso-num">3</div>
+                <div class="paso-body">
+                    <h4>Postura correcta</h4>
+                    <p>Espalda apoyada, brazo sobre la mesa a la altura del corazón, piernas descruzadas, pies en el suelo. En silencio durante la toma.</p>
+                </div>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>El manguito: sobre la piel, 2-3 cm por encima del codo</h3>
-                <p>Coloca el manguito sobre la piel desnuda, no sobre la ropa. El borde inferior del manguito debe quedar 2-3 centímetros por encima del pliegue del codo. El manguito debe ajustarse bien, pero sin apretar en exceso: debe caber un dedo entre la piel y el manguito.</p>
+            <div class="paso">
+                <div class="paso-num">4</div>
+                <div class="paso-body">
+                    <h4>Manguito sobre la piel, 2–3 cm sobre el codo</h4>
+                    <p>Sobre piel desnuda, nunca sobre ropa. El borde inferior a 2–3 cm del pliegue del codo. Ajustado pero sin apretar (debe caber un dedo).</p>
+                </div>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>La regla de las 3 medidas</h3>
-                <p>No te quedes con la primera medida. Toma la tensión tres veces seguidas, con un minuto de descanso entre cada toma. Descarta la primera medida y quédate con la media de la segunda y la tercera. Esta es la medida válida.</p>
-                <p>La primera medida suele ser más alta por el efecto de la activación inicial. Las siguientes son más fiables.</p>
+            <div class="paso">
+                <div class="paso-num">5</div>
+                <div class="paso-body">
+                    <h4>Regla de las 3 medidas</h4>
+                    <p>Toma la tensión 3 veces con 1 minuto de descanso entre cada toma. Descarta la primera; quédate con la media de la segunda y la tercera.</p>
+                </div>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>La regla de los 3 días</h3>
-                <p>Para evaluar bien tu tensión arterial, no basta con medirla un día. Tómala durante al menos 3 días diferentes en una semana, antes del desayuno y antes de la cena. Apunta todos los valores. Esto te dará una imagen real de cómo está tu tensión arterial habitualmente.</p>
-                <p>Lleva estos registros a tu médico. Son mucho más valiosos que una medida puntual en consulta.</p>
-            </div>
- 
-            <h2 class="section-title">¿Cuáles son los valores normales?</h2>
-            <p>La presión arterial se expresa con dos números: la presión arterial sistólica (la máxima, cuando el corazón se contrae) y la presión arterial diastólica (la mínima, cuando el corazón se relaja). Se mide en milímetros de mercurio (mmHg).</p>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>El semáforo de la presión arterial</h3>
-                <p><strong>Presión arterial óptima (verde):</strong> Menos de 120/70 mmHg. Es el objetivo ideal para la mayoría de las personas.</p>
-                <p><strong>Presión arterial elevada (amarillo):</strong> Sistólica entre 120-139 mmHg o diastólica entre 70-89 mmHg. Requiere cambio de hábitos y seguimiento estrecho. Aunque aún no es hipertensión establecida, indica que la tensión está subiendo y que hay que actuar antes de que suba más.</p>
-                <p><strong>Hipertensión arterial (rojo):</strong> Sistólica de 140 mmHg o más, o diastólica de 90 mmHg o más. Requiere valoración médica y probablemente tratamiento farmacológico además de cambios en el estilo de vida.</p>
-            </div>
- 
-            <p>Estos valores son orientativos. El objetivo de presión arterial puede variar según la edad, las enfermedades asociadas y otros factores individuales. En general, el objetivo suele ser una presión arterial sistólica entre 120-129 mmHg, pero esto debe ser individualizado por un especialista.</p>
- 
-            <p>Lo importante es que una sola toma en consulta no es suficiente para diagnosticar hipertensión ni para valorar el control. Se necesita un seguimiento, medidas repetidas, y preferiblemente registros domiciliarios o medidas ambulatorias.</p>
- 
-            <h2 class="section-title">AMPA y MAPA: medidas ambulatorias más fiables</h2>
-            <p>Además de las medidas en consulta y las medidas en casa, existen dos métodos más avanzados para valorar la presión arterial de forma más precisa:</p>
- 
-            <p><strong>AMPA (Automedida de la Presión Arterial):</strong> Es la medida que tú mismo te tomas en casa siguiendo las recomendaciones que hemos explicado. Es más válida que la medida en consulta porque refleja la tensión arterial en condiciones habituales, sin el efecto de bata blanca, y permite obtener múltiples valores a lo largo de varios días.</p>
- 
-            <p><strong>MAPA (Monitorización Ambulatoria de la Presión Arterial):</strong> Es un dispositivo que llevas puesto durante 24 horas y que toma la tensión arterial de forma automática cada cierto tiempo (cada 15-30 minutos durante el día, cada 30-60 minutos durante la noche). Es la medida más completa y precisa, porque registra cómo se comporta la tensión arterial durante todo el día, incluida la noche, y en tus actividades habituales.</p>
- 
-            <p>Tanto el AMPA como el MAPA son más válidos que la medida puntual en consulta para diagnosticar hipertensión, para valorar el control del tratamiento, y para detectar situaciones especiales como la hipertensión de bata blanca (tensión alta solo en consulta pero normal fuera) o la hipertensión enmascarada (tensión normal en consulta pero alta fuera).</p>
- 
-            <h2 class="section-title">Tratamiento: hábitos como pilar fundamental</h2>
-            <p>El tratamiento de la hipertensión arterial tiene dos pilares: las medidas no farmacológicas (cambios en el estilo de vida) y el tratamiento farmacológico (medicación). Ambos son importantes, y en muchos casos es necesario combinarlos.</p>
- 
-            <p>Los hábitos de vida son fundamentales tanto para prevenir la hipertensión como para tratarla una vez diagnosticada. En algunos casos, los cambios en el estilo de vida pueden ser suficientes para controlar la tensión arterial sin necesidad de fármacos, especialmente en fases iniciales o en hipertensión leve. En otros casos, aunque sea necesaria medicación, los hábitos saludables permiten reducir el número de fármacos o las dosis necesarias.</p>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Pilares domésticos para controlar la presión arterial</h3>
-                <p><strong>Sodio: reduce la sal.</strong> El exceso de sodio es uno de los principales factores que elevan la tensión arterial. Reduce el consumo de sal a menos de 2 gramos al día (equivale a menos de 5 gramos de sal común). La mayor parte del sodio que consumimos no viene del salero, sino de alimentos procesados, precocinados, embutidos, conservas y alimentos preparados. Lee las etiquetas y evita los alimentos con alto contenido en sodio.</p>
- 
-                <p><strong>Potasio: aumenta el consumo.</strong> El potasio compensa el exceso de sodio y ayuda a bajar la tensión arterial. Aumenta el consumo de alimentos ricos en potasio: frutas (plátano, kiwi, naranja), verduras de hoja verde, legumbres, frutos secos, patata, aguacate.</p>
- 
-                <p><strong>Ejercicio: aeróbico y de fuerza.</strong> El ejercicio físico regular es uno de los mejores tratamientos para la hipertensión. Combina ejercicio aeróbico (caminar rápido, correr, nadar, bicicleta) con ejercicios de fuerza (pesas, gomas, ejercicios con el propio peso corporal). El objetivo es al menos 150 minutos de ejercicio aeróbico moderado a la semana, más al menos 2 sesiones de fuerza.</p>
- 
-                <p><strong>Alcohol: cero o lo mínimo.</strong> El consumo de alcohol eleva la tensión arterial. Si bebes alcohol, reduce el consumo al mínimo posible. Lo ideal es eliminarlo por completo.</p>
- 
-                <p><strong>Peso: controla el peso corporal.</strong> El sobrepeso y la obesidad aumentan la tensión arterial. Mantener un peso saludable (índice de masa corporal menor de 25 kg/m²) y un perímetro de cintura adecuado (menos de 94 cm en hombres, menos de 80 cm en mujeres) ayuda a controlar la tensión arterial y reduce el riesgo cardiovascular global.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>La dieta DASH: el patrón alimentario más efectivo</h3>
-                <p>La dieta DASH (Dietary Approaches to Stop Hypertension) es el patrón alimentario que ha demostrado mayor eficacia en reducir la presión arterial. No es una dieta restrictiva ni complicada, es una forma de comer saludable y sostenible que combina todos los principios nutricionales que ayudan a controlar la hipertensión.</p>
-                <p>La dieta DASH se basa en aumentar el consumo de frutas, verduras, cereales integrales, legumbres, frutos secos, pescado y lácteos bajos en grasa, y reducir el consumo de sal, carnes rojas, dulces y alimentos procesados. Es rica en potasio, magnesio, calcio y fibra, y baja en sodio y grasas saturadas.</p>
-                <p>Seguir la dieta DASH puede reducir la presión arterial sistólica hasta 10-12 mmHg en personas con hipertensión, un efecto comparable al de algunos fármacos antihipertensivos. Además, mejora el perfil lipídico, reduce el riesgo de diabetes y ayuda al control del peso.</p>
-            </div>
- 
-            <h2 class="section-title">Tratamiento farmacológico: frecuentemente necesario</h2>
-            <p>En muchos casos, los cambios en el estilo de vida no son suficientes para controlar la tensión arterial, y es necesario añadir tratamiento farmacológico. Esto no significa que hayas fracasado o que los hábitos no sirvan. Significa que tu hipertensión necesita tratamiento médico para proteger tu corazón, tus arterias, tus riñones y tu cerebro.</p>
- 
-            <p>Existen múltiples fármacos antihipertensivos, con diferentes mecanismos de acción. El médico elegirá el más adecuado para ti según tus características, otras enfermedades que puedas tener, posibles efectos secundarios y objetivos de control. En algunos casos basta con un fármaco; en otros, es necesario combinar dos, tres o más fármacos para conseguir un control adecuado.</p>
- 
-            <p>Es fundamental entender que tomar medicación para la tensión no significa que ya esté todo controlado. Hay que seguir midiendo la tensión arterial de forma regular, hay que seguir con los hábitos saludables, y hay que ir ajustando el tratamiento según la evolución. No des por hecho que, por estar tomando pastillas, tu tensión arterial está bien. Compruébalo.</p>
- 
-            <h2 class="section-title">Seguimiento y control: monitorizar y ajustar</h2>
-            <p>El control de la hipertensión arterial no es un punto y final, es un proceso continuo. Aunque tomes medicación, aunque hayas cambiado tus hábitos, hay que seguir midiendo la tensión arterial de forma periódica, hay que revisar el tratamiento y ajustarlo si es necesario.</p>
- 
-            <p>La tensión arterial puede cambiar con el tiempo. Puede mejorar si pierdes peso, haces más ejercicio o reduces el consumo de sal. Puede empeorar si ganas peso, abandonas el ejercicio o aumentas el estrés. Los fármacos pueden dejar de ser suficientes con el tiempo, o pueden necesitar ajustes de dosis. Por eso es importante el seguimiento médico regular y la medición periódica de la tensión arterial en casa.</p>
- 
-            <p>Lleva un registro de tus medidas domiciliarias y compártelo con tu médico. Es una información muy valiosa para valorar el control y ajustar el tratamiento si es necesario.</p>
- 
-            <h2 class="section-title">¿Cuándo consultar al cardiólogo?</h2>
-            <p>Debes consultar si tus medidas de tensión arterial en casa son persistentemente elevadas (sistólica de 140 mmHg o más, o diastólica de 90 mmHg o más), si tienes factores de riesgo cardiovascular (diabetes, colesterol alto, tabaquismo, antecedentes familiares de enfermedad coronaria), si ya estás en tratamiento pero las medidas domiciliarias siguen siendo altas, o si tienes dudas sobre cómo medir correctamente la tensión arterial o sobre cómo interpretar los resultados.</p>
- 
-            <p>También debes consultar si tienes cifras de tensión arterial en el rango de "presión arterial elevada" (sistólica 120-139 o diastólica 70-89). Aunque aún no sea hipertensión establecida, es el momento de actuar para evitar que suba más. Es más fácil prevenir que curar.</p>
- 
-            <p>La consulta cardiológica permite valorar tu riesgo cardiovascular global, realizar un estudio completo con ECG, ecocardiograma y analítica, diseñar un plan personalizado de prevención y tratamiento, y hacer un seguimiento adecuado para ajustar el tratamiento según la evolución.</p>
- 
-            <p>La consulta se realiza en <strong>Clínica Elche Salud</strong>, con tiempo suficiente para explicar cómo medir correctamente la tensión arterial en casa, cómo interpretar los valores, qué cambios en el estilo de vida son más importantes en tu caso, y qué tratamiento farmacológico es el más adecuado si es necesario.</p>
- 
-            <h2 class="section-title">Más información sobre hipertensión arterial</h2>
-            <p>Si quieres profundizar en cómo medir correctamente la tensión arterial en casa y en la dieta DASH, puedes consultar:</p>
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Guía completa para medir la tensión arterial en casa</h3>
-                <p>Post en Instagram con todos los detalles sobre cómo tomar correctamente la tensión arterial domiciliaria:</p>
-                <p><a href="https://www.instagram.com/p/DTvkfAyCE5m/" target="_blank" style="color: var(--rojo); font-weight: 600;">Ver guía en Instagram →</a></p>
-            </div>
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Está bien tu presión arterial?</h3>
-                <p>Post en Instagram sobre valores de referencia y cuándo preocuparse:</p>
-                <p><a href="https://www.instagram.com/p/DTqdYtMiHKC/" target="_blank" style="color: var(--rojo); font-weight: 600;">Ver post en Instagram →</a></p>
-            </div>
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Dieta DASH: el patrón alimentario para reducir la hipertensión</h3>
-                <p>Artículo completo sobre la dieta DASH, cómo funciona, qué comer y cómo aplicarla en la práctica:</p>
-                <p><a href="https://cardiolopezclemente.com/articulos/dieta-dash" style="color: var(--rojo); font-weight: 600;">Leer artículo sobre dieta DASH →</a></p>
+            <div class="paso">
+                <div class="paso-num">6</div>
+                <div class="paso-body">
+                    <h4>Regla de los 3 días</h4>
+                    <p>Mídela al menos 3 días distintos: antes del desayuno y antes de la cena. Anota todos los valores y llévalos a tu médico.</p>
+                </div>
             </div>
         </div>
-    </section>
- 
-    <section class="section bg-light cta-section">
-        <div class="container">
-            <h2 class="section-title">¿Tensión arterial elevada?</h2>
-            <p class="lead">Consulta cardiológica en Elche. Valoración completa, plan personalizado de prevención y tratamiento. Aprende a controlar tu tensión arterial correctamente.</p>
-            <div class="cta-group">
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
-                <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
-            </div>
+
+        <h2 class="section-title">AMPA y MAPA: medidas ambulatorias más fiables</h2>
+        <p><strong>AMPA (Automedida de la Presión Arterial):</strong> Las medidas que tú mismo te tomas en casa siguiendo la técnica correcta. Más válidas que la medida en consulta porque reflejan la tensión en condiciones habituales y sin efecto de bata blanca.</p>
+        <p><strong>MAPA (Monitorización Ambulatoria de la Presión Arterial):</strong> Dispositivo que llevas 24 horas y toma la tensión automáticamente cada 15–30 minutos durante el día y cada 30–60 minutos por la noche. Es la medida más completa: detecta hipertensión de bata blanca e hipertensión enmascarada, y registra el comportamiento nocturno.</p>
+
+        <h2 class="section-title">Tratamiento: hábitos como pilar fundamental</h2>
+        <p>El tratamiento tiene dos pilares: medidas no farmacológicas (cambios en el estilo de vida) y tratamiento farmacológico. Ambos son importantes y en muchos casos es necesario combinarlos. En fases iniciales o hipertensión leve, los hábitos pueden ser suficientes para evitar los fármacos o reducir las dosis necesarias.</p>
+
+        <div class="info-card" style="margin-bottom: 20px;">
+            <h3>Pilares para controlar la presión arterial</h3>
+            <p><strong>Sodio: reduce la sal.</strong> Menos de 2 g de sodio al día (menos de 5 g de sal). La mayor parte no viene del salero sino de alimentos procesados, embutidos, conservas y precocinados.</p>
+            <p><strong>Potasio: aumenta el consumo.</strong> Frutas (plátano, kiwi, naranja), verduras de hoja verde, legumbres, frutos secos, patata, aguacate.</p>
+            <p><strong>Ejercicio aeróbico y de fuerza.</strong> Al menos 150 minutos de aeróbico moderado a la semana más 2 sesiones de fuerza. Es uno de los mejores tratamientos disponibles.</p>
+            <p><strong>Alcohol: cero o mínimo.</strong> El alcohol eleva la tensión. Lo ideal es eliminarlo.</p>
+            <p><strong>Peso saludable.</strong> IMC menor de 25 kg/m² y perímetro de cintura adecuado (&lt; 94 cm en hombres, &lt; 80 cm en mujeres).</p>
         </div>
-    </section>
- 
-    <section class="section container">
-        <h2 class="section-title">Otros motivos de consulta</h2>
-        <div class="articles-grid">
-            <a href="/servicios/riesgo-cardiovascular-elche" class="article-card">
-                <span class="category-tag">Prevención</span>
-                <h3>Valoración de riesgo cardiovascular</h3>
-                <p>Optimización de salud con abordaje global: nutrición, ejercicio y prevención personalizada.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/motivos/palpitaciones-elche" class="article-card">
-                <span class="category-tag">Motivo de consulta</span>
-                <h3>Palpitaciones</h3>
-                <p>Qué son, cuándo preocuparse y cómo se estudian las palpitaciones cardíacas.</p>
-                <span class="read-more">Ver más →</span>
-            </a>
-            <a href="/motivos/dolor-toracico-elche" class="article-card">
-                <span class="category-tag">Motivo de consulta</span>
-                <h3>Dolor en el pecho</h3>
-                <p>Cuándo consultar, signos de alarma y qué características son importantes para la valoración.</p>
-                <span class="read-more">Ver más →</span>
-            </a>
+
+        <div class="info-card" style="margin-bottom: 20px;">
+            <h3>La dieta DASH: el patrón alimentario más efectivo</h3>
+            <p>La dieta DASH (Dietary Approaches to Stop Hypertension) es el patrón con mayor evidencia en reducción de presión arterial. Basada en frutas, verduras, cereales integrales, legumbres, pescado y lácteos bajos en grasa, y reducción de sal, carnes rojas y procesados. Puede reducir la presión sistólica hasta 10–12 mmHg, comparable al efecto de algunos fármacos.</p>
+            <p><a href="/articulos/dieta-dash.html" style="color: var(--rojo); font-weight: 600;">Leer artículo completo sobre dieta DASH →</a></p>
         </div>
-    </section>
- 
-    <footer>
-        <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <p style="font-size: 0.85rem; color: #666; margin: 8px 0 18px;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
-            <div class="footer-links">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/legal/aviso-legal.html">Aviso Legal</a>
-                <a href="/legal/privacidad.html">Privacidad</a>
-                <a href="/legal/cookies.html">Cookies</a>
-            </div>
-            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+
+        <h2 class="section-title">Tratamiento farmacológico</h2>
+        <p>Cuando los hábitos no son suficientes, es necesario tratamiento farmacológico. No significa fracaso: significa que tu hipertensión necesita tratamiento médico para proteger tu corazón, arterias, riñones y cerebro. Existen múltiples fármacos; el médico elegirá el más adecuado según tus características.</p>
+        <p>Tomar medicación no significa que todo esté controlado. Hay que seguir midiendo la tensión regularmente y ajustar el tratamiento según la evolución. No des por hecho que, por tomar pastillas, tu tensión está bien. Compruébalo.</p>
+
+        <h2 class="section-title">¿Cuándo consultar al cardiólogo?</h2>
+        <p>Consulta si tus medidas en casa son persistentemente ≥ 140/90 mmHg, si tienes factores de riesgo cardiovascular asociados, si ya estás en tratamiento pero las medidas siguen siendo altas, o si tus valores están en el rango de presión elevada (120–139 / 70–89 mmHg). En ese rango aún no hay hipertensión establecida, pero es el momento de actuar.</p>
+        <p>La consulta cardiológica permite valorar el riesgo cardiovascular global, realizar un estudio completo (ECG, ecocardiograma, analítica) y diseñar un plan personalizado de prevención y tratamiento.</p>
+
+        <h2 class="section-title">Más sobre hipertensión arterial</h2>
+        <div class="info-card" style="margin-bottom: 20px;">
+            <h3>📸 Cómo medir correctamente la tensión en casa</h3>
+            <p>Resumen visual con todos los detalles sobre la técnica correcta:</p>
+            <p><a href="https://www.instagram.com/p/DTvkfAyCE5m/" target="_blank" style="color: var(--rojo); font-weight: 600;">Ver guía en Instagram →</a></p>
         </div>
-    </footer>
- 
+        <div class="info-card" style="margin-bottom: 20px;">
+            <h3>📸 ¿Está bien tu presión arterial?</h3>
+            <p>Valores de referencia y cuándo preocuparse:</p>
+            <p><a href="https://www.instagram.com/p/DTqdYtMiHKC/" target="_blank" style="color: var(--rojo); font-weight: 600;">Ver post en Instagram →</a></p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section bg-light cta-section">
+    <div class="container">
+        <h2 class="section-title">¿Tensión arterial elevada?</h2>
+        <p class="lead">Consulta cardiológica en Elche. Valoración completa, plan personalizado de prevención y tratamiento.</p>
+        <div class="cta-group">
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
+            <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
+        </div>
+    </div>
+</section>
+
+<section class="section container">
+    <h2 class="section-title">Otros motivos de consulta</h2>
+    <div class="articles-grid">
+        <a href="/servicios/riesgo-cardiovascular-elche" class="article-card">
+            <span class="category-tag">Prevención</span>
+            <h3>Valoración de riesgo cardiovascular</h3>
+            <p>Abordaje global con nutrición, ejercicio y prevención personalizada.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/motivos/palpitaciones-elche" class="article-card">
+            <span class="category-tag">Motivo de consulta</span>
+            <h3>Palpitaciones</h3>
+            <p>Qué son, cuándo preocuparse y cómo se estudian.</p>
+            <span class="read-more">Ver más →</span>
+        </a>
+        <a href="/motivos/colesterol-alto-elche" class="article-card">
+            <span class="category-tag">Motivo de consulta</span>
+            <h3>Colesterol alto</h3>
+            <p>Cómo interpretar tu analítica, objetivos según tu riesgo y prevención.</p>
+            <span class="read-more">Ver más →</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
+        </div>
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>
- 
