@@ -4,226 +4,539 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cardiolopezclemente.com/motivos/mareo-sincope-elche" />
- 
+
     <title>Mareo y Síncope: Cuándo Preocuparse | Cardiólogo Elche</title>
     <meta name="description" content="Mareo y síncope: qué son, cuándo consultar y cómo se estudian. Información clara del cardiólogo en Elche.">
- 
+
     <meta property="og:title" content="Mareo y Síncope: Cuándo Consultar · Dr. López Clemente">
     <meta property="og:description" content="Mareo, presíncope y síncope: diferencias, causas y cuándo requiere valoración cardiológica.">
     <meta property="og:url" content="https://cardiolopezclemente.com/motivos/mareo-sincope-elche">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://cardiolopezclemente.com/img/perfil.webp">
- 
+
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
       "name": "Mareo y síncope: cuándo consultar",
       "description": "Información médica sobre mareo, presíncope y síncope: diferencias, causas y cuándo requiere valoración.",
+      "author": {"@type": "Physician", "name": "Dr. José Carlos López Clemente"},
       "medicalAudience": ["Patient"],
-      "about": {
-        "@type": "MedicalCondition",
-        "name": "Síncope"
-      }
+      "about": {"@type": "MedicalCondition", "name": "Síncope"}
     }
     </script>
+
+    <style>
+        /* ── Imagen de cabecera ── */
+        .motivo-img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-lg);
+            display: block;
+            margin-bottom: 60px;
+        }
+
+        /* ── Tabla comparativa 3 conceptos ── */
+        .comparativa {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--gris-200);
+            margin: 28px 0 40px;
+        }
+
+        .comp-header {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1fr;
+            background: var(--negro);
+        }
+
+        .comp-header span {
+            padding: 13px 18px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.65);
+        }
+
+        .comp-fila {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1fr;
+            border-bottom: 1px solid var(--gris-200);
+            transition: background 0.15s ease;
+        }
+
+        .comp-fila:last-child { border-bottom: none; }
+        .comp-fila:nth-child(even) { background: var(--crema); }
+        .comp-fila:hover { background: var(--gris-100); }
+
+        .comp-cell {
+            padding: 15px 18px;
+            font-size: 0.93rem;
+            line-height: 1.5;
+            color: var(--gris-700);
+            border-right: 1px solid var(--gris-200);
+        }
+
+        .comp-cell:last-child { border-right: none; }
+
+        .comp-label {
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--negro);
+            font-size: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-top: 5px;
+        }
+
+        .badge-verde { background: #e8f7ef; color: #1a7a45; }
+        .badge-amarillo { background: #fef6e0; color: #9a6500; }
+        .badge-rojo { background: #fde8e8; color: #9b1515; }
+
+        @media (max-width: 640px) {
+            .comp-header { grid-template-columns: 1fr; }
+            .comp-header span:not(:first-child) { display: none; }
+            .comp-fila { grid-template-columns: 1fr; }
+            .comp-cell { border-right: none; border-bottom: 1px solid var(--gris-200); padding: 10px 16px; }
+            .comp-cell:last-child { border-bottom: none; }
+        }
+
+        /* ── Signos de alarma (igual que palpitaciones) ── */
+        .alarma-lista {
+            border: 1.5px solid #fde0e0;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 28px 0 36px;
+            background: #fff8f8;
+        }
+
+        .alarma-header {
+            background: var(--rojo);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .alarma-header span {
+            font-weight: 600;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--blanco);
+        }
+
+        .alarma-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 16px 24px;
+            border-bottom: 1px solid #fde0e0;
+        }
+
+        .alarma-item:last-child { border-bottom: none; }
+
+        .alarma-dot {
+            width: 8px; height: 8px;
+            background: var(--rojo);
+            border-radius: 50%;
+            margin-top: 7px;
+            flex-shrink: 0;
+        }
+
+        .alarma-item p { font-size: 0.95rem; color: var(--gris-700); margin: 0; line-height: 1.6; }
+        .alarma-item strong { color: var(--negro); }
+
+        /* ── Fases del síncope vasovagal ── */
+        .fases-wrap {
+            margin: 28px 0 36px;
+        }
+
+        .fases-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--gris-200);
+        }
+
+        .fase {
+            padding: 24px 20px;
+            border-right: 1px solid var(--gris-200);
+            background: var(--blanco);
+            position: relative;
+            transition: background 0.2s ease;
+        }
+
+        .fase:last-child { border-right: none; }
+        .fase:hover { background: var(--crema); }
+
+        /* Flecha entre fases */
+        .fase:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--rojo);
+            font-size: 1.1rem;
+            font-weight: 700;
+            z-index: 2;
+            background: var(--blanco);
+            padding: 2px 0;
+        }
+
+        .fase:hover::after { background: var(--crema); }
+
+        .fase-num {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--rojo);
+            margin-bottom: 8px;
+        }
+
+        .fase h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--negro);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .fase ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .fase ul li {
+            font-size: 0.85rem;
+            color: var(--gris-700);
+            padding: 3px 0;
+            line-height: 1.45;
+        }
+
+        .fase ul li::before {
+            content: '·';
+            color: var(--rojo);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        @media (max-width: 768px) {
+            .fases-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .fase:nth-child(2) { border-right: none; }
+            .fase:not(:last-child)::after { display: none; }
+            .fase:nth-child(1), .fase:nth-child(2) {
+                border-bottom: 1px solid var(--gris-200);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .fases-grid { grid-template-columns: 1fr; }
+            .fase { border-right: none !important; border-bottom: 1px solid var(--gris-200); }
+            .fase:last-child { border-bottom: none; }
+        }
+    </style>
 </head>
 <body>
- 
-    <nav>
-        <div class="nav-container container">
-            <a href="/" class="logo-area">
-                <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
-                <span class="logo-text">Dr. López Clemente</span>
-            </a>
-            <div class="menu">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/#servicios">Servicios</a>
-                <a href="/#blog">Blog</a>
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+
+<nav>
+    <div class="nav-container container">
+        <a href="/" class="logo-area">
+            <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+            <span class="logo-text">Dr. López Clemente</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú de navegación"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="menu" id="main-menu">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/#servicios">Servicios</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/#blog">Blog</a>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero hero-page">
+    <div class="hero-content container">
+        <p class="location-top">Cardiólogo en Elche · Clínica Elche Salud</p>
+        <h1>Mareo y Síncope:<br class="mobile-br"> <span class="text-red">Cuándo Consultar</span></h1>
+        <p class="hero-p">Diferencias · Causas · Estudio cardiológico</p>
+    </div>
+</header>
+
+<section class="section container">
+    <div class="service-content">
+
+        <!-- ══════════════════════════════
+             IMAGEN: ../img/mot-mareo.webp
+             Persona sentada, luz cálida, 800×380px
+             ══════════════════════════════ -->
+        <img src="../img/mot-mareo.webp"
+             alt="Valoración del síncope y mareo en consulta cardiológica en Elche"
+             class="motivo-img"
+             onerror="this.style.display='none';">
+
+        <!-- ══════════════════════════════════════
+             COMPONENTE: TABLA COMPARATIVA
+             Mareo / Presíncope / Síncope
+             ══════════════════════════════════════ -->
+        <h2 class="section-title">¿Qué son el mareo y el síncope?</h2>
+        <p>Mareo y síncope son síntomas relacionados pero distintos. Distinguirlos es importante porque no significan lo mismo y no se estudian igual.</p>
+
+        <div class="comparativa">
+            <div class="comp-header">
+                <span>Síntoma</span>
+                <span>Qué siente el paciente</span>
+                <span>¿Pérdida de consciencia?</span>
+                <span>Valoración</span>
+            </div>
+            <div class="comp-fila">
+                <div class="comp-cell">
+                    <span class="comp-label">Mareo</span><br>
+                    <span class="badge badge-verde">Leve</span>
+                </div>
+                <div class="comp-cell">Inestabilidad, aturdimiento, sensación de flotar o de "cabeza vacía". Siempre consciente.</div>
+                <div class="comp-cell">No</div>
+                <div class="comp-cell">Valoración programada si es persistente o limitante</div>
+            </div>
+            <div class="comp-fila">
+                <div class="comp-cell">
+                    <span class="comp-label">Presíncope</span><br>
+                    <span class="badge badge-amarillo">Moderado</span>
+                </div>
+                <div class="comp-cell">Sensación de desmayo inminente: visión oscura, sudoración, debilidad. No llega a perder el conocimiento.</div>
+                <div class="comp-cell">No (pero casi)</div>
+                <div class="comp-cell">Valoración programada, especialmente si se repite</div>
+            </div>
+            <div class="comp-fila">
+                <div class="comp-cell">
+                    <span class="comp-label">Síncope</span><br>
+                    <span class="badge badge-rojo">Requiere estudio</span>
+                </div>
+                <div class="comp-cell">Pérdida total y transitoria de la consciencia, caída al suelo, recuperación espontánea en segundos o minutos.</div>
+                <div class="comp-cell">Sí, completa</div>
+                <div class="comp-cell">Siempre requiere valoración médica</div>
             </div>
         </div>
-    </nav>
- 
-    <header class="hero hero-page">
-        <div class="hero-content container">
-            <p class="location-top">Cardiólogo en Elche · Clínica Elche Salud</p>
-            <h1>Mareo y Síncope:<br class="mobile-br"> <span class="text-red">Cuándo Consultar</span></h1>
-            <p class="hero-p">Diferencias · Causas · Estudio cardiológico</p>
+
+        <p>El síncope verdadero, especialmente si se repite o aparece en determinadas circunstancias, requiere siempre valoración médica para descartar causas que puedan ser importantes.</p>
+
+        <!-- ══════════════════════════════════
+             COMPONENTE: SIGNOS DE ALARMA
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Cuándo preocuparse? Signos de alarma</h2>
+        <p>No todos los síncopes requieren estudio urgente, pero hay situaciones que sí merecen valoración preferente:</p>
+
+        <div class="alarma-lista">
+            <div class="alarma-header">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span>Consulta con carácter preferente si…</span>
+            </div>
+            <div class="alarma-item">
+                <div class="alarma-dot"></div>
+                <p><strong>Síncope durante el esfuerzo físico.</strong> Puede indicar problemas cardíacos estructurales o arritmias que necesitan tratamiento.</p>
+            </div>
+            <div class="alarma-item">
+                <div class="alarma-dot"></div>
+                <p><strong>Síncope sin aviso previo (sin pródromos).</strong> Los síncopes bruscos, sin sensación previa, orientan a arritmias.</p>
+            </div>
+            <div class="alarma-item">
+                <div class="alarma-dot"></div>
+                <p><strong>Síncopes de repetición.</strong> Aunque cada episodio parezca benigno, la recurrencia merece estudio para identificar la causa.</p>
+            </div>
+            <div class="alarma-item">
+                <div class="alarma-dot"></div>
+                <p><strong>Antecedentes familiares de muerte súbita.</strong> Especialmente en menores de 50 años o con cardiopatías hereditarias conocidas.</p>
+            </div>
+            <div class="alarma-item">
+                <div class="alarma-dot"></div>
+                <p><strong>Síncope acompañado de palpitaciones, dolor torácico o disnea.</strong> La combinación de síntomas orienta a origen cardíaco.</p>
+            </div>
+            <div class="alarma-item">
+                <div class="alarma-dot"></div>
+                <p><strong>Síncope en paciente con cardiopatía conocida.</strong> Siempre requiere estudio.</p>
+            </div>
         </div>
-    </header>
- 
-    <section class="section container">
-        <div class="service-content">
-            <h2 class="section-title">¿Qué son el mareo y el síncope?</h2>
-            <p>Mareo y síncope son dos síntomas relacionados pero diferentes. Es importante distinguirlos porque no significan lo mismo y no se estudian de la misma forma.</p>
- 
-            <p><strong>Mareo</strong> es una sensación de inestabilidad, aturdimiento o desorientación. Puede describirse como sensación de vacío en la cabeza, sensación de flotar, inestabilidad al caminar, o simplemente "sentirse raro". El mareo no implica pérdida de conocimiento, la persona está consciente en todo momento aunque se sienta mal.</p>
- 
-            <p><strong>Presíncope</strong> es la sensación de desmayo inminente. La persona nota que va a perder el conocimiento: visión borrosa, sudoración, palidez, debilidad intensa, sensación de que todo se vuelve oscuro o lejano. Es como si fueras a desmayarte pero no llegas a hacerlo. Puedes sentarte o tumbarte a tiempo y recuperarte sin llegar a perder la consciencia.</p>
- 
-            <p><strong>Síncope</strong> es la pérdida transitoria y completa de la consciencia, con incapacidad para mantenerse de pie, seguida de recuperación espontánea y completa. Es el "desmayo" propiamente dicho. La persona pierde el conocimiento, cae al suelo si está de pie, y se recupera sola en segundos o pocos minutos sin necesidad de reanimación.</p>
- 
-            <p>La diferencia es importante porque el síncope verdadero, especialmente si se repite o si aparece en determinadas circunstancias, requiere siempre valoración médica para descartar causas que puedan ser importantes.</p>
- 
-            <h2 class="section-title">¿Por qué es importante estudiarlo?</h2>
-            <p>El síncope puede ser un síntoma benigno o puede ser la manifestación de un problema cardíaco o neurológico que requiere tratamiento. La mayoría de los síncopes son benignos, pero algunos pueden indicar arritmias, problemas estructurales del corazón, o enfermedades que aumentan el riesgo de síncopes futuros o incluso de muerte súbita.</p>
- 
-            <p>El mareo, aunque suele ser menos preocupante que el síncope, también puede tener múltiples causas: desde problemas del oído interno hasta bajadas de tensión, pasando por efectos secundarios de medicación o cuadros de ansiedad. Si el mareo es persistente, limitante, o se acompaña de otros síntomas, merece estudio.</p>
- 
-            <p>El objetivo de la valoración médica es identificar si hay una causa potencialmente grave que requiera tratamiento, tranquilizar cuando la causa es benigna, y prevenir nuevos episodios o complicaciones.</p>
- 
-            <h2 class="section-title">¿Cuándo preocuparse? Signos de alarma</h2>
-            <p>No todos los síncopes ni todos los mareos requieren estudio urgente, pero hay situaciones que sí merecen valoración preferente:</p>
- 
+
+        <h2 class="section-title">Causas del síncope y el mareo</h2>
+
+        <!-- ══════════════════════════════════════
+             COMPONENTE: FASES DEL SÍNCOPE VASOVAGAL
+             ══════════════════════════════════════ -->
+        <div class="info-card" style="margin-bottom: 20px;">
+            <h3>Síncope vasovagal: el más frecuente y benigno</h3>
+            <p>Es con diferencia la causa más frecuente de síncope. No indica enfermedad cardíaca ni aumenta el riesgo de problemas graves. Ocurre por una reacción exagerada del sistema nervioso que provoca una bajada brusca de tensión arterial y frecuencia cardíaca, reduciendo el flujo de sangre al cerebro.</p>
+        </div>
+
+        <div class="fases-wrap">
+            <div class="fases-grid">
+                <div class="fase">
+                    <div class="fase-num">Fase 1</div>
+                    <h4>Desencadenante</h4>
+                    <ul>
+                        <li>Estrés emocional intenso</li>
+                        <li>Ver sangre o agujas</li>
+                        <li>Permanecer de pie mucho tiempo</li>
+                        <li>Calor o ambientes cerrados</li>
+                        <li>Levantarse bruscamente</li>
+                        <li>Toser, orinar, defecar</li>
+                    </ul>
+                </div>
+                <div class="fase">
+                    <div class="fase-num">Fase 2</div>
+                    <h4>Pródromos</h4>
+                    <ul>
+                        <li>Visión borrosa o en negro</li>
+                        <li>Sudoración fría</li>
+                        <li>Palidez intensa</li>
+                        <li>Náuseas</li>
+                        <li>Sensación de calor o frío</li>
+                        <li>Sonidos que se apagan</li>
+                    </ul>
+                </div>
+                <div class="fase">
+                    <div class="fase-num">Fase 3</div>
+                    <h4>Síncope</h4>
+                    <ul>
+                        <li>Pérdida de consciencia</li>
+                        <li>Caída al suelo</li>
+                        <li>Duración: segundos</li>
+                        <li>Sin convulsiones</li>
+                        <li>Puede evitarse si se tumba a tiempo</li>
+                    </ul>
+                </div>
+                <div class="fase">
+                    <div class="fase-num">Fase 4</div>
+                    <h4>Recuperación</h4>
+                    <ul>
+                        <li>Rápida y completa</li>
+                        <li>Sin confusión prolongada</li>
+                        <li>Puede quedar sensación de cansancio</li>
+                        <li>Sin síntomas neurológicos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p>Si el patrón es claro — desencadenantes típicos, pródromos, recuperación rápida, sin síncope de esfuerzo, sin cardiopatía — es muy probable que se trate de un síncope vasovagal benigno. Aun así, una valoración médica inicial es recomendable para confirmarlo, especialmente en el primer episodio.</p>
+
+        <div class="info-card" style="margin-bottom: 20px;">
+            <h3>Causas cardíacas de síncope</h3>
+            <p>Menos frecuentes que el vasovagal pero más importantes. Las principales:</p>
             <ul class="service-list">
-                <li><strong>Síncope durante el esfuerzo físico:</strong> Si pierdes el conocimiento mientras haces ejercicio, mientras corres, subes escaleras, o realizas cualquier actividad física intensa, requiere estudio cardiológico. El síncope con el esfuerzo puede indicar problemas cardíacos estructurales o arritmias que necesitan tratamiento.</li>
-                <li><strong>Síncope sin aviso previo (sin pródromos):</strong> Si te desmayas de golpe, sin notar nada antes, sin sensación previa de mareo, sin sudoración, sin náuseas, requiere valoración. Los síncopes sin aviso pueden deberse a arritmias.</li>
-                <li><strong>Síncopes de repetición:</strong> Si has tenido varios episodios de síncope, aunque cada uno parezca benigno, merece estudio para identificar la causa y evitar nuevos episodios.</li>
-                <li><strong>Antecedentes familiares de muerte súbita:</strong> Si en tu familia ha habido casos de muerte súbita en personas jóvenes, o si hay antecedentes de enfermedades cardíacas hereditarias, cualquier síncope requiere estudio detallado.</li>
-                <li><strong>Síncope asociado a otros síntomas:</strong> Si el síncope se acompaña de palpitaciones intensas antes o después del desmayo, si se acompaña de dolor en el pecho, si hay dificultad respiratoria importante, o si tras el síncope hay confusión prolongada o síntomas neurológicos, requiere valoración urgente.</li>
-                <li><strong>Síncope en persona mayor con enfermedad cardíaca conocida:</strong> Si ya tienes diagnosticada una enfermedad del corazón y sufres un síncope, debe estudiarse.</li>
+                <li><strong>Arritmias:</strong> El corazón va demasiado rápido, demasiado lento o de forma irregular. Pueden producir síncope brusco sin aviso o con palpitaciones previas.</li>
+                <li><strong>Estenosis aórtica:</strong> Estrechamiento de la válvula aórtica que dificulta la salida de sangre. Puede causar síncope con el esfuerzo.</li>
+                <li><strong>Miocardiopatía hipertrófica:</strong> Engrosamiento anormal del músculo cardíaco. Puede causar arritmias y síncope, especialmente con el ejercicio.</li>
             </ul>
- 
-            <p>Si presentas alguna de estas situaciones, consulta. Aunque muchos síncopes resulten ser benignos, es importante descartarlo mediante estudio médico.</p>
- 
-            <h2 class="section-title">Causas del síncope y el mareo</h2>
-            <p>El síncope y el mareo pueden tener múltiples causas. Algunas son benignas y no requieren tratamiento específico, otras necesitan estudio y manejo especializado.</p>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Síncope vasovagal: el más frecuente y benigno</h3>
-                <p>El síncope vasovagal, también llamado síncope neurocardiogénico o desmayo común, es con diferencia la causa más frecuente de síncope. Es un síncope benigno, no indica enfermedad cardíaca ni aumenta el riesgo de problemas graves. Ocurre por una reacción exagerada del sistema nervioso que provoca una bajada brusca de la tensión arterial y de la frecuencia cardíaca, lo que reduce el flujo de sangre al cerebro y produce el desmayo.</p>
- 
-                <p><strong>Cómo se presenta el síncope vasovagal:</strong> Suele tener desencadenantes claros y pródromos característicos. Los desencadenantes típicos son situaciones de estrés emocional intenso (ver sangre, recibir una mala noticia, dolor intenso, miedo, situaciones angustiantes), permanecer de pie mucho tiempo sin moverse (especialmente en ambientes calurosos o cerrados), levantarse bruscamente, o maniobras que aumentan la presión en el pecho como toser, orinar o defecar.</p>
- 
-                <p><strong>Pródromos del síncope vasovagal:</strong> Antes del desmayo, la persona suele notar síntomas de aviso: visión borrosa o visión de puntos negros, sudoración fría, palidez, náuseas, sensación de calor o de frío, debilidad intensa, sensación de que todo se vuelve lejano o que los sonidos se apagan. Estos síntomas duran segundos o uno o dos minutos antes de que se produzca la pérdida de conocimiento. Si la persona se sienta o se tumba a tiempo, puede evitar el desmayo completo.</p>
- 
-                <p><strong>Recuperación del síncope vasovagal:</strong> La recuperación es rápida y completa. En pocos segundos o minutos la persona está consciente y orientada. Puede quedar con sensación de cansancio o debilidad durante un rato, pero no hay confusión prolongada ni síntomas neurológicos.</p>
- 
-                <p><strong>Por qué es importante reconocer el síncope vasovagal:</strong> Porque es benigno. Si el patrón es claro (desencadenantes típicos, pródromos, recuperación rápida, ausencia de síntomas durante el ejercicio, sin antecedentes de enfermedad cardíaca), es muy probable que se trate de un síncope vasovagal y no requiera estudios extensos ni tratamiento específico más allá de medidas generales para prevenir nuevos episodios: evitar desencadenantes, mantener buena hidratación, no levantarse bruscamente, sentarse o tumbarse si aparecen los síntomas de aviso.</p>
- 
-                <p>Aun así, incluso cuando el patrón es muy sugestivo de síncope vasovagal, es recomendable una valoración médica inicial para confirmarlo y descartar otras causas, especialmente si es el primer episodio o si hay dudas.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Causas cardíacas de síncope</h3>
-                <p>El síncope de origen cardíaco es menos frecuente que el vasovagal, pero es más preocupante porque puede indicar problemas que requieren tratamiento. Las principales causas cardíacas son:</p>
- 
-                <p><strong>Arritmias:</strong> Alteraciones del ritmo cardíaco que hacen que el corazón vaya demasiado rápido, demasiado lento, o de forma irregular, reduciendo el flujo de sangre al cerebro. Pueden producir síncope de forma brusca, sin aviso previo, o con palpitaciones antes del desmayo.</p>
- 
-                <p><strong>Estenosis aórtica:</strong> Estrechamiento de la válvula aórtica que dificulta la salida de sangre del corazón. Puede causar síncope con el esfuerzo físico.</p>
- 
-                <p><strong>Miocardiopatía hipertrófica:</strong> Engrosamiento anormal del músculo cardíaco que puede dificultar el llenado del corazón y provocar arritmias. Puede causar síncope, especialmente con el ejercicio.</p>
- 
-                <p>Estas causas cardíacas son menos frecuentes pero requieren estudio y tratamiento específico. Por eso es importante la valoración médica cuando el síncope se presenta con características que no son típicas de síncope vasovagal.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Síncope ortostático (hipotensión ortostática)</h3>
-                <p>Ocurre por una bajada excesiva de la tensión arterial al ponerse de pie. Normalmente, cuando te levantas, el cuerpo ajusta rápidamente la tensión arterial para mantener el flujo de sangre al cerebro. Si este mecanismo falla, la tensión baja demasiado al levantarte y puedes tener mareo o síncope.</p>
-                <p>Es más frecuente en personas mayores, en personas que toman medicación para la tensión arterial o diuréticos, en situaciones de deshidratación, o tras reposo prolongado en cama. Suele presentarse al levantarse de la cama o de una silla, y mejora al volver a sentarse o tumbarse.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Otras causas</h3>
-                <p>Existen otras causas menos frecuentes de síncope: problemas neurológicos (aunque la mayoría de los problemas neurológicos no causan síncope verdadero sino otros tipos de pérdida de conocimiento), hipoglucemia en personas con diabetes, anemia severa, o efectos secundarios de medicación.</p>
-            </div>
- 
-            <h2 class="section-title">El mareo inespecífico: frecuente, benigno, pero difícil de diagnosticar</h2>
-            <p>Muchas personas consultan por mareo que no encaja en ninguna de las categorías anteriores. Es un mareo vago, difícil de describir, que va y viene, que no se asocia a ningún desencadenante claro, que no llega a ser presíncope ni síncope, pero que resulta molesto.</p>
- 
-            <p>Este tipo de mareo inespecífico es muy frecuente. Puede deberse a múltiples causas: cuadros de tensión emocional o ansiedad, contracturas cervicales, problemas del oído interno leves, efectos de medicación, o simplemente no tener una causa clara identificable. En la mayoría de los casos, no traduce un problema grave ni tiene riesgo para la salud.</p>
- 
-            <p>El problema del mareo inespecífico es que puede ser difícil de diagnosticar. A veces, tras un estudio completo, no se encuentra una causa concreta. Esto no significa que el mareo no sea real ni que sea imaginario. Significa que no hay una enfermedad grave detrás y que probablemente se trata de un cuadro benigno multifactorial.</p>
- 
-            <p>Ante un mareo inespecífico, es importante descartar causas que requieran tratamiento (problemas cardíacos, alteraciones del equilibrio, efectos de medicación), tranquilizar al paciente cuando el estudio es normal, y en algunos casos tratar de forma sintomática o con medidas generales aunque no se identifique una causa única.</p>
- 
-            <h2 class="section-title">¿Cómo se estudia el mareo y el síncope?</h2>
-            <p>El estudio del mareo y el síncope se basa en la historia clínica detallada, la exploración física y pruebas complementarias dirigidas según la sospecha.</p>
- 
-            <p><strong>La historia clínica es lo más importante.</strong> La descripción detallada de lo que ha ocurrido es fundamental para orientar la causa. Es importante saber cómo fue el episodio, qué estabas haciendo cuando ocurrió, si hubo desencadenantes, si tuviste síntomas de aviso y cuáles fueron, cuánto duró el episodio, cómo fue la recuperación, si había testigos y qué vieron, si has tenido episodios previos similares, qué medicación tomas, si tienes antecedentes de enfermedad cardíaca o familiar de muerte súbita.</p>
- 
-            <p>Una entrevista detallada con un profesional que pueda valorar toda esta información en conjunto es el primer paso del estudio y el más valioso. En muchos casos, la historia clínica por sí sola permite identificar si se trata de un síncope vasovagal benigno, un síncope ortostático, o si hay características que sugieren causa cardíaca y requieren más estudio.</p>
- 
-            <p><strong>Exploración física:</strong> Incluye la toma de tensión arterial y frecuencia cardíaca en diferentes posiciones (tumbado, sentado, de pie) para detectar hipotensión ortostática, auscultación cardíaca, exploración neurológica básica.</p>
- 
-            <p><strong>Electrocardiograma (ECG):</strong> Es la prueba básica en todo síncope. Detecta arritmias, alteraciones de la conducción cardíaca, signos de cardiopatía estructural, o patrones que sugieran mayor riesgo de arritmias graves. Es una prueba rápida, sencilla y muy informativa.</p>
- 
-            <p><strong>Según la sospecha clínica, pueden ser necesarias otras pruebas:</strong></p>
- 
-            <p><strong>Ecocardiograma Doppler:</strong> Valora la estructura y función del corazón. Detecta problemas de válvulas (como estenosis aórtica), miocardiopatías, alteraciones de la función de contracción. Es una prueba fundamental si se sospecha causa cardíaca estructural.</p>
- 
-            <p><strong>Holter de ECG:</strong> Monitorización del ritmo cardíaco durante 24 horas o más. Detecta arritmias que pueden no aparecer en el ECG de reposo. Útil cuando se sospecha que el síncope puede deberse a arritmias intermitentes.</p>
- 
-            <p><strong>Otras pruebas según la sospecha:</strong> Mesa basculante (para confirmar síncope vasovagal en casos dudosos o recurrentes), prueba de esfuerzo (si el síncope ocurrió con el ejercicio), estudio electrofisiológico (en casos de sospecha de arritmias graves), estudio neurológico (si hay síntomas neurológicos asociados), analítica de sangre (para descartar anemia, alteraciones electrolíticas, hipoglucemia).</p>
- 
-            <p>El estudio se personaliza según las características de cada caso. No todos los síncopes requieren todas las pruebas. La clave es una buena historia clínica que permita dirigir el estudio de forma eficiente.</p>
- 
-            <h2 class="section-title">¿Cuándo consultar al cardiólogo?</h2>
-            <p>Debes consultar si has tenido un síncope (pérdida de conocimiento), especialmente si fue durante el ejercicio, si fue sin aviso previo, si se ha repetido, si tienes enfermedad cardíaca conocida o antecedentes familiares de muerte súbita o enfermedad cardíaca hereditaria.</p>
- 
-            <p>Debes consultar también si tienes episodios de presíncope recurrentes (sensación de desmayo inminente que no llega a producirse pero que se repite), si el mareo es persistente y limitante, si el mareo se acompaña de palpitaciones, dolor en el pecho, o dificultad respiratoria, o si tienes dudas sobre si lo que has experimentado requiere estudio.</p>
- 
-            <p>Aunque muchos síncopes y mareos resulten ser benignos, solo una valoración médica puede confirmarlo y descartar causas que requieran tratamiento. Es mejor consultar y tranquilizarse que dejar pasar un síntoma que pueda ser importante.</p>
- 
-            <p>La consulta cardiológica permite valorar el episodio mediante historia clínica detallada, exploración física, ECG, y decidir si son necesarias más pruebas o si el cuadro es compatible con síncope vasovagal benigno que no requiere estudios extensos.</p>
- 
-            <p>La consulta se realiza en <strong>Clínica Elche Salud</strong>, con el tiempo necesario para escuchar el relato detallado de lo que ha ocurrido, realizar las pruebas iniciales, y explicar qué significa el episodio, qué riesgo conlleva, y qué estudio o seguimiento es necesario.</p>
+            <p>Estas causas requieren estudio y tratamiento específico.</p>
         </div>
-    </section>
- 
-    <section class="section bg-light cta-section">
-        <div class="container">
-            <h2 class="section-title">¿Has tenido un desmayo o mareo?</h2>
-            <p class="lead">Consulta cardiológica en Elche. Valoración del episodio, estudio con ECG, ecocardiograma y pruebas necesarias según tu caso.</p>
-            <div class="cta-group">
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
-                <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
-            </div>
+
+        <div class="info-card" style="margin-bottom: 20px;">
+            <h3>Síncope ortostático (hipotensión ortostática)</h3>
+            <p>Bajada excesiva de la tensión arterial al ponerse de pie. El cuerpo no ajusta correctamente la tensión al levantarse, el flujo al cerebro cae y aparece mareo o síncope. Más frecuente en personas mayores, con medicación antihipertensiva o diuréticos, o en estados de deshidratación. Mejora al volver a sentarse o tumbarse.</p>
         </div>
-    </section>
- 
-    <section class="section container">
-        <h2 class="section-title">Otros motivos de consulta</h2>
-        <div class="articles-grid">
-            <a href="/motivos/palpitaciones-elche" class="article-card">
-                <span class="category-tag">Motivo de consulta</span>
-                <h3>Palpitaciones</h3>
-                <p>Qué son, cuándo preocuparse y cómo se estudian las palpitaciones cardíacas.</p>
-                <span class="read-more">Ver más →</span>
-            </a>
-            <a href="/motivos/dolor-toracico-elche" class="article-card">
-                <span class="category-tag">Motivo de consulta</span>
-                <h3>Dolor en el pecho</h3>
-                <p>Cuándo consultar, signos de alarma y qué características son importantes para la valoración.</p>
-                <span class="read-more">Ver más →</span>
-            </a>
-            <a href="/motivos/hipertension-arterial-elche" class="article-card">
-                <span class="category-tag">Motivo de consulta</span>
-                <h3>Hipertensión arterial</h3>
-                <p>Cómo medir correctamente la tensión en casa, valores normales y tratamiento.</p>
-                <span class="read-more">Ver más →</span>
-            </a>
+
+        <div class="info-card" style="margin-bottom: 28px;">
+            <h3>Mareo inespecífico: frecuente, benigno, difícil de diagnosticar</h3>
+            <p>Muchas personas consultan por un mareo vago, difícil de describir, sin desencadenante claro, que no llega a ser presíncope. Puede deberse a ansiedad, contracturas cervicales, problemas del oído interno leves, efectos de medicación o simplemente no tiene causa única identificable. En la mayoría de casos, no traduce un problema grave.</p>
+            <p>Ante un mareo inespecífico, el objetivo es descartar causas que requieran tratamiento y tranquilizar cuando el estudio es normal.</p>
         </div>
-    </section>
- 
-    <footer>
-        <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <p style="font-size: 0.85rem; color: #666; margin: 8px 0 18px;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
-            <div class="footer-links">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/legal/aviso-legal.html">Aviso Legal</a>
-                <a href="/legal/privacidad.html">Privacidad</a>
-                <a href="/legal/cookies.html">Cookies</a>
-            </div>
-            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+
+        <h2 class="section-title">¿Cómo se estudia?</h2>
+        <p><strong>La historia clínica es lo más importante.</strong> Cómo fue el episodio, qué estabas haciendo, si hubo pródromos y cuáles, cuánto duró, cómo fue la recuperación, si hubo testigos, si hay episodios previos, qué medicación tomas, antecedentes de cardiopatía o muerte súbita familiar. Una buena historia clínica en muchos casos ya orienta la causa.</p>
+
+        <ul class="service-list">
+            <li><strong>Exploración física:</strong> Tensión arterial y frecuencia cardíaca en diferentes posiciones (tumbado, sentado, de pie) para detectar hipotensión ortostática. Auscultación cardíaca y exploración neurológica básica.</li>
+            <li><strong>Electrocardiograma (ECG):</strong> Prueba básica en todo síncope. Detecta arritmias, alteraciones de conducción, signos de cardiopatía estructural o patrones de riesgo.</li>
+            <li><strong>Ecocardiograma Doppler:</strong> Si se sospecha causa cardíaca estructural. Valora válvulas, función y tamaño de cavidades.</li>
+            <li><strong>Holter de ECG:</strong> Monitorización 24 horas para detectar arritmias intermitentes cuando se sospecha causa arrítmica.</li>
+            <li><strong>Otras pruebas según sospecha:</strong> Mesa basculante (para confirmar síncope vasovagal en casos recurrentes o dudosos), prueba de esfuerzo (si el síncope ocurrió con el ejercicio), estudio electrofisiológico (sospecha de arritmias graves), analítica (anemia, electrolitos, glucemia, función tiroidea).</li>
+        </ul>
+
+        <p>El estudio se personaliza según las características de cada caso. No todos los síncopes requieren todas las pruebas. Una buena historia clínica dirige el estudio de forma eficiente.</p>
+
+        <h2 class="section-title">¿Cuándo consultar al cardiólogo?</h2>
+        <p>Consulta si has tenido un síncope — especialmente si fue durante el ejercicio, sin aviso, o si se ha repetido. También si tienes presíncopes recurrentes, si el mareo es persistente o limitante, o si se acompaña de palpitaciones, dolor torácico o disnea.</p>
+        <p>Aunque muchos síncopes resultan ser benignos, solo una valoración médica puede confirmarlo y descartar causas que requieran tratamiento. La consulta en Clínica Elche Salud permite valorar el episodio con historia clínica detallada, ECG y pruebas necesarias según cada caso.</p>
+
+    </div>
+</section>
+
+<section class="section bg-light cta-section">
+    <div class="container">
+        <h2 class="section-title">¿Has tenido un desmayo o mareo?</h2>
+        <p class="lead">Consulta cardiológica en Elche. Valoración del episodio, ECG, ecocardiograma y pruebas necesarias según tu caso.</p>
+        <div class="cta-group">
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
+            <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
         </div>
-    </footer>
- 
+    </div>
+</section>
+
+<section class="section container">
+    <h2 class="section-title">Otros motivos de consulta</h2>
+    <div class="articles-grid">
+        <a href="/motivos/palpitaciones-elche" class="article-card">
+            <span class="category-tag">Motivo de consulta</span>
+            <h3>Palpitaciones</h3>
+            <p>Qué son, cuándo preocuparse y cómo se estudian las palpitaciones cardíacas.</p>
+            <span class="read-more">Ver más →</span>
+        </a>
+        <a href="/motivos/dolor-toracico-elche" class="article-card">
+            <span class="category-tag">Motivo de consulta</span>
+            <h3>Dolor en el pecho</h3>
+            <p>Cuándo consultar, signos de alarma y qué características son importantes para la valoración.</p>
+            <span class="read-more">Ver más →</span>
+        </a>
+        <a href="/motivos/hipertension-arterial-elche" class="article-card">
+            <span class="category-tag">Motivo de consulta</span>
+            <h3>Hipertensión arterial</h3>
+            <p>Cómo medir correctamente la tensión en casa, valores normales y tratamiento.</p>
+            <span class="read-more">Ver más →</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
+        </div>
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>
- 
