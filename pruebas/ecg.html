@@ -68,7 +68,6 @@
             color: var(--rojo);
         }
 
-        /* Grid qué evalúa */
         .evalua-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -87,34 +86,90 @@
             transition: var(--transition-fast);
         }
 
-        .evalua-item:hover {
-            border-color: var(--rojo-medium);
-            background: var(--crema);
+        .evalua-item:hover { border-color: var(--rojo-medium); background: var(--crema); }
+
+        .evalua-dot { width: 8px; height: 8px; background: var(--rojo); border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+
+        .evalua-item strong { display: block; color: var(--negro); font-size: 0.92rem; margin-bottom: 3px; }
+        .evalua-item span { font-size: 0.87rem; color: var(--gris-700); line-height: 1.5; }
+
+        @media (max-width: 560px) { .evalua-grid { grid-template-columns: 1fr; } }
+
+        /* ── Bloque Instagram destacado ── */
+        .ig-promo {
+            background: var(--negro);
+            border-radius: var(--radius-lg);
+            padding: 40px 44px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin: 60px 0;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .evalua-dot {
-            width: 8px; height: 8px;
-            background: var(--rojo);
-            border-radius: 50%;
-            margin-top: 6px;
+        .ig-promo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 48px rgba(15,15,15,0.15);
+        }
+
+        .ig-promo-icon {
             flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .evalua-item strong {
+        .ig-promo-icon svg { width: 32px; height: 32px; color: white; }
+
+        .ig-promo-body { flex: 1; }
+
+        .ig-promo-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 8px;
             display: block;
-            color: var(--negro);
+        }
+
+        .ig-promo-title {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--blanco);
+            margin-bottom: 8px;
+            letter-spacing: -0.015em;
+            line-height: 1.2;
+        }
+
+        .ig-promo-desc {
             font-size: 0.92rem;
-            margin-bottom: 3px;
+            color: rgba(255,255,255,0.6);
+            margin: 0;
+            line-height: 1.55;
         }
 
-        .evalua-item span {
-            font-size: 0.87rem;
-            color: var(--gris-700);
-            line-height: 1.5;
+        .ig-promo-arrow {
+            flex-shrink: 0;
+            color: rgba(255,255,255,0.3);
+            font-size: 1.5rem;
+            transition: color 0.2s ease, transform 0.2s ease;
         }
 
-        @media (max-width: 560px) {
-            .evalua-grid { grid-template-columns: 1fr; }
+        .ig-promo:hover .ig-promo-arrow {
+            color: rgba(255,255,255,0.8);
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 600px) {
+            .ig-promo { flex-direction: column; gap: 20px; padding: 28px 24px; }
+            .ig-promo-arrow { display: none; }
         }
     </style>
 </head>
@@ -151,12 +206,8 @@
 <section class="section container">
     <div class="service-content">
 
-        <!-- ══════════════════════════════════
-             IMAGEN: ../img/prueba-ecg.webp
-             ECG.png → renombrar a prueba-ecg.webp
-             ══════════════════════════════════ -->
         <img src="../img/prueba-ecg.webp"
-             alt="Electrocardiógrafo con trazado ECG normal — prueba diagnóstica en Elche"
+             alt="Electrocardiógrafo con trazado ECG — prueba diagnóstica en Elche"
              class="prueba-img"
              onerror="this.style.display='none';">
 
@@ -222,8 +273,26 @@
         <p>El corazón funciona gracias a impulsos eléctricos que siguen un circuito específico. Primero se activan las aurículas —que recogen la sangre— y después los ventrículos, que la bombean al resto del cuerpo. El ECG captura este recorrido eléctrico latido a latido y permite detectar si el circuito funciona con normalidad o si hay alguna alteración en su origen, velocidad o propagación.</p>
 
         <h2 class="section-title">¿Cuándo se solicita?</h2>
-        <p>El ECG es la primera prueba que se realiza ante cualquier síntoma cardiovascular: palpitaciones, dolor en el pecho, mareo, síncope o disnea. También forma parte de cualquier valoración cardiológica de rutina, del seguimiento de enfermedades cardíacas conocidas y de la valoración preoperatoria en pacientes de riesgo.</p>
-        <p>En la consulta, el ECG se realiza en el mismo acto — los resultados están disponibles de inmediato y se explican en la misma visita.</p>
+        <p>Es la primera prueba ante cualquier síntoma cardiovascular: palpitaciones, dolor en el pecho, mareo, síncope o disnea. También forma parte de cualquier valoración cardiológica de rutina, del seguimiento de enfermedades cardíacas conocidas y de la valoración preoperatoria en pacientes de riesgo. En la consulta se realiza en el mismo acto y los resultados se explican de inmediato.</p>
+
+        <!-- ══════════════════════════════════
+             BLOQUE INSTAGRAM DESTACADO
+             ══════════════════════════════════ -->
+        <a href="https://www.instagram.com/p/DWmWTd0CKa-/" target="_blank" rel="noopener" class="ig-promo">
+            <div class="ig-promo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+            </div>
+            <div class="ig-promo-body">
+                <span class="ig-promo-label">@cardiolopezclemente · Instagram</span>
+                <div class="ig-promo-title">¿Sabes leer un electrocardiograma?</div>
+                <p class="ig-promo-desc">Post visual con todo lo que el cardiólogo analiza en un ECG — explicado de forma clara y con imágenes.</p>
+            </div>
+            <div class="ig-promo-arrow">→</div>
+        </a>
 
     </div>
 </section>
