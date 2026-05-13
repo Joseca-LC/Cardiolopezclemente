@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cardiolopezclemente.com/servicios/consulta-cardiologica-elche" />
- 
+
     <title>Consulta Cardiológica en Elche | Dr. López Clemente</title>
-    <meta name="description" content="Consulta de cardiología en Elche. Valoración integral del riesgo cardiovascular, prevención y tratamiento. Doctor en Ciencias de la Salud. Pide cita en Doctoralia.">
- 
+    <meta name="description" content="Consulta de cardiología en Elche. Valoración integral del riesgo cardiovascular, prevención y tratamiento personalizado. Dr. López Clemente en Clínica Elche Salud.">
+
     <meta property="og:title" content="Consulta Cardiológica en Elche · Dr. López Clemente">
     <meta property="og:description" content="Consulta presencial de cardiología en Elche. Valoración cardiovascular completa con enfoque preventivo y nutricional.">
     <meta property="og:url" content="https://cardiolopezclemente.com/servicios/consulta-cardiologica-elche">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://cardiolopezclemente.com/img/perfil.webp">
- 
+    <meta property="og:image" content="https://cardiolopezclemente.com/img/serv-consulta-1.webp">
+
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -33,140 +35,445 @@
         "addressLocality": "Elche",
         "addressRegion": "Alicante",
         "addressCountry": "ES"
-      },
-      "availableService": {
-        "@type": "MedicalProcedure",
-        "name": "Consulta cardiológica",
-        "procedureType": "Evaluación cardiovascular completa"
       }
     }
     </script>
+
+    <style>
+        /* ── Imagen banner ── */
+        .serv-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-lg);
+            display: block;
+        }
+
+        /* ── Grid foto + texto ── */
+        .foto-texto {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+            margin: 64px 0;
+        }
+
+        .foto-texto img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-md);
+        }
+
+        .foto-texto-body h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.8rem;
+            color: var(--negro);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .foto-texto-body p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--gris-700);
+            margin-bottom: 16px;
+        }
+
+        .foto-texto-body p:last-child { margin-bottom: 0; }
+
+        @media (max-width: 768px) {
+            .foto-texto { grid-template-columns: 1fr; gap: 30px; }
+            .foto-texto img { height: 260px; }
+        }
+
+        /* ── Grid indicaciones ── */
+        .indicaciones-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 28px 0 40px;
+        }
+
+        .indicacion-card {
+            background: var(--blanco);
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            padding: 22px 20px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .indicacion-card:hover {
+            border-color: var(--rojo-medium);
+            box-shadow: var(--sombra-sm);
+            transform: translateY(-2px);
+        }
+
+        .indicacion-icon {
+            width: 38px;
+            height: 38px;
+            background: var(--rojo-soft);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .indicacion-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--rojo);
+        }
+
+        .indicacion-card h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--negro);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .indicacion-card p {
+            font-size: 0.85rem;
+            color: var(--gris-700);
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        @media (max-width: 768px) {
+            .indicaciones-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .indicaciones-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Fases de la consulta (pasos numerados) ── */
+        .fases-lista {
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 28px 0 40px;
+        }
+
+        .fase-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            align-items: start;
+            border-bottom: 1px solid var(--gris-200);
+            background: var(--blanco);
+            transition: background 0.2s ease;
+        }
+
+        .fase-item:last-child { border-bottom: none; }
+        .fase-item:hover { background: var(--crema); }
+
+        .fase-num {
+            padding: 26px 0 26px 28px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--rojo);
+            line-height: 1;
+            opacity: 0.85;
+        }
+
+        .fase-body {
+            padding: 24px 28px 24px 0;
+            border-left: 1px solid var(--gris-200);
+        }
+
+        .fase-body h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: var(--negro);
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .fase-body p {
+            font-size: 0.96rem;
+            color: var(--gris-700);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 500px) {
+            .fase-item { grid-template-columns: 60px 1fr; }
+            .fase-num { padding: 20px 0 20px 20px; font-size: 1.6rem; }
+            .fase-body { padding: 20px 20px 20px 0; }
+        }
+
+        /* ── Razones destacadas ── */
+        .razones-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 28px 0 0;
+        }
+
+        .razon-card {
+            background: var(--crema);
+            border: 1px solid var(--gris-200);
+            border-left: 4px solid var(--rojo);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 24px;
+        }
+
+        .razon-card h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--negro);
+            margin-bottom: 10px;
+        }
+
+        .razon-card p {
+            font-size: 0.93rem;
+            color: var(--gris-700);
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 640px) {
+            .razones-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
- 
-    <nav>
-        <div class="nav-container container">
-            <a href="/" class="logo-area">
-                <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
-                <span class="logo-text">Dr. López Clemente</span>
-            </a>
-            <div class="menu">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/#servicios">Servicios</a>
-                <a href="/#blog">Blog</a>
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+
+<nav>
+    <div class="nav-container container">
+        <a href="/" class="logo-area">
+            <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+            <span class="logo-text">Dr. López Clemente</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú de navegación"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="menu" id="main-menu">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/#servicios">Servicios</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/#blog">Blog</a>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero hero-page">
+    <div class="hero-content container">
+        <p class="location-top">Elche · Clínica Elche Salud</p>
+        <h1>Consulta<br class="mobile-br"> <span class="text-red">Cardiológica</span></h1>
+        <p class="hero-p">Valoración cardiovascular integral · Prevención · Tratamiento</p>
+    </div>
+</header>
+
+<section class="section container">
+    <div class="service-content">
+
+        <!-- ══════════════════════════════════
+             IMAGEN 1: ../img/serv-consulta-1.webp
+             Escritorio con estetoscopio (consulta-3.jpeg)
+             ══════════════════════════════════ -->
+        <img src="../img/serv-consulta-1.webp"
+             alt="Consulta cardiológica en Elche — escritorio con estetoscopio y tensiómetro"
+             class="serv-img"
+             style="margin-bottom: 60px;"
+             onerror="this.style.display='none';">
+
+        <h2 class="section-title">¿En qué consiste?</h2>
+        <p>La consulta cardiológica es una valoración médica completa del sistema cardiovascular. El objetivo es conocer el estado de salud, detectar enfermedades y prevenirlas antes de que se desarrollen. Detectar y controlar los factores de riesgo antes de que causen daño, diseñar estrategias de prevención personalizadas y, cuando hay cardiopatía, ajustar el tratamiento de forma individualizada.</p>
+        <p>Cada consulta incluye historia clínica detallada, exploración física cardiovascular, análisis de pruebas previas y realización de ECG, ecocardiograma y otras pruebas cuando son necesarias. A partir de ahí se establece un diagnóstico, se estratifica el riesgo y se diseña un plan terapéutico que integra medicación, estilo de vida, nutrición y ejercicio.</p>
+
+        <!-- ══════════════════════════════════
+             GRID INDICACIONES (6 cards)
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Cuándo está indicada?</h2>
+
+        <div class="indicaciones-grid">
+
+            <div class="indicacion-card">
+                <div class="indicacion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <h4>Síntomas cardiovasculares</h4>
+                <p>Palpitaciones, dolor en el pecho, mareo, síncope, disnea o cansancio fuera de lo normal.</p>
+            </div>
+
+            <div class="indicacion-card">
+                <div class="indicacion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <h4>Factores de riesgo</h4>
+                <p>Hipertensión, colesterol elevado, diabetes, obesidad, tabaquismo o antecedentes familiares de cardiopatía.</p>
+            </div>
+
+            <div class="indicacion-card">
+                <div class="indicacion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                </div>
+                <h4>Diagnóstico reciente</h4>
+                <p>Cardiopatía isquémica, arritmias, insuficiencia cardíaca o valvulopatías recién diagnosticadas.</p>
+            </div>
+
+            <div class="indicacion-card">
+                <div class="indicacion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <h4>Seguimiento de cardiopatía</h4>
+                <p>Control evolutivo, ajuste de tratamiento o valoración de síntomas nuevos en cardiopatía conocida.</p>
+            </div>
+
+            <div class="indicacion-card">
+                <div class="indicacion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+                <h4>Segunda opinión</h4>
+                <p>Revisión de informes, aclaración de diagnósticos o valoración de alternativas terapéuticas.</p>
+            </div>
+
+            <div class="indicacion-card">
+                <div class="indicacion-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h4>Prevención en personas sanas</h4>
+                <p>Conocer el riesgo cardiovascular real con antecedentes familiares o interés en prevención activa.</p>
+            </div>
+
+        </div>
+
+        <!-- ══════════════════════════════════
+             FASES DE LA CONSULTA (pasos)
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Cómo es la consulta?</h2>
+        <p>La consulta presencial dura aproximadamente <strong>45–60 minutos</strong>, con el tiempo necesario para ti, sin prisa. Se estructura en cuatro fases:</p>
+
+        <div class="fases-lista">
+            <div class="fase-item">
+                <div class="fase-num">1</div>
+                <div class="fase-body">
+                    <h3>Historia clínica y motivo de consulta</h3>
+                    <p>Tiempo para entender qué te preocupa, revisar antecedentes personales y familiares, factores de riesgo, síntomas actuales y tratamiento previo. Es la parte más importante de la valoración — sin ella, las pruebas no tienen contexto.</p>
+                </div>
+            </div>
+            <div class="fase-item">
+                <div class="fase-num">2</div>
+                <div class="fase-body">
+                    <h3>Exploración física cardiovascular</h3>
+                    <p>Toma de tensión arterial, auscultación cardiopulmonar, valoración de pulsos periféricos y signos de insuficiencia cardíaca. Además de cualquier otro signo relevante que oriente el diagnóstico.</p>
+                </div>
+            </div>
+            <div class="fase-item">
+                <div class="fase-num">3</div>
+                <div class="fase-body">
+                    <h3>Pruebas complementarias</h3>
+                    <p>Revisamos y comentamos los resultados de pruebas previas (analítica, Holter, TAC, prueba de esfuerzo, cateterismo…). A continuación se realiza un <strong>electrocardiograma</strong> y un <strong>ecocardiograma</strong> para una valoración integral del corazón. Si faltan pruebas, se solicitan y se realizan.</p>
+                </div>
+            </div>
+            <div class="fase-item">
+                <div class="fase-num">4</div>
+                <div class="fase-body">
+                    <h3>Diagnóstico, plan terapéutico y seguimiento</h3>
+                    <p>Explicación clara del diagnóstico, estratificación del riesgo cardiovascular y diseño de un plan individualizado: tratamiento farmacológico si procede, modificación de estilo de vida, nutrición y calendario de seguimiento.</p>
+                </div>
             </div>
         </div>
-    </nav>
- 
-    <header class="hero hero-page">
-        <div class="hero-content container">
-            <p class="location-top">Elche · Clínica Elche Salud</p>
-            <h1>Consulta<br class="mobile-br"> <span class="text-red">Cardiológica</span></h1>
-            <p class="hero-p">Valoración cardiovascular integral · Prevención · Tratamiento</p>
-        </div>
-    </header>
- 
-    <section class="section container">
-        <div class="service-content">
-            <h2 class="section-title">¿En qué consiste?</h2>
-            <p>La consulta cardiológica es una valoración médica completa. El objetivo es conocer el estado de salud, detectar enfermedades y prevenirlas antes de que las haya. Queremos detectar y controlar los factores de riesgo antes de que causen daño, diseñar estrategias de prevención personalizadas y, cuando hay cardiopatía, ajustar el tratamiento de forma individualizada.</p>
-            
-            <p>Cada consulta incluye historia clínica detallada, exploración física cardiovascular, análisis de pruebas complementarias previas y realización de ECG, ecocardiograma y otras pruebas cuando sean necesarias. A partir de ahí se establece un diagnóstico, se estratifica el riesgo y se diseña un plan terapéutico que integra medicación, estilo de vida, nutrición y ejercicio.</p>
- 
-            <h2 class="section-title">¿Cuándo está indicada?</h2>
-            <p>Una consulta de cardiología está recomendada en situaciones como:</p>
-            <ul class="service-list">
-                <li>Síntomas cardiovasculares: palpitaciones, dolor torácico, mareo, síncope, disnea, cansancio anormal</li>
-                <li>Factores de riesgo: hipertensión arterial, colesterol alto, diabetes, obesidad, tabaquismo, antecedentes familiares de cardiopatía</li>
-                <li>Diagnóstico reciente de enfermedad cardiovascular: cardiopatía isquémica, arritmias, insuficiencia cardíaca, valvulopatías</li>
-                <li>Seguimiento de cardiopatía conocida: ajuste de tratamiento, control evolutivo, valoración de síntomas nuevos</li>
-                <li>Segunda opinión: revisión de informes, valoración de alternativas terapéuticas</li>
-                <li>Prevención en personas sanas con antecedentes familiares o interés en conocer su riesgo cardiovascular</li>
-            </ul>
- 
-            <h2 class="section-title">¿Cómo es la consulta?</h2>
-            <p>La consulta presencial tiene una duración aproximada de 45-60 minutos, sin prisa, con el tiempo necesario, para ti.</p>
-            
-            <p>Se estructura en cuatro fases:</p>
-            
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>1. Historia clínica y motivo de consulta</h3>
-                <p>Tiempo para entender qué te preocupa, revisar antecedentes personales y familiares, factores de riesgo, síntomas actuales y tratamiento previo. Es la parte más importante de la valoración.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>2. Exploración física cardiovascular</h3>
-                <p>Toma de tensión arterial, auscultación cardiopulmonar, valoración de pulsos periféricos y signos de insuficiencia cardíaca. Además de valorar cualquier otro signo relevante.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>3. Pruebas complementarias</h3>
-                <p>Valoramos y comentamos los resultados de pruebas previas (analítica, Holter, TAC, prueba de esfuerzo, cateterismo, etc.). A continuación, realizamos un electrocardiograma y un ecocardiograma para una valoración integral de tu corazón. Si faltan pruebas para completar el estudio, se solicitan y se realizan.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>4. Diagnóstico, plan terapéutico y seguimiento</h3>
-                <p>Explicación clara del diagnóstico, estratificación del riesgo cardiovascular y diseño de un plan individualizado que incluye tratamiento farmacológico (si procede), modificación de estilo de vida, nutrición y calendario de seguimiento.</p>
-            </div>
- 
-            <h2 class="section-title">Por qué en esta consulta</h2>
-            <p>Porque llevo a cabo un enfoque integral, dirigido a conocer y tratar el riesgo cardiovascular desde su causa, no solo desde su consecuencia. Como especialista en Cardiología, como dietista-nutricionista y como apasionado de la actividad física y del deporte, doy a estos aspectos la importancia que requieren. Esto significa que la consulta no se limita a ajustar fármacos, sino que integra nutrición, ejercicio y modificación de hábitos como herramientas terapéuticas de primera línea.</p>
- 
-            <p>Porque hago un esfuerzo por la actualización constante. Título de especialista, doctorado, másteres e investigación permanente respaldan cómo se dedica el máximo tiempo a conocer la mejor manera de actuar para tomar decisiones con rigor y criterio basado en la evidencia científica más reciente.</p>
- 
-            <p>La consulta se desarrolla en <strong>Clínica Elche Salud</strong>, con acceso directo a pruebas diagnósticas sin demoras ni derivaciones.</p>
-        </div>
-    </section>
- 
-    <section class="section bg-light cta-section">
-        <div class="container">
-            <h2 class="section-title">Reserva tu consulta</h2>
-            <p class="lead">Consulta presencial en Elche. Pide cita directamente a través de Doctoralia.</p>
-            <div class="cta-group">
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
-                <a href="/sobre-mi" class="btn-sub">Conoce mi trayectoria</a>
+
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     FOTO 2 + TEXTO "Por qué en esta consulta"
+     IMAGEN: ../img/serv-consulta-2.webp
+     Vista general de la sala (consulta-1.jpeg)
+     ══════════════════════════════════════════════ -->
+<section class="section bg-light">
+    <div class="container">
+        <div class="foto-texto">
+            <img src="../img/serv-consulta-2.webp"
+                 alt="Sala de consulta cardiológica en Clínica Elche Salud, Elche"
+                 onerror="this.style.display='none';">
+            <div class="foto-texto-body">
+                <h2 class="section-title" style="margin-bottom: 28px;">Por qué en esta consulta</h2>
+
+                <div class="razones-grid">
+                    <div class="razon-card">
+                        <h4>Enfoque integral</h4>
+                        <p>La consulta no se limita a ajustar fármacos. Integra nutrición, ejercicio y hábitos como herramientas terapéuticas de primera línea — porque el riesgo cardiovascular nace en el estilo de vida, no solo en la farmacia.</p>
+                    </div>
+                    <div class="razon-card">
+                        <h4>Formación dual</h4>
+                        <p>Especialista en Cardiología y graduado en Nutrición Humana y Dietética. Una combinación que permite abordar el riesgo cardiovascular desde su origen, no solo desde sus consecuencias.</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 24px; font-size: 0.97rem; color: var(--gris-700); line-height: 1.7;">La consulta se desarrolla en <strong>Clínica Elche Salud</strong>, con acceso directo a pruebas diagnósticas — ECG, ecocardiograma y Holter — sin demoras ni derivaciones.</p>
             </div>
         </div>
-    </section>
- 
-    <section class="section container">
-        <h2 class="section-title">Otros servicios</h2>
-        <div class="articles-grid">
-            <a href="/servicios/ecocardiograma-elche" class="article-card">
-                <span class="category-tag">Prueba diagnóstica</span>
-                <h3>Ecocardiograma Doppler</h3>
-                <p>Estudio de la estructura y función del corazón mediante ultrasonidos.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/servicios/holter-ecg-elche" class="article-card">
-                <span class="category-tag">Prueba diagnóstica</span>
-                <h3>Holter de ECG</h3>
-                <p>Monitorización cardíaca de 24-48 horas para detectar arritmias.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/sobre-mi" class="article-card">
-                <span class="category-tag">Sobre mí</span>
-                <h3>Formación y trayectoria</h3>
-                <p>Doctor en Ciencias de la Salud, especialista en Cardiología y graduado en Nutrición.</p>
-                <span class="read-more">Conocer más →</span>
-            </a>
+    </div>
+</section>
+
+<section class="section bg-light cta-section">
+    <div class="container">
+        <h2 class="section-title">Reserva tu consulta</h2>
+        <p class="lead">Consulta presencial en Elche. Pide cita directamente a través de Doctoralia.</p>
+        <div class="cta-group">
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
+            <a href="/sobre-mi" class="btn-sub">Conoce mi trayectoria</a>
         </div>
-    </section>
- 
-    <footer>
-        <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <p style="font-size: 0.85rem; color: #666; margin: 8px 0 18px;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
-            <div class="footer-links">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/legal/aviso-legal.html">Aviso Legal</a>
-                <a href="/legal/privacidad.html">Privacidad</a>
-                <a href="/legal/cookies.html">Cookies</a>
-            </div>
-            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</section>
+
+<section class="section container">
+    <h2 class="section-title">Otros servicios</h2>
+    <div class="articles-grid">
+        <a href="/servicios/ecocardiograma-elche" class="article-card">
+            <span class="category-tag">Prueba diagnóstica</span>
+            <h3>Ecocardiograma Doppler</h3>
+            <p>Estudio de la estructura y función del corazón mediante ultrasonidos.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/servicios/holter-ecg-elche" class="article-card">
+            <span class="category-tag">Prueba diagnóstica</span>
+            <h3>Holter de ECG</h3>
+            <p>Monitorización cardíaca de 24–48 horas para detectar arritmias.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/servicios/riesgo-cardiovascular-elche" class="article-card">
+            <span class="category-tag">Prevención</span>
+            <h3>Valoración de riesgo cardiovascular</h3>
+            <p>Estudio integral con abordaje de nutrición, ejercicio y prevención personalizada.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
         </div>
-    </footer>
- 
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>
