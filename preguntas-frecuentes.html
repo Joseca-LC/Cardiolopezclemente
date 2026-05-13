@@ -4,302 +4,652 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cardiolopezclemente.com/preguntas-frecuentes" />
- 
+
     <title>Preguntas Frecuentes sobre Cardiología | Cardiólogo Elche</title>
     <meta name="description" content="Resolvemos las dudas más habituales sobre síntomas cardiovasculares, pruebas diagnósticas, prevención y tratamiento. Cardiólogo en Elche.">
- 
+
     <meta property="og:title" content="Preguntas Frecuentes Cardiología · Dr. López Clemente">
     <meta property="og:description" content="Dudas más habituales sobre el corazón: palpitaciones, dolor en el pecho, colesterol, prevención cardiovascular y mucho más.">
     <meta property="og:url" content="https://cardiolopezclemente.com/preguntas-frecuentes">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://cardiolopezclemente.com/img/perfil.webp">
- 
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Cuándo debo preocuparme por las palpitaciones?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La mayoría de las palpitaciones son benignas, pero algunas situaciones requieren valoración médica: palpitaciones que se acompañan de mareo, pérdida de conocimiento o casi pérdida, dolor en el pecho, dificultad respiratoria importante, o que aparecen con el ejercicio físico. También merecen estudio si son muy frecuentes, si duran mucho tiempo, si son muy rápidas, o si tienes antecedentes familiares de muerte súbita o enfermedad cardíaca."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿El dolor en el pecho siempre es del corazón?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. El dolor torácico tiene muchas causas posibles: musculoesqueléticas, digestivas, respiratorias, ansiedad, además de las cardíacas. Sin embargo, no es algo que deba ignorarse. Características como la opresión, la irradiación al brazo o mandíbula, la aparición con el esfuerzo, o la asociación con sudoración o falta de aire, requieren valoración médica."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Es normal cansarme al subir escaleras?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Depende. Cierto cansancio al hacer esfuerzos puede ser normal según la edad, la forma física y el grado de esfuerzo. Lo que no es normal es que el cansancio sea progresivo, que limite actividades que antes hacías sin problema, o que aparezca con esfuerzos cada vez menores. En esos casos, conviene una valoración cardiovascular."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿A partir de qué edad debo hacerme un chequeo cardiovascular?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No hay una edad universal. En general, suele recomendarse una valoración a partir de los 40 años en hombres y 50 en mujeres, antes si hay antecedentes familiares, factores de riesgo conocidos (hipertensión, diabetes, colesterol elevado, tabaquismo) o si se va a iniciar deporte intenso. Cada caso requiere una valoración individual."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Es verdad que las estatinas tienen muchos efectos secundarios?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Las estatinas son medicamentos seguros y bien tolerados en la mayoría de los pacientes. El efecto secundario más conocido es el dolor muscular, que ocurre en un porcentaje bajo y suele ser leve. Estudios comparando estatinas con placebo muestran que muchos síntomas atribuidos a estatinas pueden tener otras causas. La decisión de tratamiento debe individualizarse valorando el balance beneficio-riesgo."
-          }
-        }
+        {"@type":"Question","name":"¿Cuándo debo preocuparme por las palpitaciones?","acceptedAnswer":{"@type":"Answer","text":"La mayoría de las palpitaciones son benignas, pero merecen valoración cuando se acompañan de mareo o pérdida de conocimiento, dolor en el pecho, dificultad respiratoria, aparecen con el ejercicio, son muy frecuentes o duran mucho tiempo, o si hay antecedentes familiares de muerte súbita."}},
+        {"@type":"Question","name":"¿El dolor en el pecho siempre es del corazón?","acceptedAnswer":{"@type":"Answer","text":"No. El dolor torácico puede tener causas musculoesqueléticas, digestivas, respiratorias o relacionadas con la ansiedad. Sin embargo, características como la opresión, la irradiación al brazo o mandíbula, la aparición con el esfuerzo, o la asociación con sudoración o falta de aire, requieren valoración médica."}},
+        {"@type":"Question","name":"¿Es verdad que las estatinas tienen muchos efectos secundarios?","acceptedAnswer":{"@type":"Answer","text":"Las estatinas son medicamentos seguros y bien tolerados en la mayoría de los pacientes. El efecto secundario más conocido es el dolor muscular, que ocurre en un porcentaje bajo y suele ser leve. La decisión de tratamiento debe individualizarse valorando el balance beneficio-riesgo."}}
       ]
     }
     </script>
+
+    <style>
+        /* ── Acordeón ── */
+        .faq-grupo {
+            margin-bottom: 56px;
+        }
+
+        .faq-grupo-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--gris-200);
+        }
+
+        .faq-grupo-num {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--rojo);
+            opacity: 0.25;
+            line-height: 1;
+            min-width: 36px;
+        }
+
+        .faq-grupo-header h2 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--negro);
+            letter-spacing: -0.015em;
+            margin: 0;
+        }
+
+        /* Items del acordeón */
+        .faq-lista {
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--gris-200);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-pregunta {
+            width: 100%;
+            background: var(--blanco);
+            border: none;
+            padding: 22px 24px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            transition: background 0.2s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .faq-pregunta:hover {
+            background: var(--crema);
+        }
+
+        .faq-item.open .faq-pregunta {
+            background: var(--crema);
+        }
+
+        .faq-pregunta-texto {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.98rem;
+            color: var(--negro);
+            line-height: 1.45;
+        }
+
+        .faq-item.open .faq-pregunta-texto {
+            color: var(--rojo);
+        }
+
+        .faq-icono {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--gris-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease, transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-icono {
+            background: var(--rojo);
+            transform: rotate(45deg);
+        }
+
+        .faq-icono svg {
+            width: 14px;
+            height: 14px;
+            color: var(--gris-500);
+            transition: color 0.2s ease;
+        }
+
+        .faq-item.open .faq-icono svg {
+            color: var(--blanco);
+        }
+
+        /* Respuesta con animación */
+        .faq-respuesta {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.open .faq-respuesta {
+            max-height: 800px;
+        }
+
+        .faq-respuesta-inner {
+            padding: 0 24px 24px;
+            border-top: 1px solid var(--gris-200);
+            background: var(--crema);
+        }
+
+        .faq-respuesta-inner p {
+            font-size: 0.97rem;
+            color: var(--gris-700);
+            line-height: 1.75;
+            margin-top: 18px;
+            margin-bottom: 12px;
+        }
+
+        .faq-respuesta-inner p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-respuesta-inner ul {
+            padding-left: 22px;
+            margin: 10px 0 14px;
+        }
+
+        .faq-respuesta-inner li {
+            font-size: 0.95rem;
+            color: var(--gris-700);
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .faq-respuesta-inner a {
+            color: var(--rojo);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .faq-respuesta-inner a:hover {
+            text-decoration: underline;
+        }
+
+        /* Nota intro */
+        .faq-intro {
+            background: var(--crema);
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            padding: 22px 28px;
+            margin-bottom: 56px;
+            font-size: 0.97rem;
+            color: var(--gris-700);
+            line-height: 1.7;
+        }
+
+        /* Nota final */
+        .faq-final {
+            background: var(--negro);
+            border-radius: var(--radius-lg);
+            padding: 36px 40px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .faq-final h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--blanco);
+            margin-bottom: 12px;
+            letter-spacing: -0.015em;
+        }
+
+        .faq-final p {
+            font-size: 0.97rem;
+            color: rgba(255,255,255,0.6);
+            margin: 0 auto 24px;
+            max-width: 560px;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 480px) {
+            .faq-final { padding: 28px 22px; }
+            .faq-pregunta { padding: 18px 18px; }
+            .faq-respuesta-inner { padding: 0 18px 20px; }
+        }
+    </style>
 </head>
 <body>
- 
-    <nav>
-        <div class="nav-container container">
-            <a href="/" class="logo-area">
-                <img src="img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
-                <span class="logo-text">Dr. López Clemente</span>
-            </a>
-            <div class="menu">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/#servicios">Servicios</a>
-                <a href="/#blog">Blog</a>
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+
+<nav>
+    <div class="nav-container container">
+        <a href="/" class="logo-area">
+            <img src="img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+            <span class="logo-text">Dr. López Clemente</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú de navegación"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="menu" id="main-menu">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/#servicios">Servicios</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/#blog">Blog</a>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero hero-page">
+    <div class="hero-content container">
+        <p class="location-top">Cardiólogo en Elche · Clínica Elche Salud</p>
+        <h1>Preguntas <span class="text-red">Frecuentes</span></h1>
+        <p class="hero-p">Dudas habituales sobre síntomas, pruebas y prevención cardiovascular</p>
+    </div>
+</header>
+
+<section class="section container">
+    <div class="service-content">
+
+        <div class="faq-intro">
+            Aquí encontrarás respuestas a las dudas más comunes que recibo en consulta. La información tiene fines orientativos y educativos — no sustituye la valoración médica individual. Si presentas síntomas o tienes dudas sobre tu salud cardiovascular, lo más adecuado es consultar con un profesional para una valoración personalizada.
+        </div>
+
+        <!-- ══════════════════════════════════
+             GRUPO 1: SÍNTOMAS
+             ══════════════════════════════════ -->
+        <div class="faq-grupo">
+            <div class="faq-grupo-header">
+                <span class="faq-grupo-num">01</span>
+                <h2>Síntomas cardiovasculares</h2>
+            </div>
+            <div class="faq-lista">
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Cuándo debo preocuparme por las palpitaciones?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>La mayoría de las palpitaciones son benignas y no traducen un problema cardíaco grave. Sin embargo, hay situaciones en las que conviene una valoración médica:</p>
+                            <ul>
+                                <li>Palpitaciones que se acompañan de <strong>mareo, pérdida de conocimiento</strong> o sensación de desmayo inminente.</li>
+                                <li>Palpitaciones con <strong>dolor en el pecho</strong> o dificultad respiratoria importante.</li>
+                                <li>Palpitaciones que aparecen con el <strong>ejercicio físico</strong>.</li>
+                                <li>Palpitaciones <strong>muy frecuentes, muy rápidas o que duran mucho tiempo</strong>.</li>
+                                <li>Personas con <strong>antecedentes familiares</strong> de muerte súbita o enfermedad cardíaca.</li>
+                            </ul>
+                            <p>Si tienes dudas, consultar es la mejor opción. Más información en nuestro artículo sobre <a href="/motivos/palpitaciones-elche">palpitaciones</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿El dolor en el pecho siempre es del corazón?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>No, en absoluto. El dolor torácico puede tener múltiples causas: musculoesqueléticas (contracturas, costocondritis), digestivas (reflujo, espasmo esofágico), respiratorias, ansiedad, además de las cardíacas. La mayoría de los dolores torácicos no son de origen cardíaco.</p>
+                            <p>Aun así, no es un síntoma que deba ignorarse. Determinadas características aumentan la probabilidad de causa cardíaca:</p>
+                            <ul>
+                                <li>Sensación de <strong>opresión</strong> o presión en el pecho.</li>
+                                <li>Aparición con el <strong>esfuerzo físico</strong>.</li>
+                                <li>Asociación con <strong>sudoración, náuseas, dificultad respiratoria</strong>.</li>
+                                <li>Duración prolongada o intensidad importante.</li>
+                            </ul>
+                            <p>Más información en nuestro artículo sobre <a href="/motivos/dolor-toracico-elche">dolor en el pecho</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Es normal cansarme al subir escaleras?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>Depende de varios factores: edad, forma física, peso, grado de esfuerzo. Cierto cansancio al hacer esfuerzos puede entrar dentro de lo esperable. Lo que merece valoración es:</p>
+                            <ul>
+                                <li>Cansancio <strong>progresivo</strong> que va a más con el tiempo.</li>
+                                <li>Cansancio que <strong>limita actividades</strong> que antes hacías sin problema.</li>
+                                <li>Cansancio que aparece con esfuerzos <strong>cada vez menores</strong>.</li>
+                                <li>Cansancio asociado a <strong>dificultad respiratoria, palpitaciones o dolor en el pecho</strong>.</li>
+                            </ul>
+                            <p>Estos síntomas pueden tener causas cardíacas, respiratorias, anémicas o de desentrenamiento. Una valoración médica permite orientar el origen. Más información en nuestro artículo sobre <a href="/motivos/disnea-cansancio-elche">disnea y cansancio</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">Me he desmayado, ¿necesito un estudio cardiológico?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>El desmayo puede tener causas benignas y causas que requieren más estudio. La causa más frecuente es el síncope vasovagal, que es benigno y suele tener desencadenantes y síntomas de aviso característicos. Sin embargo, hay situaciones en las que el síncope merece valoración cardiológica:</p>
+                            <ul>
+                                <li>Síncope durante el <strong>ejercicio físico</strong>.</li>
+                                <li>Síncope <strong>sin aviso previo</strong>.</li>
+                                <li>Síncopes <strong>recurrentes</strong>.</li>
+                                <li>Antecedentes familiares de <strong>muerte súbita</strong>.</li>
+                                <li>Síncope con <strong>palpitaciones, dolor en el pecho</strong> o en personas con cardiopatía conocida.</li>
+                            </ul>
+                            <p>Aunque la mayoría resulten ser benignos, la valoración inicial es razonable para confirmar el diagnóstico y descartar causas que requieran tratamiento. Más información en nuestro artículo sobre <a href="/motivos/mareo-sincope-elche">mareo y síncope</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">Tengo la tensión alta en casa, ¿qué hago?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>Antes de tomar decisiones, asegúrate de que las medidas son fiables: usa un aparato validado de brazo, mide correctamente (en reposo, sentado, brazo apoyado) y registra varias mediciones a lo largo de varios días.</p>
+                            <p>Una sola medición elevada no establece el diagnóstico de hipertensión. Lo recomendable es realizar mediciones repetidas según la regla de 3 días (mañana y noche durante varios días) y consultar con tu médico para valorar los resultados.</p>
+                            <p>Si la tensión es muy elevada (sistólica por encima de 180 mmHg) o se acompaña de dolor de cabeza intenso, dolor torácico o alteraciones visuales, consulta de forma preferente. Más información en nuestro artículo sobre <a href="/motivos/hipertension-arterial-elche">hipertensión arterial</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </nav>
- 
-    <header class="hero hero-page">
-        <div class="hero-content container">
-            <p class="location-top">Cardiólogo en Elche · Clínica Elche Salud</p>
-            <h1>Preguntas <span class="text-red">Frecuentes</span></h1>
-            <p class="hero-p">Dudas habituales sobre síntomas, pruebas y prevención cardiovascular</p>
-        </div>
-    </header>
- 
-    <section class="section container">
-        <div class="service-content">
- 
-            <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px;">Aquí encontrarás respuestas a las dudas más comunes que recibo en consulta. La información que sigue tiene fines orientativos y educativos; no sustituye la valoración médica individual. Si presentas síntomas o tienes dudas sobre tu salud cardiovascular, lo más adecuado es consultar con un profesional para una valoración personalizada.</p>
- 
-            <h2 class="section-title">Síntomas cardiovasculares</h2>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Cuándo debo preocuparme por las palpitaciones?</h3>
-                <p>La mayoría de las palpitaciones son benignas y no traducen un problema cardíaco grave. Sin embargo, hay situaciones en las que conviene una valoración médica:</p>
-                <ul class="service-list">
-                    <li>Palpitaciones que se acompañan de <strong>mareo, pérdida de conocimiento</strong> o sensación de desmayo inminente.</li>
-                    <li>Palpitaciones con <strong>dolor en el pecho</strong> o dificultad respiratoria importante.</li>
-                    <li>Palpitaciones que aparecen con el <strong>ejercicio físico</strong>.</li>
-                    <li>Palpitaciones <strong>muy frecuentes, muy rápidas o que duran mucho tiempo</strong>.</li>
-                    <li>Personas con <strong>antecedentes familiares</strong> de muerte súbita o enfermedad cardíaca.</li>
-                </ul>
-                <p>Si tienes dudas, consultar es la mejor opción. Puedes ampliar información en nuestro artículo sobre <a href="/motivos/palpitaciones-elche" style="color: var(--rojo); font-weight: 600;">palpitaciones</a>.</p>
+
+        <!-- ══════════════════════════════════
+             GRUPO 2: PREVENCIÓN
+             ══════════════════════════════════ -->
+        <div class="faq-grupo">
+            <div class="faq-grupo-header">
+                <span class="faq-grupo-num">02</span>
+                <h2>Prevención y factores de riesgo</h2>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿El dolor en el pecho siempre es del corazón?</h3>
-                <p>No, en absoluto. El dolor torácico puede tener múltiples causas: musculoesqueléticas (contracturas, costocondritis), digestivas (reflujo, espasmo esofágico), respiratorias, ansiedad, además de las cardíacas. La mayoría de los dolores torácicos no son de origen cardíaco.</p>
-                <p>Aun así, no es un síntoma que deba ignorarse. Determinadas características aumentan la probabilidad de que la causa sea cardíaca y requieren valoración:</p>
-                <ul class="service-list">
-                    <li>Sensación de <strong>opresión</strong> o presión en el pecho.</li>
-                    <li>Aparición con el <strong>esfuerzo físico</strong>.</li>
-                    <li>Asociación con <strong>sudoración, náuseas, dificultad respiratoria</strong>.</li>
-                    <li>Duración prolongada o intensidad importante.</li>
-                </ul>
-                <p>Más información en nuestro artículo sobre <a href="/motivos/dolor-toracico-elche" style="color: var(--rojo); font-weight: 600;">dolor en el pecho</a>.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Es normal cansarme al subir escaleras?</h3>
-                <p>Depende de varios factores: edad, forma física, peso, grado de esfuerzo. Cierto cansancio al hacer esfuerzos puede entrar dentro de lo esperable. Lo que merece valoración es:</p>
-                <ul class="service-list">
-                    <li>Cansancio <strong>progresivo</strong> que va a más con el tiempo.</li>
-                    <li>Cansancio que <strong>limita actividades</strong> que antes hacías sin problema.</li>
-                    <li>Cansancio que aparece con esfuerzos <strong>cada vez menores</strong>.</li>
-                    <li>Cansancio asociado a <strong>dificultad respiratoria, palpitaciones o dolor en el pecho</strong>.</li>
-                </ul>
-                <p>Estos síntomas pueden tener causas cardíacas pero también respiratorias, anémicas o de desentrenamiento. Una valoración médica permite orientar el origen. Más información en nuestro artículo sobre <a href="/motivos/disnea-cansancio-elche" style="color: var(--rojo); font-weight: 600;">disnea y cansancio</a>.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Me he desmayado, ¿necesito un estudio cardiológico?</h3>
-                <p>El desmayo (síncope) puede tener causas benignas y causas que requieren más estudio. La causa más frecuente es el síncope vasovagal, que es benigno y suele tener desencadenantes y síntomas de aviso característicos.</p>
-                <p>Sin embargo, hay situaciones en las que el síncope merece valoración cardiológica:</p>
-                <ul class="service-list">
-                    <li>Síncope durante el <strong>ejercicio físico</strong>.</li>
-                    <li>Síncope <strong>sin aviso previo</strong>.</li>
-                    <li>Síncopes <strong>recurrentes</strong>.</li>
-                    <li>Antecedentes familiares de <strong>muerte súbita</strong>.</li>
-                    <li>Síncope con <strong>palpitaciones, dolor en el pecho</strong> o en personas con cardiopatía conocida.</li>
-                </ul>
-                <p>Aunque la mayoría resulten ser benignos, la valoración inicial es razonable para confirmar el diagnóstico y descartar causas que requieran tratamiento. Más información en nuestro artículo sobre <a href="/motivos/mareo-sincope-elche" style="color: var(--rojo); font-weight: 600;">mareo y síncope</a>.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Tengo la tensión alta en casa, ¿qué hago?</h3>
-                <p>Antes de tomar decisiones, es importante asegurarse de que las medidas son fiables: usar un aparato validado de brazo, hacer la medición correctamente (en reposo, sentado, con el brazo apoyado), y registrar varias mediciones a lo largo de varios días.</p>
-                <p>Una sola medición elevada no establece el diagnóstico de hipertensión. Lo recomendable es realizar mediciones repetidas según la regla de 3 días (mañana y noche durante varios días) y consultar con tu médico para valorar los resultados, descartar causas reversibles, y decidir si requiere tratamiento.</p>
-                <p>Si tu tensión es muy elevada (por ejemplo, sistólica por encima de 180 mmHg) o se acompaña de síntomas como dolor de cabeza intenso, dolor torácico o alteraciones visuales, consulta de forma preferente. Más información en nuestro artículo sobre <a href="/motivos/hipertension-arterial-elche" style="color: var(--rojo); font-weight: 600;">hipertensión arterial</a>.</p>
-            </div>
- 
-            <h2 class="section-title">Prevención y factores de riesgo</h2>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿A partir de qué edad debo hacerme un chequeo cardiovascular?</h3>
-                <p>No existe una edad universal. Como orientación general, las recomendaciones suelen apuntar a una valoración a partir de los 40 años en hombres y 50 en mujeres, pero hay situaciones en las que conviene adelantarla:</p>
-                <ul class="service-list">
-                    <li><strong>Antecedentes familiares</strong> de enfermedad cardiovascular precoz o muerte súbita.</li>
-                    <li>Presencia de <strong>factores de riesgo</strong> conocidos (hipertensión, diabetes, colesterol elevado, tabaquismo, obesidad).</li>
-                    <li>Personas que van a iniciar <strong>deporte intenso</strong>.</li>
-                    <li>Aparición de cualquier <strong>síntoma sospechoso</strong>.</li>
-                </ul>
-                <p>La frecuencia y el contenido del chequeo dependen de cada caso. Una valoración personalizada permite ajustar el seguimiento a tu perfil de riesgo individual.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Cómo puedo prevenir un infarto?</h3>
-                <p>La prevención cardiovascular se basa en controlar los factores de riesgo modificables:</p>
-                <ul class="service-list">
-                    <li><strong>Tensión arterial</strong> en valores adecuados.</li>
-                    <li><strong>Colesterol LDL</strong> en objetivos según tu riesgo cardiovascular individual.</li>
-                    <li>Control de la <strong>diabetes</strong> si está presente.</li>
-                    <li><strong>No fumar</strong>. El tabaco es uno de los factores más importantes y reversibles.</li>
-                    <li>Mantener un <strong>peso saludable</strong>.</li>
-                    <li><strong>Actividad física</strong> regular: idealmente 150 minutos semanales de ejercicio aeróbico moderado más entrenamiento de fuerza.</li>
-                    <li><strong>Alimentación cardiosaludable</strong>, con la dieta mediterránea como referencia.</li>
-                    <li>Manejo del <strong>estrés</strong> y descanso adecuado.</li>
-                </ul>
-                <p>El peso de cada factor varía según cada persona. Una valoración cardiovascular personalizada permite identificar tus prioridades y diseñar una estrategia individualizada.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Qué factores de riesgo cardiovascular son más importantes?</h3>
-                <p>Los principales factores de riesgo cardiovascular modificables son:</p>
-                <ul class="service-list">
-                    <li><strong>Hipertensión arterial</strong>.</li>
-                    <li><strong>Colesterol elevado</strong>, especialmente el LDL.</li>
-                    <li><strong>Diabetes</strong> y prediabetes.</li>
-                    <li><strong>Tabaquismo</strong>.</li>
-                    <li><strong>Sedentarismo</strong>.</li>
-                    <li><strong>Obesidad</strong>, especialmente la abdominal.</li>
-                </ul>
-                <p>A estos se suman factores no modificables como la edad, el sexo y los antecedentes familiares. Su importancia relativa depende de cada persona y de cómo se combinan entre sí. Por eso es importante valorar el riesgo cardiovascular de forma global y no aisladamente. Puedes ampliar información en nuestra <a href="/servicios/riesgo-cardiovascular-elche" style="color: var(--rojo); font-weight: 600;">página de valoración del riesgo cardiovascular</a>.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Puedo consultar al cardiólogo si solo quiero prevenir, sin tener síntomas?</h3>
-                <p>Por supuesto. La consulta cardiológica preventiva está indicada para personas asintomáticas que quieren conocer su riesgo cardiovascular y optimizar su salud. Es especialmente recomendable en personas con factores de riesgo, antecedentes familiares de enfermedad cardiovascular precoz, deportistas, o cualquier persona interesada en prevenir.</p>
-                <p>La valoración incluye historia clínica, exploración, electrocardiograma, ecocardiograma si procede, revisión de analítica, estimación del riesgo cardiovascular global y un plan personalizado. Más información en nuestra página sobre <a href="/servicios/riesgo-cardiovascular-elche" style="color: var(--rojo); font-weight: 600;">valoración de riesgo cardiovascular</a>.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Con qué frecuencia debo revisar mi corazón?</h3>
-                <p>Depende de tu situación. En personas sanas sin factores de riesgo, una valoración cada varios años puede ser suficiente. En personas con factores de riesgo o cardiopatía conocida, los controles suelen ser más frecuentes (anuales o según indicación). En cualquier caso, la frecuencia debe individualizarse según tu riesgo y los hallazgos de cada revisión.</p>
-                <p>Lo importante es que la frecuencia tenga sentido clínico, ni excesiva ni insuficiente. Una valoración inicial permite establecer un plan de seguimiento adaptado a tu caso.</p>
-            </div>
- 
-            <h2 class="section-title">Pruebas diagnósticas</h2>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Qué detecta un electrocardiograma?</h3>
-                <p>El electrocardiograma (ECG) registra la actividad eléctrica del corazón. Es una prueba rápida, indolora, sin radiación y muy informativa. Permite detectar arritmias, alteraciones de la conducción, signos sugestivos de cardiopatía isquémica antigua o aguda, signos indirectos de hipertrofia o dilatación de cavidades, entre otros hallazgos.</p>
-                <p>Sus limitaciones son que solo registra el momento de la prueba (las arritmias intermitentes pueden pasar desapercibidas) y que no proporciona información sobre la estructura del corazón (para eso se complementa con ecocardiograma). Es una prueba básica en cualquier valoración cardiovascular. Más información en nuestro <a href="/pruebas/ecg" style="color: var(--rojo); font-weight: 600;">artículo sobre el electrocardiograma</a>.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Para qué sirve el ecocardiograma?</h3>
-                <p>El ecocardiograma Doppler estudia la estructura y función del corazón mediante ultrasonidos. No utiliza radiación, no es invasivo, y aporta información muy completa sobre el tamaño y función de las cavidades, el funcionamiento de las válvulas, la presencia de cardiopatías estructurales, la presión pulmonar estimada, y otros parámetros relevantes.</p>
-                <p>Es una prueba clave en la valoración cardiovascular y permite diagnosticar la mayoría de las cardiopatías estructurales. Puedes ampliar información en nuestra <a href="/servicios/ecocardiograma-elche" style="color: var(--rojo); font-weight: 600;">página sobre el ecocardiograma</a>.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Cómo funciona el Holter de 24 horas?</h3>
-                <p>El Holter es una grabación continua del electrocardiograma durante 24 horas (o más, según el caso) mediante un dispositivo portátil que se coloca con electrodos en el pecho. Permite detectar arritmias y alteraciones del ritmo que pueden no aparecer en un electrocardiograma puntual.</p>
-                <p>Es especialmente útil cuando se sospecha que los síntomas (palpitaciones, mareos) pueden estar relacionados con arritmias intermitentes. Durante el registro se recomienda llevar una vida normal y anotar los síntomas para correlacionarlos con el trazado. Más información en nuestra <a href="/servicios/holter-ecg-elche" style="color: var(--rojo); font-weight: 600;">página sobre el Holter de ECG</a>.</p>
-            </div>
- 
-            <h2 class="section-title">Tratamiento y medicación</h2>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Es verdad que las estatinas tienen muchos efectos secundarios?</h3>
-                <p>Las estatinas son medicamentos seguros y bien tolerados en la inmensa mayoría de los pacientes. El efecto secundario más conocido es el dolor muscular (mialgia), que puede ocurrir en un porcentaje bajo de pacientes y suele ser leve. La miopatía grave es muy rara.</p>
-                <p>Es importante poner los datos en contexto. En estudios donde se compara estatina frente a placebo (pastilla sin principio activo), la frecuencia de síntomas musculares es similar en ambos grupos en muchos casos, lo que sugiere que parte de los síntomas atribuidos a las estatinas pueden tener otras causas.</p>
-                <p>Cuando aparecen efectos secundarios atribuibles al fármaco, hay estrategias de manejo: cambiar de estatina, ajustar la dosis, o valorar alternativas. La decisión de iniciar, mantener o suspender el tratamiento debe tomarse de forma individualizada, valorando el balance entre el beneficio cardiovascular esperado y la tolerancia. Más información en nuestro artículo sobre <a href="/motivos/colesterol-alto-elche" style="color: var(--rojo); font-weight: 600;">colesterol alto</a>.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿La dieta realmente puede bajar el colesterol?</h3>
-                <p>Sí. Los cambios en la alimentación pueden tener un impacto significativo sobre los niveles de colesterol, especialmente cuando se mantienen en el tiempo. La dieta mediterránea es el patrón alimentario más estudiado y con mejor evidencia para mejorar el perfil lipídico y reducir el riesgo cardiovascular.</p>
-                <p>El alcance del efecto varía entre personas. En general, una dieta cardiosaludable bien implementada puede reducir el colesterol LDL alrededor de un 10-15%, aunque hay variabilidad individual. En algunos casos, especialmente con riesgo cardiovascular bajo o moderado, los cambios alimentarios pueden ser suficientes para alcanzar los objetivos. En otros casos, especialmente con objetivos muy bajos o riesgo elevado, la dieta es necesaria pero puede no ser suficiente, y conviene complementarla con tratamiento farmacológico.</p>
-                <p>El tratamiento debe individualizarse en función del riesgo cardiovascular global de cada persona. Más información en nuestro artículo sobre <a href="/motivos/colesterol-alto-elche" style="color: var(--rojo); font-weight: 600;">colesterol alto</a>.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Puedo hacer ejercicio si tengo una cardiopatía?</h3>
-                <p>En la mayoría de los casos, sí. La actividad física forma parte del tratamiento de muchas cardiopatías y aporta beneficios contrastados sobre el pronóstico, la capacidad funcional y la calidad de vida. La rehabilitación cardíaca, basada en programas estructurados de ejercicio supervisado, ha demostrado reducir mortalidad y nuevos eventos en muchas cardiopatías.</p>
-                <p>El tipo, intensidad y características del ejercicio deben adaptarse a la cardiopatía concreta y al estado clínico de cada paciente. En algunas situaciones específicas pueden existir restricciones temporales o permanentes para ciertos tipos de actividad.</p>
-                <p>Si tienes una cardiopatía y quieres hacer ejercicio, lo recomendable es valoración médica previa para diseñar un programa adaptado y seguro.</p>
-            </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>¿Cuándo necesito una segunda opinión cardiológica?</h3>
-                <p>Una segunda opinión puede ser útil en situaciones como:</p>
-                <ul class="service-list">
-                    <li>Cuando vas a tomar una <strong>decisión importante</strong>: cirugía cardíaca, intervencionismo, marcapasos, cambios de tratamiento.</li>
-                    <li>Si tienes <strong>dudas sobre el diagnóstico</strong> o el tratamiento propuesto.</li>
-                    <li>Cuando los síntomas <strong>persisten</strong> a pesar del tratamiento.</li>
-                    <li>Si quieres confirmar que el plan terapéutico es el más adecuado para tu caso.</li>
-                    <li>Para tener <strong>tiempo y calma</strong> para entender bien tu situación.</li>
-                </ul>
-                <p>No es cuestionar al primer médico: es una práctica habitual y razonable, especialmente cuando hay decisiones relevantes. Más información en nuestra <a href="/servicios/segunda-opinion-cardiologica-elche" style="color: var(--rojo); font-weight: 600;">página sobre segunda opinión cardiológica</a>.</p>
-            </div>
- 
-            <h2 class="section-title">¿Tienes otra duda?</h2>
-            <p>Si tu pregunta no está aquí, o si quieres una valoración personalizada de tu situación, puedes pedir cita en consulta. Cada caso requiere una valoración individual: la información general es útil, pero no sustituye la consulta médica.</p>
- 
-        </div>
-    </section>
- 
-    <section class="section bg-light cta-section">
-        <div class="container">
-            <h2 class="section-title">Consulta cardiológica en Elche</h2>
-            <p class="lead">Valoración personalizada en Clínica Elche Salud. Tiempo suficiente para resolver tus dudas y diseñar un plan adaptado a ti.</p>
-            <div class="cta-group">
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
-                <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Más sobre la consulta</a>
+            <div class="faq-lista">
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿A partir de qué edad debo hacerme un chequeo cardiovascular?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>No existe una edad universal. Como orientación general, suele recomendarse una valoración a partir de los 40 años en hombres y 50 en mujeres, pero hay situaciones en las que conviene adelantarla:</p>
+                            <ul>
+                                <li><strong>Antecedentes familiares</strong> de enfermedad cardiovascular precoz o muerte súbita.</li>
+                                <li>Presencia de <strong>factores de riesgo</strong> conocidos (hipertensión, diabetes, colesterol elevado, tabaquismo, obesidad).</li>
+                                <li>Personas que van a iniciar <strong>deporte intenso</strong>.</li>
+                                <li>Aparición de cualquier <strong>síntoma sospechoso</strong>.</li>
+                            </ul>
+                            <p>La frecuencia y el contenido del chequeo dependen de cada caso. Una valoración personalizada permite ajustar el seguimiento a tu perfil de riesgo individual.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Cómo puedo prevenir un infarto?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>La prevención cardiovascular se basa en controlar los factores de riesgo modificables:</p>
+                            <ul>
+                                <li><strong>Tensión arterial</strong> en valores adecuados.</li>
+                                <li><strong>Colesterol LDL</strong> en objetivos según tu riesgo cardiovascular individual.</li>
+                                <li>Control de la <strong>diabetes</strong> si está presente.</li>
+                                <li><strong>No fumar.</strong> El tabaco es uno de los factores más importantes y reversibles.</li>
+                                <li>Mantener un <strong>peso saludable</strong>.</li>
+                                <li><strong>Actividad física regular:</strong> al menos 150 minutos semanales de ejercicio aeróbico moderado más entrenamiento de fuerza.</li>
+                                <li><strong>Alimentación cardiosaludable,</strong> con la dieta mediterránea como referencia.</li>
+                                <li>Manejo del <strong>estrés</strong> y descanso adecuado.</li>
+                            </ul>
+                            <p>El peso de cada factor varía según cada persona. Una valoración cardiovascular personalizada permite identificar tus prioridades y diseñar una estrategia individualizada.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Qué factores de riesgo cardiovascular son más importantes?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>Los principales factores de riesgo cardiovascular modificables son hipertensión arterial, colesterol elevado (especialmente el LDL), diabetes y prediabetes, tabaquismo, sedentarismo, y obesidad (especialmente la abdominal).</p>
+                            <p>A estos se suman factores no modificables como la edad, el sexo y los antecedentes familiares. Su importancia relativa depende de cada persona y de cómo se combinan. Por eso es fundamental valorar el riesgo de forma global y no aisladamente. Puedes ampliar información en nuestra <a href="/servicios/riesgo-cardiovascular-elche">página de valoración del riesgo cardiovascular</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Puedo consultar al cardiólogo si solo quiero prevenir, sin tener síntomas?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>Por supuesto. La consulta cardiológica preventiva está indicada para personas asintomáticas que quieren conocer su riesgo cardiovascular y optimizar su salud. Es especialmente recomendable en personas con factores de riesgo, antecedentes familiares de enfermedad cardiovascular precoz, deportistas, o cualquier persona interesada en prevenir.</p>
+                            <p>La valoración incluye historia clínica, exploración, electrocardiograma, ecocardiograma si procede, revisión de analítica, estimación del riesgo cardiovascular global y orientación personalizada. Más información en nuestra página sobre <a href="/servicios/riesgo-cardiovascular-elche">valoración de riesgo cardiovascular</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Con qué frecuencia debo revisar mi corazón?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>Depende de tu situación. En personas sanas sin factores de riesgo, una valoración cada varios años puede ser suficiente. En personas con factores de riesgo o cardiopatía conocida, los controles suelen ser más frecuentes (anuales o según indicación).</p>
+                            <p>Lo importante es que la frecuencia tenga sentido clínico: ni excesiva ni insuficiente. Una valoración inicial permite establecer un plan de seguimiento adaptado a tu caso.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </section>
- 
-    <footer>
-        <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <p style="font-size: 0.85rem; color: #666; margin: 8px 0 18px;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
-            <div class="footer-links">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/legal/aviso-legal.html">Aviso Legal</a>
-                <a href="/legal/privacidad.html">Privacidad</a>
-                <a href="/legal/cookies.html">Cookies</a>
+
+        <!-- ══════════════════════════════════
+             GRUPO 3: PRUEBAS
+             ══════════════════════════════════ -->
+        <div class="faq-grupo">
+            <div class="faq-grupo-header">
+                <span class="faq-grupo-num">03</span>
+                <h2>Pruebas diagnósticas</h2>
             </div>
-            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+            <div class="faq-lista">
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Qué detecta un electrocardiograma?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>El electrocardiograma (ECG) registra la actividad eléctrica del corazón. Es una prueba rápida, indolora, sin radiación y muy informativa. Permite detectar arritmias, alteraciones de la conducción, signos sugestivos de cardiopatía isquémica antigua o aguda, e indicios de hipertrofia o dilatación de cavidades, entre otros hallazgos.</p>
+                            <p>Sus limitaciones: solo registra el momento de la prueba (las arritmias intermitentes pueden pasar desapercibidas) y no aporta información sobre la estructura del corazón (para eso se complementa con ecocardiograma). Más información en nuestro <a href="/pruebas/ecg.html">artículo sobre el electrocardiograma</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Para qué sirve el ecocardiograma?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>El ecocardiograma Doppler estudia la estructura y función del corazón mediante ultrasonidos. No utiliza radiación, no es invasivo, y aporta información muy completa: tamaño y función de las cavidades, funcionamiento de las válvulas, presencia de cardiopatías estructurales, presión pulmonar estimada y otros parámetros.</p>
+                            <p>Es una prueba clave en la valoración cardiovascular que permite diagnosticar la mayoría de las cardiopatías estructurales. Más información en nuestra <a href="/servicios/ecocardiograma-elche">página sobre el ecocardiograma</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Cómo funciona el Holter de 24 horas?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>El Holter es una grabación continua del electrocardiograma durante 24 horas mediante un dispositivo portátil que se coloca con electrodos en el pecho. Permite detectar arritmias y alteraciones del ritmo que no aparecen en un ECG puntual.</p>
+                            <p>Es especialmente útil cuando los síntomas (palpitaciones, mareos) pueden estar relacionados con arritmias intermitentes. Durante el registro se recomienda llevar una vida normal y anotar los síntomas para correlacionarlos con el trazado. Más información en nuestra <a href="/servicios/holter-ecg-elche">página sobre el Holter de ECG</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </footer>
- 
+
+        <!-- ══════════════════════════════════
+             GRUPO 4: TRATAMIENTO
+             ══════════════════════════════════ -->
+        <div class="faq-grupo">
+            <div class="faq-grupo-header">
+                <span class="faq-grupo-num">04</span>
+                <h2>Tratamiento y medicación</h2>
+            </div>
+            <div class="faq-lista">
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Es verdad que las estatinas tienen muchos efectos secundarios?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>Las estatinas son medicamentos seguros y bien tolerados en la inmensa mayoría de los pacientes. El efecto secundario más conocido es el dolor muscular (mialgia), que puede ocurrir en un porcentaje bajo de pacientes y suele ser leve. La miopatía grave es muy rara.</p>
+                            <p>Es importante poner los datos en contexto: en estudios comparando estatina frente a placebo, la frecuencia de síntomas musculares es similar en ambos grupos en muchos casos, lo que sugiere que parte de los síntomas atribuidos a las estatinas pueden tener otras causas.</p>
+                            <p>Cuando aparecen efectos secundarios, hay estrategias de manejo: cambiar de estatina, ajustar la dosis, o valorar alternativas. La decisión debe tomarse de forma individualizada valorando el balance beneficio-riesgo. Más información en nuestro artículo sobre <a href="/motivos/colesterol-alto-elche">colesterol alto</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿La dieta realmente puede bajar el colesterol?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>Sí. Los cambios en la alimentación pueden tener un impacto significativo sobre los niveles de colesterol, especialmente cuando se mantienen en el tiempo. La dieta mediterránea es el patrón alimentario más estudiado con mejor evidencia para mejorar el perfil lipídico y reducir el riesgo cardiovascular.</p>
+                            <p>En general, una dieta cardiosaludable bien implementada puede reducir el colesterol LDL alrededor de un 10–15%, con variabilidad individual. En algunos casos esto puede ser suficiente para alcanzar los objetivos; en otros, especialmente con riesgo elevado u objetivos muy bajos, la dieta es necesaria pero conviene complementarla con tratamiento farmacológico. Más información en nuestro artículo sobre <a href="/motivos/colesterol-alto-elche">colesterol alto</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Puedo hacer ejercicio si tengo una cardiopatía?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>En la mayoría de los casos, sí. La actividad física forma parte del tratamiento de muchas cardiopatías y aporta beneficios contrastados sobre el pronóstico, la capacidad funcional y la calidad de vida. La rehabilitación cardíaca, basada en programas estructurados de ejercicio supervisado, ha demostrado reducir mortalidad y nuevos eventos en muchas cardiopatías.</p>
+                            <p>El tipo, intensidad y características del ejercicio deben adaptarse a la cardiopatía concreta y al estado clínico de cada paciente. En algunas situaciones específicas pueden existir restricciones temporales o permanentes. Si tienes una cardiopatía y quieres hacer ejercicio, lo recomendable es una valoración médica previa para diseñar un programa adaptado y seguro.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pregunta" onclick="toggleFaq(this)">
+                        <span class="faq-pregunta-texto">¿Cuándo necesito una segunda opinión cardiológica?</span>
+                        <span class="faq-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-respuesta">
+                        <div class="faq-respuesta-inner">
+                            <p>Una segunda opinión puede ser útil en situaciones como:</p>
+                            <ul>
+                                <li>Cuando vas a tomar una <strong>decisión importante:</strong> cirugía cardíaca, intervencionismo, marcapasos, cambios de tratamiento.</li>
+                                <li>Si tienes <strong>dudas sobre el diagnóstico</strong> o el tratamiento propuesto.</li>
+                                <li>Cuando los síntomas <strong>persisten</strong> a pesar del tratamiento.</li>
+                                <li>Si quieres confirmar que el plan terapéutico es el más adecuado para tu caso.</li>
+                                <li>Para tener <strong>tiempo y calma</strong> para entender bien tu situación.</li>
+                            </ul>
+                            <p>No es cuestionar al primer médico: es una práctica habitual y razonable. Más información en nuestra <a href="/servicios/segunda-opinion-cardiologica-elche">página sobre segunda opinión cardiológica</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- NOTA FINAL -->
+        <div class="faq-final">
+            <h3>¿Tu pregunta no está aquí?</h3>
+            <p>Si tu duda no aparece en esta página, o si quieres una valoración personalizada de tu situación, puedes pedir cita en consulta. La información general es útil, pero no sustituye la valoración médica individual.</p>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section bg-light cta-section">
+    <div class="container">
+        <h2 class="section-title">Consulta cardiológica en Elche</h2>
+        <p class="lead">Valoración personalizada en Clínica Elche Salud. Tiempo suficiente para resolver tus dudas y diseñar un plan adaptado a ti.</p>
+        <div class="cta-group">
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
+            <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Más sobre la consulta</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
+        </div>
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleFaq(btn) {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+
+        // Cierra todos los items del mismo grupo
+        const grupo = item.closest('.faq-lista');
+        grupo.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+
+        // Abre el actual si estaba cerrado
+        if (!isOpen) item.classList.add('open');
+    }
+</script>
+
 </body>
 </html>
- 
