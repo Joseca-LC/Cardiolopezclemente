@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cardiolopezclemente.com/servicios/riesgo-cardiovascular-elche" />
- 
+
     <title>Valoración de Riesgo Cardiovascular en Elche | Dr. López Clemente</title>
-    <meta name="description" content="Valoración de riesgo cardiovascular en Elche. Optimización de salud con abordaje global: nutrición, ejercicio, prevención. Clínica Elche Salud.">
- 
+    <meta name="description" content="Valoración de riesgo cardiovascular en Elche. Cálculo SCORE2, factores de riesgo clásicos y emergentes, plan de prevención personalizado. Clínica Elche Salud.">
+
     <meta property="og:title" content="Valoración de Riesgo Cardiovascular en Elche · Dr. López Clemente">
-    <meta property="og:description" content="Prevención cardiovascular personalizada. Optimización de salud con abordaje integral: nutrición, ejercicio y screening preventivo.">
+    <meta property="og:description" content="Prevención cardiovascular personalizada. Cálculo de riesgo SCORE2, nutrición, ejercicio y screening preventivo.">
     <meta property="og:url" content="https://cardiolopezclemente.com/servicios/riesgo-cardiovascular-elche">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://cardiolopezclemente.com/img/perfil.webp">
- 
+    <meta property="og:image" content="https://cardiolopezclemente.com/img/serv-riesgo.webp">
+
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "Valoración de riesgo cardiovascular - Dr. José Carlos López Clemente",
-      "description": "Prevención cardiovascular personalizada con abordaje integral: screening, nutrición, ejercicio y optimización de estilo de vida.",
+      "description": "Prevención cardiovascular personalizada con abordaje integral: cálculo de riesgo SCORE2, screening, nutrición, ejercicio y optimización de estilo de vida.",
       "provider": {
         "@type": "Physician",
         "name": "Dr. José Carlos López Clemente",
@@ -36,145 +38,707 @@
       }
     }
     </script>
+
+    <style>
+        /* ── Imagen banner ── */
+        .serv-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-lg);
+            display: block;
+            margin-bottom: 60px;
+        }
+
+        /* ── Tabla SCORE2 ── */
+        .score-tabla {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--gris-200);
+            margin: 28px 0 12px;
+        }
+
+        .score-header {
+            display: grid;
+            grid-template-columns: 130px 1fr 1.2fr 1.2fr;
+            background: var(--negro);
+        }
+
+        .score-header span {
+            padding: 13px 18px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .score-fila {
+            display: grid;
+            grid-template-columns: 130px 1fr 1.2fr 1.2fr;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            transition: filter 0.15s ease;
+        }
+
+        .score-fila:last-child { border-bottom: none; }
+
+        .score-bajo     { background: #edfaf3; }
+        .score-moderado { background: #fefce8; }
+        .score-alto     { background: #fff5eb; }
+        .score-muyalto  { background: #fff0f0; }
+
+        .score-cell {
+            padding: 16px 18px;
+            font-size: 0.92rem;
+            line-height: 1.45;
+            color: var(--gris-700);
+            border-right: 1px solid rgba(0,0,0,0.06);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .score-cell:last-child { border-right: none; }
+
+        .score-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            white-space: nowrap;
+        }
+
+        .score-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .dot-bajo     { background: #1a9e5c; }
+        .dot-moderado { background: #d4a017; }
+        .dot-alto     { background: #d4620a; }
+        .dot-muyalto  { background: #b80101; }
+
+        .score-pct {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--negro);
+        }
+
+        .score-nota {
+            background: var(--crema);
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-md);
+            padding: 13px 18px;
+            font-size: 0.85rem;
+            color: var(--gris-500);
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .score-header { grid-template-columns: 1fr; }
+            .score-header span:not(:first-child) { display: none; }
+            .score-fila { grid-template-columns: 1fr; }
+            .score-cell { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.06); }
+            .score-cell:last-child { border-bottom: none; }
+        }
+
+        /* ── Grid ¿Para quién? ── */
+        .para-quien-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 28px 0 40px;
+        }
+
+        .pq-card {
+            background: var(--blanco);
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            padding: 20px 22px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            transition: var(--transition);
+        }
+
+        .pq-card:hover {
+            border-color: var(--rojo-medium);
+            box-shadow: var(--sombra-sm);
+        }
+
+        .pq-icon {
+            width: 36px; height: 36px;
+            background: var(--rojo-soft);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--rojo);
+        }
+
+        .pq-icon svg { width: 18px; height: 18px; }
+
+        .pq-card p {
+            font-size: 0.9rem;
+            color: var(--gris-700);
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        @media (max-width: 560px) {
+            .para-quien-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Pasos fases ── */
+        .pasos-lista {
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 28px 0 40px;
+        }
+
+        .paso {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            align-items: start;
+            border-bottom: 1px solid var(--gris-200);
+            background: var(--blanco);
+            transition: background 0.2s ease;
+        }
+
+        .paso:last-child { border-bottom: none; }
+        .paso:hover { background: var(--crema); }
+
+        .paso-num {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--rojo);
+            padding: 22px 0 22px 26px;
+            line-height: 1;
+        }
+
+        .paso-body {
+            padding: 20px 24px 20px 0;
+            border-left: 1px solid var(--gris-200);
+        }
+
+        .paso-body h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--negro);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .paso-body p {
+            font-size: 0.95rem;
+            color: var(--gris-700);
+            margin: 0 0 8px;
+            line-height: 1.65;
+        }
+
+        .paso-body p:last-child { margin-bottom: 0; }
+
+        @media (max-width: 500px) {
+            .paso { grid-template-columns: 56px 1fr; }
+            .paso-num { font-size: 1.3rem; padding: 18px 0 18px 18px; }
+            .paso-body { padding: 16px 16px 16px 0; }
+        }
+
+        /* ── FRCV: clásicos vs emergentes ── */
+        .frcv-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 28px 0 40px;
+        }
+
+        .frcv-col {
+            padding: 28px;
+        }
+
+        .frcv-col:first-child {
+            border-right: 1px solid var(--gris-200);
+            background: var(--blanco);
+        }
+
+        .frcv-col:last-child {
+            background: var(--crema);
+        }
+
+        .frcv-col-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .frcv-col-title h3 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gris-500);
+            margin: 0;
+        }
+
+        .frcv-badge {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: var(--rojo-soft);
+            color: var(--rojo);
+            border: 1px solid var(--rojo-medium);
+            white-space: nowrap;
+        }
+
+        .frcv-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+
+        .frcv-item:last-child { margin-bottom: 0; }
+
+        .frcv-item-dot {
+            width: 7px; height: 7px;
+            background: var(--rojo);
+            border-radius: 50%;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        .frcv-item-text {
+            font-size: 0.9rem;
+            color: var(--gris-700);
+            line-height: 1.5;
+        }
+
+        .frcv-item-text strong {
+            color: var(--negro);
+            display: block;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 640px) {
+            .frcv-wrap { grid-template-columns: 1fr; }
+            .frcv-col:first-child { border-right: none; border-bottom: 1px solid var(--gris-200); }
+        }
+
+        /* ── Comparativa estándar vs preventiva ── */
+        .comp-tabla {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--gris-200);
+            margin: 28px 0 0;
+        }
+
+        .comp-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--negro);
+        }
+
+        .comp-header span {
+            padding: 14px 22px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.65);
+        }
+
+        .comp-header span:first-child {
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .comp-fila {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 1px solid var(--gris-200);
+        }
+
+        .comp-fila:last-child { border-bottom: none; }
+        .comp-fila:nth-child(even) { background: var(--crema); }
+
+        .comp-cell {
+            padding: 14px 22px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--gris-700);
+            border-right: 1px solid var(--gris-200);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .comp-cell:last-child { border-right: none; }
+
+        .comp-x {
+            color: var(--gris-400);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .comp-ok {
+            color: #1a9e5c;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            font-weight: 700;
+        }
+
+        @media (max-width: 560px) {
+            .comp-header { grid-template-columns: 1fr; }
+            .comp-header span:first-child { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .comp-fila { grid-template-columns: 1fr; }
+            .comp-cell { border-right: none; border-bottom: 1px solid var(--gris-200); }
+            .comp-cell:last-child { border-bottom: none; }
+        }
+    </style>
 </head>
 <body>
- 
-    <nav>
-        <div class="nav-container container">
-            <a href="/" class="logo-area">
-                <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
-                <span class="logo-text">Dr. López Clemente</span>
-            </a>
-            <div class="menu">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/#servicios">Servicios</a>
-                <a href="/#blog">Blog</a>
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+
+<nav>
+    <div class="nav-container container">
+        <a href="/" class="logo-area">
+            <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+            <span class="logo-text">Dr. López Clemente</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú de navegación"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="menu" id="main-menu">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/#servicios">Servicios</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/#blog">Blog</a>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero hero-page">
+    <div class="hero-content container">
+        <p class="location-top">Elche · Clínica Elche Salud</p>
+        <h1>Valoración de<br class="mobile-br"> <span class="text-red">Riesgo Cardiovascular</span></h1>
+        <p class="hero-p">Prevención personalizada · Optimización global · Salud a largo plazo</p>
+    </div>
+</header>
+
+<section class="section container">
+    <div class="service-content">
+
+        <!-- ══════════════════════════════════
+             IMAGEN: ../img/serv-riesgo.webp
+             Flat lay lifestyle (800×420px)
+             ══════════════════════════════════ -->
+        <img src="../img/serv-riesgo.webp"
+             alt="Prevención cardiovascular activa — estilo de vida saludable"
+             class="serv-img"
+             onerror="this.style.display='none';">
+
+        <h2 class="section-title">¿En qué consiste?</h2>
+        <p>La valoración de riesgo cardiovascular es una consulta preventiva para personas sin síntomas ni enfermedad conocida que quieren saber qué riesgo tienen de sufrir un problema cardíaco y, sobre todo, qué pueden hacer para reducirlo. No vienes porque te duela algo: vienes para actuar antes de que aparezcan problemas.</p>
+        <p>El enfoque va más allá del simple cálculo de riesgo. El objetivo es conocer tu situación actual, establecer objetivos y trabajar para mejorarlos mediante orientación sobre nutrición, ejercicio y modificación de hábitos. Prevención activa, no reactiva.</p>
+
+        <!-- ══════════════════════════════════
+             TABLA SCORE2
+             ══════════════════════════════════ -->
+        <h2 class="section-title">El cálculo del riesgo cardiovascular: SCORE2</h2>
+        <p>El riesgo cardiovascular no es igual para todo el mundo. Las guías de la Sociedad Europea de Cardiología (ESC 2021) utilizan la escala <strong>SCORE2</strong> para estimar la probabilidad de sufrir un evento cardiovascular grave (infarto, ictus) en los próximos 10 años. A partir del resultado se definen los objetivos terapéuticos — especialmente el objetivo de colesterol LDL.</p>
+
+        <div class="score-tabla">
+            <div class="score-header">
+                <span>Categoría</span>
+                <span>SCORE2 a 10 años</span>
+                <span>Objetivo LDL</span>
+                <span>Qué implica</span>
+            </div>
+            <div class="score-fila score-bajo">
+                <div class="score-cell">
+                    <span class="score-badge"><span class="score-dot dot-bajo"></span>Bajo</span>
+                </div>
+                <div class="score-cell"><span class="score-pct">&lt; 2,5%</span></div>
+                <div class="score-cell">&lt; 116 mg/dL</div>
+                <div class="score-cell">Medidas de estilo de vida. Sin tratamiento farmacológico habitual.</div>
+            </div>
+            <div class="score-fila score-moderado">
+                <div class="score-cell">
+                    <span class="score-badge"><span class="score-dot dot-moderado"></span>Moderado</span>
+                </div>
+                <div class="score-cell"><span class="score-pct">2,5 – 5%</span></div>
+                <div class="score-cell">&lt; 100 mg/dL</div>
+                <div class="score-cell">Intervención intensiva en estilo de vida. Valorar tratamiento si no se alcanzan objetivos.</div>
+            </div>
+            <div class="score-fila score-alto">
+                <div class="score-cell">
+                    <span class="score-badge"><span class="score-dot dot-alto"></span>Alto</span>
+                </div>
+                <div class="score-cell"><span class="score-pct">5 – 10%</span></div>
+                <div class="score-cell">&lt; 70 mg/dL</div>
+                <div class="score-cell">Tratamiento farmacológico habitualmente necesario además de cambios de estilo de vida.</div>
+            </div>
+            <div class="score-fila score-muyalto">
+                <div class="score-cell">
+                    <span class="score-badge"><span class="score-dot dot-muyalto"></span>Muy alto</span>
+                </div>
+                <div class="score-cell"><span class="score-pct">≥ 10%</span></div>
+                <div class="score-cell">&lt; 55 mg/dL</div>
+                <div class="score-cell">Tratamiento intensivo imprescindible. Objetivos estrictos de LDL con reducción ≥ 50%.</div>
             </div>
         </div>
-    </nav>
- 
-    <header class="hero hero-page">
-        <div class="hero-content container">
-            <p class="location-top">Elche · Clínica Elche Salud</p>
-            <h1>Valoración de<br class="mobile-br"> <span class="text-red">Riesgo Cardiovascular</span></h1>
-            <p class="hero-p">Prevención personalizada · Optimización global · Salud a largo plazo</p>
-        </div>
-    </header>
- 
-    <section class="section container">
-        <div class="service-content">
-            <h2 class="section-title">¿En qué consiste?</h2>
-            <p>La valoración de riesgo cardiovascular es una consulta preventiva dirigida a personas sin síntomas ni enfermedad cardiovascular conocida que quieren conocer qué riesgo tienen de sufrir un problema en su corazón (o, en ocasiones, si lo tienen sin ser conscientes) y, sobre todo, qué pueden hacer para reducirlo. No es una consulta médica al uso: no vienes porque te duela algo, sino porque quieres actuar antes de que aparezcan problemas.</p>
-            
-            <p>El enfoque va más allá del simple cálculo de riesgo. El objetivo es diseñar un plan personalizado de optimización de salud cardiovascular: a partir de un estudio para conocer tu situación actual (analítica, ECG, ecocardiograma, síntomas y signos que puedes haber pasado por alto), establecer un plan para mantenerla y mejorarla mediante nutrición, ejercicio y modificación de hábitos. Es prevención activa, no reactiva.</p>
- 
-            <h2 class="section-title">¿Para quién está pensada?</h2>
-            <p>Esta valoración está indicada en personas sanas que quieren prevenir de forma activa. Situaciones habituales:</p>
-            <ul class="service-list">
-                <li>Tienes antecedentes familiares de enfermedad cardiovascular (infartos, ictus, muerte súbita) y quieres saber si estás en riesgo</li>
-                <li>Los años pasan y empieza a preocuparte tu salud cardiovascular, quieres asegurarte de que todo está bien y optimizar tu estilo de vida</li>
-                <li>Tienes factores de riesgo (tensión arterial en el límite, colesterol alto, sobrepeso, sedentarismo, tabaquismo) pero no enfermedad, y quieres actuar antes de que cause daño</li>
-                <li>Vas a iniciar un programa de ejercicio intenso y quieres asegurarte de que tu corazón está preparado</li>
-                <li>Simplemente quieres conocer tu riesgo cardiovascular y recibir un plan de prevención personalizado basado en evidencia científica</li>
-            </ul>
- 
-            <h2 class="section-title">¿Qué incluye la valoración?</h2>
-            <p>La consulta se estructura en tres fases:</p>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>1. Screening cardiovascular completo</h3>
-                <p>Historia clínica detallada (antecedentes familiares, factores de riesgo, síntomas y signos que puedas haber pasado por alto, nivel de actividad física, alimentación habitual), exploración física cardiovascular, electrocardiograma, ecocardiograma Doppler y valoración de analítica reciente (si la aportas) o solicitud de analítica completa si no dispones de una reciente.</p>
-                <p>Con esta información se calcula tu riesgo cardiovascular real mediante escalas validadas (SCORE2, Framingham) que estiman la probabilidad de sufrir un evento cardiovascular (infarto, ictus) en los próximos 10 años.</p>
+
+        <p class="score-nota">⚠️ SCORE2 aplica a personas de 40–69 años sin enfermedad cardiovascular conocida en países de riesgo moderado. Para &gt;70 años se usa SCORE2-OP (umbrales diferentes). Personas con ECV establecida, diabetes, ERC o LDL muy elevado se estratifican directamente como muy alto riesgo independientemente del cálculo.</p>
+
+        <!-- ══════════════════════════════════
+             PARA QUIÉN ESTÁ PENSADA
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Para quién está pensada?</h2>
+
+        <div class="para-quien-grid">
+            <div class="pq-card">
+                <div class="pq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <p><strong>Antecedentes familiares</strong> de infarto, ictus o muerte súbita. Quieres saber si estás en riesgo y actuar a tiempo.</p>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>2. Valoración nutricional y de estilo de vida</h3>
-                <p>Análisis de tu patrón alimentario habitual, identificación de errores nutricionales que aumentan el riesgo cardiovascular (exceso de sal, grasas saturadas, azúcares, déficit de fibra, omega-3, antioxidantes) y enseñarte a comer para mejorar tu salud cardiovascular de forma práctica y sostenible. No es una dieta genérica: se trata de entender qué estás haciendo bien, qué puedes mejorar y cómo hacerlo de forma realista adaptándolo a tus preferencias y tu día a día.</p>
-                <p>Valoración de tu nivel de actividad física, capacidad funcional y diseño de pautas de ejercicio individualizadas. Si eres sedentario, cómo empezar de forma segura. Si ya haces ejercicio, cómo optimizarlo para salud cardiovascular.</p>
+            <div class="pq-card">
+                <div class="pq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <p><strong>Los años pasan</strong> y empieza a preocuparte tu salud cardiovascular. Quieres saber exactamente cómo estás.</p>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>3. Plan de optimización cardiovascular</h3>
-                <p>Al finalizar la valoración saldrás de la consulta sabiendo cómo comer y cuidarte para reducir tu riesgo cardiovascular. Recibes un informe completo con: tu riesgo cardiovascular calculado, interpretación de todas las pruebas realizadas, identificación de factores de riesgo modificables, pautas claras sobre alimentación y ejercicio adaptadas a tu situación, objetivos terapéuticos (tensión arterial, colesterol, peso) y calendario de seguimiento.</p>
-                <p>Si se detecta algún factor de riesgo que requiere tratamiento farmacológico (hipertensión, dislipemia, diabetes), se indica y se explica por qué, pero siempre integrado en un plan global que incluye nutrición y ejercicio como pilares fundamentales.</p>
+            <div class="pq-card">
+                <div class="pq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <p><strong>Factores de riesgo presentes</strong> (tensión en el límite, colesterol, sobrepeso, sedentarismo) sin enfermedad todavía. El momento ideal para actuar.</p>
             </div>
- 
-            <h2 class="section-title">Resolución de dudas basada en evidencia</h2>
-            <p>Esta consulta es también el espacio para resolver dudas sobre aspectos concretos de tu día a día que te generan incertidumbre: ¿el café es bueno o malo para el corazón?, ¿cuánto ejercicio es suficiente?, ¿los huevos suben el colesterol?, ¿puedo tomar alcohol de forma segura?, ¿el ayuno intermitente es recomendable?, ¿los suplementos de omega-3 sirven para algo?, ¿dormir poco afecta al corazón?</p>
- 
-            <p>Hay mucha información contradictoria circulando, y es fácil perderse entre consejos de Internet, titulares sensacionalistas y opiniones no fundamentadas. Aquí se trabaja solo con evidencia científica actualizada: qué dice la investigación más reciente, qué recomiendan las guías clínicas y, sobre todo, qué tiene sentido para ti según tu situación particular. No se trata de dar consejos genéricos, sino de explicarte el porqué detrás de cada recomendación para que puedas tomar decisiones informadas.</p>
- 
-            <h2 class="section-title">Por qué un abordaje global</h2>
-            <p>La enfermedad cardiovascular es multifactorial: genética, alimentación, ejercicio, estrés, sueño, tabaco, alcohol. Abordar el riesgo cardiovascular solo con fármacos es insuficiente. Los estudios demuestran que la modificación de estilo de vida tiene un impacto mayor en la reducción del riesgo que muchos tratamientos farmacológicos, pero requiere un plan personalizado, no consejos genéricos.</p>
- 
-            <p>La formación completa en Cardiología y en Nutrición, junto con la actualización constante en evidencia científica, permite diseñar planes de prevención que integran ambas disciplinas de forma natural. No es "come sano y haz ejercicio" (eso ya lo sabes), sino "este es tu patrón alimentario actual, estos son los errores que más impacto tienen en tu riesgo, así los corregimos, y este es el tipo de ejercicio que más te beneficia según tu situación".</p>
- 
-            <h2 class="section-title">Diferencia con una consulta médica estándar</h2>
-            <p>En una consulta médica convencional, el tiempo es limitado y el foco suele estar en diagnosticar y tratar enfermedad. Aquí no hay enfermedad: el objetivo es prevenir que aparezca. Por eso el tiempo de consulta es el que se necesite, y el enfoque es educativo y de acompañamiento a largo plazo.</p>
- 
-            <p>No se trata de hacer una analítica, decirte que tienes el colesterol alto y recetarte una estatina. Se trata de entender por qué tienes el colesterol alto, qué cambios nutricionales van a reducirlo (y cuánto), si el ejercicio puede ayudar, si necesitas medicación o si con cambios de estilo de vida es suficiente, y cómo vamos a hacer seguimiento para verificar que funciona. Se trata de que entiendas qué está pasando en tu cuerpo, por qué es importante, qué puedes hacer tú y qué herramientas médicas existen si las necesitas. El objetivo no es solo mejorar números en una analítica, sino que comprendas tu salud cardiovascular y tengas las herramientas para cuidarla a largo plazo de forma autónoma e informada.</p>
- 
-            <h2 class="section-title">¿Es solo para personas con factores de riesgo?</h2>
-            <p>No. También está pensada para personas completamente sanas que simplemente quieren optimizar su salud cardiovascular. Tener la tensión arterial perfecta, el colesterol bien y no fumar no significa que no haya margen de mejora. La prevención cardiovascular no es solo evitar la enfermedad, sino maximizar la salud.</p>
- 
-            <p>Si haces deporte de forma regular, una valoración de riesgo cardiovascular puede ayudarte a optimizar tu entrenamiento para salud (no solo para rendimiento). A veces entrenamos mucho pero comemos mal, o al revés. A veces el ejercicio que hacemos no es el más beneficioso para nuestro corazón. A veces tenemos pequeños factores de riesgo que pasan desapercibidos (tensión arterial ligeramente elevada solo con el esfuerzo, glucosa en el límite alto, colesterol HDL bajo) y que detectados a tiempo se pueden corregir fácilmente.</p>
- 
-            <p>Si quieres llegar a los 70-80 años con la mejor salud posible, esta consulta te da las herramientas para conseguirlo. No se trata de obsesionarse con la salud, sino de tener información clara sobre qué hábitos te benefician y cuáles te perjudican, para que puedas elegir con criterio. Salud cardiovascular a largo plazo no es casualidad: es el resultado de decisiones diarias informadas y sostenidas en el tiempo.</p>
- 
-            <p>La consulta se realiza en <strong>Clínica Elche Salud</strong>, con acceso directo a todas las pruebas diagnósticas necesarias para una valoración completa.</p>
-        </div>
-    </section>
- 
-    <section class="section bg-light cta-section">
-        <div class="container">
-            <h2 class="section-title">Solicita tu valoración</h2>
-            <p class="lead">Prevención cardiovascular personalizada en Elche. Screening completo + plan de optimización global. Reserva en Doctoralia.</p>
-            <div class="cta-group">
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
-                <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
+            <div class="pq-card">
+                <div class="pq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <p><strong>Inicio de ejercicio intenso</strong>. Quieres asegurarte de que tu corazón está preparado antes de aumentar la carga.</p>
+            </div>
+            <div class="pq-card" style="grid-column: 1/-1;">
+                <div class="pq-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <p><strong>Prevención activa en personas sanas</strong>. No hay enfermedad, pero quieres un plan de optimización personalizado basado en evidencia y adaptado a tu estilo de vida.</p>
             </div>
         </div>
-    </section>
- 
-    <section class="section container">
-        <h2 class="section-title">Otros servicios</h2>
-        <div class="articles-grid">
-            <a href="/servicios/consulta-cardiologica-elche" class="article-card">
-                <span class="category-tag">Consulta</span>
-                <h3>Consulta cardiológica</h3>
-                <p>Valoración cardiovascular integral con enfoque preventivo y nutricional.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/servicios/ecocardiograma-elche" class="article-card">
-                <span class="category-tag">Prueba diagnóstica</span>
-                <h3>Ecocardiograma Doppler</h3>
-                <p>Estudio de la estructura y función del corazón mediante ultrasonidos.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/servicios/reconocimiento-cardiologico-elche" class="article-card">
-                <span class="category-tag">Screening</span>
-                <h3>Reconocimiento médico cardiológico</h3>
-                <p>Screening cardiovascular para deporte, conducción y trámites laborales.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-        </div>
-    </section>
- 
-    <footer>
-        <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <p style="font-size: 0.85rem; color: #666; margin: 8px 0 18px;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
-            <div class="footer-links">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/legal/aviso-legal.html">Aviso Legal</a>
-                <a href="/legal/privacidad.html">Privacidad</a>
-                <a href="/legal/cookies.html">Cookies</a>
+
+        <!-- ══════════════════════════════════
+             FASES DE LA VALORACIÓN
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Qué incluye la valoración?</h2>
+
+        <div class="pasos-lista">
+            <div class="paso">
+                <div class="paso-num">1</div>
+                <div class="paso-body">
+                    <h4>Screening cardiovascular completo</h4>
+                    <p>Historia clínica detallada (antecedentes familiares, factores de riesgo, síntomas que puedas haber pasado por alto, actividad física habitual, alimentación), exploración física cardiovascular, electrocardiograma y ecocardiograma Doppler.</p>
+                    <p>Con esta información se calcula el riesgo cardiovascular real mediante la escala SCORE2, que estima la probabilidad de sufrir un evento cardiovascular en los próximos 10 años, y se establecen los objetivos terapéuticos individualizados.</p>
+                </div>
             </div>
-            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+            <div class="paso">
+                <div class="paso-num">2</div>
+                <div class="paso-body">
+                    <h4>Valoración nutricional y de estilo de vida</h4>
+                    <p>Análisis del patrón alimentario habitual, identificación de errores con mayor impacto cardiovascular (exceso de sal, grasas saturadas, azúcares, déficit de fibra y omega-3) y orientación práctica sobre cómo mejorarlos — no una dieta genérica, sino recomendaciones concretas y resolución de dudas adaptadas a tus hábitos y preferencias.</p>
+                    <p>Valoración del nivel de actividad física y capacidad funcional, con orientación sobre el tipo y cantidad de ejercicio más beneficioso para tu situación cardiovascular.</p>
+                </div>
+            </div>
+            <div class="paso">
+                <div class="paso-num">3</div>
+                <div class="paso-body">
+                    <h4>Plan de optimización y seguimiento</h4>
+                    <p>Saldrás de la consulta con un informe completo que incluye: riesgo cardiovascular calculado, interpretación de todas las pruebas, factores de riesgo identificados, orientación sobre alimentación y ejercicio, objetivos terapéuticos (tensión, colesterol, peso) y calendario de seguimiento.</p>
+                    <p>Si se detecta algún factor de riesgo que requiere tratamiento farmacológico, se indica y explica el porqué, siempre integrado en un plan global donde nutrición y ejercicio son los pilares fundamentales.</p>
+                </div>
+            </div>
         </div>
-    </footer>
- 
+
+        <!-- ══════════════════════════════════
+             FRCV CLÁSICOS VS EMERGENTES
+             ══════════════════════════════════ -->
+        <h2 class="section-title">Factores de riesgo: clásicos y emergentes</h2>
+        <p>La valoración estándar suele cubrir los factores clásicos. En esta consulta también se tienen en cuenta los <strong>factores emergentes</strong> — menos conocidos pero con impacto creciente en la evidencia científica:</p>
+
+        <div class="frcv-wrap">
+            <div class="frcv-col">
+                <div class="frcv-col-title">
+                    <h3>Factores clásicos</h3>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Hipertensión arterial</strong>El factor de riesgo con mayor impacto individual en la mortalidad CV.</div>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Dislipemia (colesterol LDL y TG)</strong>Causa directa de aterosclerosis. Objetivo variable según el riesgo global.</div>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Diabetes mellitus tipo 2</strong>Acelera la aterosclerosis e incrementa el riesgo de forma independiente.</div>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Tabaquismo</strong>Daño endotelial directo. Dejar de fumar reduce el riesgo desde el primer día.</div>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Sedentarismo y obesidad</strong>Impacto sobre tensión, colesterol, glucosa y riesgo global.</div>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Antecedentes familiares</strong>Enfermedad coronaria prematura en familiares de primer grado.</div>
+                </div>
+            </div>
+            <div class="frcv-col">
+                <div class="frcv-col-title">
+                    <h3>Factores emergentes</h3>
+                    <span class="frcv-badge">Poco estudiados en consulta habitual</span>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Lipoproteína(a) — Lp(a)</strong>Factor genético independiente que puede elevar el riesgo aunque el LDL esté controlado. Se mide una vez en la vida.</div>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>PCR ultrasensible</strong>Marcador de inflamación crónica de bajo grado. Riesgo residual a pesar de lípidos normales.</div>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Apnea obstructiva del sueño</strong>Factor de riesgo independiente de hipertensión, FA e ictus. Infradiagnosticada.</div>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Estrés crónico y salud mental</strong>Activación simpática sostenida con efecto directo sobre tensión y coagulación.</div>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Calidad del sueño</strong>Sueño insuficiente o fragmentado eleva el riesgo cardiovascular de forma independiente.</div>
+                </div>
+                <div class="frcv-item">
+                    <span class="frcv-item-dot"></span>
+                    <div class="frcv-item-text"><strong>Score de calcio coronario (CAC)</strong>Imagen directa de aterosclerosis subclínica. Reclasifica el riesgo en casos intermedios.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════
+             COMPARATIVA CONSULTA ESTÁNDAR VS PREVENTIVA
+             ══════════════════════════════════ -->
+        <h2 class="section-title">Diferencia con una consulta estándar</h2>
+
+        <div class="comp-tabla">
+            <div class="comp-header">
+                <span>Consulta médica estándar</span>
+                <span>Valoración preventiva</span>
+            </div>
+            <div class="comp-fila">
+                <div class="comp-cell"><span class="comp-x">✗</span>Tiempo limitado, foco en enfermedad</div>
+                <div class="comp-cell"><span class="comp-ok">✓</span>Tiempo necesario, foco en prevención</div>
+            </div>
+            <div class="comp-fila">
+                <div class="comp-cell"><span class="comp-x">✗</span>Analítica + receta si hay algo alterado</div>
+                <div class="comp-cell"><span class="comp-ok">✓</span>Análisis integral: por qué está alterado y cómo corregirlo</div>
+            </div>
+            <div class="comp-fila">
+                <div class="comp-cell"><span class="comp-x">✗</span>Factores de riesgo clásicos</div>
+                <div class="comp-cell"><span class="comp-ok">✓</span>Factores clásicos + emergentes (Lp(a), PCR, sueño, estrés…)</div>
+            </div>
+            <div class="comp-fila">
+                <div class="comp-cell"><span class="comp-x">✗</span>Consejo genérico: "come sano y haz ejercicio"</div>
+                <div class="comp-cell"><span class="comp-ok">✓</span>Formación, orientación práctica y resolución de dudas sobre nutrición y ejercicio</div>
+            </div>
+            <div class="comp-fila">
+                <div class="comp-cell"><span class="comp-x">✗</span>Riesgo rara vez calculado y explicado</div>
+                <div class="comp-cell"><span class="comp-ok">✓</span>Cálculo SCORE2 y objetivos terapéuticos claros</div>
+            </div>
+            <div class="comp-fila">
+                <div class="comp-cell"><span class="comp-x">✗</span>Sin ECG ni ecocardiograma en la misma visita</div>
+                <div class="comp-cell"><span class="comp-ok">✓</span>ECG + ecocardiograma incluidos en la valoración</div>
+            </div>
+            <div class="comp-fila">
+                <div class="comp-cell"><span class="comp-x">✗</span>Informe poco detallado o inexistente</div>
+                <div class="comp-cell"><span class="comp-ok">✓</span>Informe completo con riesgo, objetivos y plan de acción</div>
+            </div>
+        </div>
+
+        <p style="margin-top: 24px; font-size: 0.97rem; line-height: 1.7; color: var(--gris-700);">La consulta se realiza en <strong>Clínica Elche Salud</strong>, con acceso directo a todas las pruebas diagnósticas necesarias para una valoración completa.</p>
+
+    </div>
+</section>
+
+<section class="section bg-light cta-section">
+    <div class="container">
+        <h2 class="section-title">Solicita tu valoración</h2>
+        <p class="lead">Prevención cardiovascular personalizada en Elche. Screening completo + plan de optimización global. Reserva en Doctoralia.</p>
+        <div class="cta-group">
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
+            <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
+        </div>
+    </div>
+</section>
+
+<section class="section container">
+    <h2 class="section-title">Otros servicios</h2>
+    <div class="articles-grid">
+        <a href="/servicios/consulta-cardiologica-elche" class="article-card">
+            <span class="category-tag">Consulta</span>
+            <h3>Consulta cardiológica</h3>
+            <p>Valoración cardiovascular integral con enfoque preventivo y nutricional.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/servicios/ecocardiograma-elche" class="article-card">
+            <span class="category-tag">Prueba diagnóstica</span>
+            <h3>Ecocardiograma Doppler</h3>
+            <p>Estudio de la estructura y función del corazón mediante ultrasonidos.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/servicios/reconocimiento-cardiologico-elche" class="article-card">
+            <span class="category-tag">Screening</span>
+            <h3>Reconocimiento médico cardiológico</h3>
+            <p>Screening cardiovascular para deporte, conducción y trámites laborales.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
+        </div>
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>
- 
