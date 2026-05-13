@@ -4,162 +4,390 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cardiolopezclemente.com/servicios/reconocimiento-cardiologico-elche" />
- 
+
     <title>Reconocimiento Médico Cardiológico en Elche | Dr. López Clemente</title>
-    <meta name="description" content="Reconocimiento cardiológico en Elche para deporte, conducción y trámites laborales. Informe médico completo + screening preventivo. Clínica Elche Salud. Pide cita.">
- 
+    <meta name="description" content="Reconocimiento cardiológico en Elche. Informe médico con valoración cardiovascular completa: ECG, ecocardiograma y exploración física. Clínica Elche Salud.">
+
     <meta property="og:title" content="Reconocimiento Médico Cardiológico en Elche · Dr. López Clemente">
-    <meta property="og:description" content="Reconocimiento cardiológico para deporte, renovación de carnet y valoración laboral. Informe médico + evaluación preventiva.">
+    <meta property="og:description" content="Reconocimiento cardiológico con informe médico. Valoración objetiva del estado cardiovascular para trámites deportivos, administrativos o de interés personal.">
     <meta property="og:url" content="https://cardiolopezclemente.com/servicios/reconocimiento-cardiologico-elche">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://cardiolopezclemente.com/img/perfil.webp">
- 
+    <meta property="og:image" content="https://cardiolopezclemente.com/img/serv-reconocimiento.webp">
+
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalProcedure",
       "name": "Reconocimiento médico cardiológico",
-      "description": "Evaluación cardiológica para screening deportivo, conducción y trámites laborales. Incluye historia clínica, exploración física, ECG y ecocardiograma.",
+      "description": "Evaluación cardiológica con informe médico objetivo. Incluye historia clínica, exploración física, ECG y ecocardiograma.",
       "procedureType": "Screening cardiovascular",
       "bodyLocation": "Sistema cardiovascular",
       "preparation": "Traer documentación previa si existe. Ropa cómoda para la exploración.",
-      "followup": "Informe médico completo al finalizar la valoración"
+      "followup": "Informe médico con los hallazgos de la valoración",
+      "performer": {
+        "@type": "Physician",
+        "name": "Dr. José Carlos López Clemente",
+        "medicalSpecialty": "Cardiology"
+      }
     }
     </script>
+
+    <style>
+        .serv-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-lg);
+            display: block;
+            margin-bottom: 60px;
+        }
+
+        /* Badges */
+        .prueba-badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px 0 40px;
+        }
+        .prueba-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--rojo-soft);
+            border: 1px solid var(--rojo-medium);
+            border-radius: 30px;
+            padding: 8px 18px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--rojo);
+        }
+
+        /* Grid contextos */
+        .contextos-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 28px 0 40px;
+        }
+
+        .contexto-card {
+            background: var(--blanco);
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        .contexto-card:hover {
+            border-color: var(--rojo-medium);
+            box-shadow: var(--sombra-sm);
+        }
+
+        .contexto-icon {
+            width: 40px; height: 40px;
+            background: var(--rojo-soft);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--rojo);
+            margin-bottom: 14px;
+        }
+
+        .contexto-icon svg { width: 20px; height: 20px; }
+
+        .contexto-card h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--negro);
+            margin-bottom: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        .contexto-card p {
+            font-size: 0.9rem;
+            color: var(--gris-700);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 560px) {
+            .contextos-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Pasos */
+        .pasos-lista {
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 28px 0 40px;
+        }
+        .paso {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            align-items: start;
+            border-bottom: 1px solid var(--gris-200);
+            background: var(--blanco);
+            transition: background 0.2s ease;
+        }
+        .paso:last-child { border-bottom: none; }
+        .paso:hover { background: var(--crema); }
+        .paso-num {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--rojo);
+            padding: 22px 0 22px 26px;
+            line-height: 1;
+        }
+        .paso-body {
+            padding: 20px 24px 20px 0;
+            border-left: 1px solid var(--gris-200);
+        }
+        .paso-body h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--negro);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .paso-body p {
+            font-size: 0.95rem;
+            color: var(--gris-700);
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 500px) {
+            .paso { grid-template-columns: 56px 1fr; }
+            .paso-num { font-size: 1.3rem; padding: 18px 0 18px 18px; }
+            .paso-body { padding: 16px 16px 16px 0; }
+        }
+
+        /* Nota de alcance */
+        .alcance-nota {
+            background: var(--crema);
+            border: 1px solid var(--gris-200);
+            border-left: 4px solid var(--gris-400);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 20px 24px;
+            margin: 0 0 40px;
+        }
+
+        .alcance-nota h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gris-500);
+            margin-bottom: 10px;
+        }
+
+        .alcance-nota p {
+            font-size: 0.92rem;
+            color: var(--gris-700);
+            margin: 0;
+            line-height: 1.65;
+        }
+    </style>
 </head>
 <body>
- 
-    <nav>
-        <div class="nav-container container">
-            <a href="/" class="logo-area">
-                <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
-                <span class="logo-text">Dr. López Clemente</span>
-            </a>
-            <div class="menu">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/#servicios">Servicios</a>
-                <a href="/#blog">Blog</a>
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
-            </div>
+
+<nav>
+    <div class="nav-container container">
+        <a href="/" class="logo-area">
+            <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+            <span class="logo-text">Dr. López Clemente</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú de navegación"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="menu" id="main-menu">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/#servicios">Servicios</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/#blog">Blog</a>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
         </div>
-    </nav>
- 
-    <header class="hero hero-page">
-        <div class="hero-content container">
-            <p class="location-top">Elche · Clínica Elche Salud</p>
-            <h1>Reconocimiento Médico<br class="mobile-br"> <span class="text-red">Cardiológico</span></h1>
-            <p class="hero-p">Screening cardiovascular · Informe médico · Prevención</p>
+    </div>
+</nav>
+
+<header class="hero hero-page">
+    <div class="hero-content container">
+        <p class="location-top">Elche · Clínica Elche Salud</p>
+        <h1>Reconocimiento Médico<br class="mobile-br"> <span class="text-red">Cardiológico</span></h1>
+        <p class="hero-p">Screening cardiovascular · Informe médico · Prevención</p>
+    </div>
+</header>
+
+<section class="section container">
+    <div class="service-content">
+
+        <!-- ══════════════════════════════════
+             IMAGEN: ../img/serv-reconocimiento.webp
+             Estetoscopio y portapapeles
+             ══════════════════════════════════ -->
+        <img src="../img/serv-reconocimiento.webp"
+             alt="Reconocimiento médico cardiológico en Elche — valoración cardiovascular con informe"
+             class="serv-img"
+             onerror="this.style.display='none';">
+
+        <h2 class="section-title">¿En qué consiste?</h2>
+        <p>El reconocimiento médico cardiológico es una evaluación del estado de salud cardiovascular realizada en ausencia de síntomas. Incluye historia clínica, exploración física, electrocardiograma y ecocardiograma. Al finalizar se entrega un <strong>informe médico con los hallazgos objetivos</strong> de la valoración.</p>
+
+        <div class="prueba-badges">
+            <span class="prueba-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Historia clínica</span>
+            <span class="prueba-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Exploración física</span>
+            <span class="prueba-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>ECG</span>
+            <span class="prueba-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Ecocardiograma</span>
+            <span class="prueba-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Informe médico</span>
+            <span class="prueba-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Una sola visita</span>
         </div>
-    </header>
- 
-    <section class="section container">
-        <div class="service-content">
-            <h2 class="section-title">¿En qué consiste?</h2>
-            <p>El reconocimiento médico cardiológico es una evaluación del estado de salud cardiovascular que se realiza en ausencia de síntomas, generalmente como medida preventiva o para trámites específicos que requieren valoración médica. A diferencia de una consulta médica motivada por síntomas o enfermedad conocida, aquí el objetivo es valorar la aptitud cardiovascular para una actividad específica (deporte, conducción, trabajo) o simplemente realizar un screening preventivo.</p>
-            
-            <p>La valoración incluye historia clínica dirigida, exploración física cardiovascular, electrocardiograma y ecocardiograma. Al finalizar se entrega un informe médico completo con los hallazgos.</p>
- 
-            <h2 class="section-title">¿Cuándo se solicita?</h2>
-            <p>El reconocimiento cardiológico está indicado en diversos contextos:</p>
-            
-            <div class="info-card" style="margin-bottom: 20px;">
+
+        <!-- ══════════════════════════════════
+             GRID CONTEXTOS
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Cuándo se solicita?</h2>
+
+        <div class="contextos-grid">
+            <div class="contexto-card">
+                <div class="contexto-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
                 <h3>Deporte y actividad física</h3>
-                <p>Licencias deportivas federativas, inscripción en competiciones (carreras populares, triatlones, maratones), inicio de actividad física intensa tras período de inactividad, o simplemente como screening preventivo antes de comenzar un programa de entrenamiento exigente.</p>
-                <p>La valoración cardiológica permite detectar anomalías que podrían contraindicar el ejercicio intenso (miocardiopatía hipertrófica, valvulopatías significativas, arritmias de riesgo) y ofrece tranquilidad para practicar deporte de forma segura.</p>
+                <p>Licencias deportivas, inscripción en competiciones populares (carreras, triatlones, maratones), inicio de actividad física intensa tras período de inactividad, o simplemente como screening preventivo antes de un programa exigente.</p>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Renovación o obtención de permisos de conducción</h3>
-                <p>Permisos profesionales (camión, autobús, taxi, VTC), renovación a partir de cierta edad cuando se solicita valoración cardiológica específica, o en casos donde existe antecedente cardiovascular que requiere evaluación médica actualizada para conducir.</p>
+
+            <div class="contexto-card">
+                <div class="contexto-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <h3>Renovación o permisos de conducción</h3>
+                <p>Cuando el organismo o centro de reconocimiento solicita valoración cardiológica específica complementaria. El informe recoge el estado cardiovascular actual y puede aportarse junto al resto de documentación requerida.</p>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Valoración laboral</h3>
-                <p>Trabajos que requieren evaluación de aptitud cardiovascular: trabajos en altura, manejo de maquinaria pesada, fuerzas de seguridad, bomberos, pilotos, controladores aéreos, u otros puestos donde una pérdida súbita de consciencia suponga riesgo para el trabajador o terceros.</p>
+
+            <div class="contexto-card">
+                <div class="contexto-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <h3>Trámites laborales y administrativos</h3>
+                <p>Procesos de selección u oposición, seguros de vida o invalidez, adopciones u otros trámites que soliciten un informe médico cardiológico como parte de la documentación requerida.</p>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Trámites administrativos diversos</h3>
-                <p>Adopción, procesos de oposición que requieren informe médico específico, seguros de vida o invalidez que solicitan valoración cardiológica.</p>
-            </div>
- 
-            <h2 class="section-title">¿Qué incluye la valoración?</h2>
-            <p>El reconocimiento cardiológico se realiza en una única visita de aproximadamente 40-60 minutos, con el tiempo necesario, e incluye:</p>
-            <ul class="service-list">
-                <li><strong>Historia clínica:</strong> antecedentes personales y familiares cardiovasculares, factores de riesgo, medicación actual, síntomas (si los hubiera), nivel de actividad física habitual</li>
-                <li><strong>Exploración física:</strong> tensión arterial, frecuencia cardíaca, auscultación cardiopulmonar, valoración de pulsos periféricos</li>
-                <li><strong>Electrocardiograma (ECG):</strong> registro de la actividad eléctrica del corazón en reposo para detectar arritmias, anomalías de conducción, signos de hipertrofia ventricular, alteraciones isquémicas, entre otros</li>
-                <li><strong>Ecocardiograma Doppler:</strong> estudio de la estructura y función del corazón mediante ultrasonidos. Permite valorar tamaño de cavidades, grosor de paredes, función de contracción, estado de las válvulas y descartar anomalías estructurales</li>
-            </ul>
- 
-            <p>Al finalizar la valoración se entrega un informe médico detallado con todos los hallazgos de la exploración.</p>
- 
-            <h2 class="section-title">Alcance y limitaciones</h2>
-            <p>Este reconocimiento es un screening cardiológico general que cubre las pruebas habituales en valoración preventiva: ECG y ecocardiograma. Permite detectar la mayoría de anomalías cardiovasculares relevantes y es suficiente para la mayoría de trámites administrativos y deportivos a nivel no profesional.</p>
- 
-            <p>En casos donde se requiera medicina deportiva avanzada (deportistas de élite, valoración ergométrica con análisis de VO2 máx, estudios específicos de rendimiento) puede ser necesaria derivación a unidades especializadas. Del mismo modo, si durante la valoración se detecta alguna anomalía que requiera estudios adicionales (prueba de esfuerzo, Holter, TAC coronario, resonancia), se indicarán y solicitarán las pruebas necesarias.</p>
- 
-            <h2 class="section-title">Prevención más allá del trámite</h2>
-            <p>Aunque el objetivo principal pueda ser obtener un informe médico para un trámite específico, el reconocimiento cardiológico es también una oportunidad para detectar factores de riesgo cardiovascular de forma precoz: hipertensión arterial no diagnosticada, alteraciones del colesterol, obesidad, sedentarismo o hábitos no saludables.</p>
- 
-            <p>La formación en nutrición permite ofrecer, además del informe, recomendaciones personalizadas sobre estilo de vida, alimentación y ejercicio que van más allá de la simple valoración administrativa.</p>
- 
-            <p>El reconocimiento se realiza en <strong>Clínica Elche Salud</strong>, con acceso directo a todas las pruebas necesarias sin derivaciones externas.</p>
-        </div>
-    </section>
- 
-    <section class="section bg-light cta-section">
-        <div class="container">
-            <h2 class="section-title">Solicita tu reconocimiento</h2>
-            <p class="lead">Reconocimiento cardiológico en Elche. Informe médico completo al finalizar. Reserva en Doctoralia.</p>
-            <div class="cta-group">
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
-                <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
+
+            <div class="contexto-card">
+                <div class="contexto-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Screening preventivo personal</h3>
+                <p>Sin trámite de por medio. Quieres conocer el estado de tu corazón de forma objetiva y tener un informe de referencia. Una valoración preventiva con todas las pruebas incluidas en una única visita.</p>
             </div>
         </div>
-    </section>
- 
-    <section class="section container">
-        <h2 class="section-title">Otros servicios</h2>
-        <div class="articles-grid">
-            <a href="/servicios/ecocardiograma-elche" class="article-card">
-                <span class="category-tag">Prueba diagnóstica</span>
-                <h3>Ecocardiograma Doppler</h3>
-                <p>Estudio de la estructura y función del corazón mediante ultrasonidos.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/servicios/consulta-cardiologica-elche" class="article-card">
-                <span class="category-tag">Consulta</span>
-                <h3>Consulta cardiológica</h3>
-                <p>Valoración cardiovascular integral con enfoque preventivo y nutricional.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/servicios/riesgo-cardiovascular-elche" class="article-card">
-                <span class="category-tag">Prevención</span>
-                <h3>Valoración de riesgo cardiovascular</h3>
-                <p>Optimización de salud cardiovascular con abordaje global: nutrición, ejercicio y prevención.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-        </div>
-    </section>
- 
-    <footer>
-        <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <p style="font-size: 0.85rem; color: #666; margin: 8px 0 18px;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
-            <div class="footer-links">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/legal/aviso-legal.html">Aviso Legal</a>
-                <a href="/legal/privacidad.html">Privacidad</a>
-                <a href="/legal/cookies.html">Cookies</a>
+
+        <!-- ══════════════════════════════════
+             QUÉ INCLUYE — PASOS
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Qué incluye la valoración?</h2>
+        <p>El reconocimiento se realiza en una única visita de aproximadamente <strong>45–60 minutos</strong>:</p>
+
+        <div class="pasos-lista">
+            <div class="paso">
+                <div class="paso-num">1</div>
+                <div class="paso-body">
+                    <h4>Historia clínica</h4>
+                    <p>Antecedentes personales y familiares cardiovasculares, factores de riesgo, medicación actual, síntomas presentes o pasados y nivel de actividad física habitual.</p>
+                </div>
             </div>
-            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+            <div class="paso">
+                <div class="paso-num">2</div>
+                <div class="paso-body">
+                    <h4>Exploración física cardiovascular</h4>
+                    <p>Tensión arterial, frecuencia cardíaca, auscultación cardiopulmonar y valoración de pulsos periféricos.</p>
+                </div>
+            </div>
+            <div class="paso">
+                <div class="paso-num">3</div>
+                <div class="paso-body">
+                    <h4>Electrocardiograma (ECG)</h4>
+                    <p>Registro de la actividad eléctrica del corazón en reposo. Permite detectar arritmias, anomalías de conducción, signos de hipertrofia ventricular y alteraciones isquémicas.</p>
+                </div>
+            </div>
+            <div class="paso">
+                <div class="paso-num">4</div>
+                <div class="paso-body">
+                    <h4>Ecocardiograma Doppler + informe</h4>
+                    <p>Estudio de la estructura y función del corazón mediante ultrasonidos. Valora tamaño de cavidades, grosor de paredes, función de contracción y estado de las válvulas. Al finalizar se entrega el informe médico con todos los hallazgos.</p>
+                </div>
+            </div>
         </div>
-    </footer>
- 
+
+        <h2 class="section-title">Prevención más allá del trámite</h2>
+        <p>Aunque el motivo principal pueda ser un trámite concreto, el reconocimiento cardiológico es también una oportunidad para detectar factores de riesgo de forma precoz: hipertensión no diagnosticada, alteraciones de colesterol, obesidad o hábitos cardiovasculares de riesgo que muchas veces pasan desapercibidos.</p>
+        <p>Más allá del informe, si durante la valoración se detecta algún hallazgo relevante se explica su significado, sus implicaciones y, si es necesario, se orienta sobre el seguimiento o las pruebas adicionales que puedan estar indicadas.</p>
+        <p>El reconocimiento se realiza en <strong>Clínica Elche Salud</strong>, con acceso directo a todas las pruebas necesarias en una única visita.</p>
+
+    </div>
+</section>
+
+<section class="section bg-light cta-section">
+    <div class="container">
+        <h2 class="section-title">Solicita tu reconocimiento</h2>
+        <p class="lead">Reconocimiento cardiológico en Elche. ECG + ecocardiograma + informe médico en una sola visita. Reserva en Doctoralia.</p>
+        <div class="cta-group">
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
+            <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
+        </div>
+    </div>
+</section>
+
+<section class="section container">
+    <h2 class="section-title">Otros servicios</h2>
+    <div class="articles-grid">
+        <a href="/servicios/ecocardiograma-elche" class="article-card">
+            <span class="category-tag">Prueba diagnóstica</span>
+            <h3>Ecocardiograma Doppler</h3>
+            <p>Estudio de la estructura y función del corazón mediante ultrasonidos.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/servicios/riesgo-cardiovascular-elche" class="article-card">
+            <span class="category-tag">Prevención</span>
+            <h3>Valoración de riesgo cardiovascular</h3>
+            <p>Screening preventivo completo con cálculo de riesgo y orientación personalizada.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/servicios/consulta-cardiologica-elche" class="article-card">
+            <span class="category-tag">Consulta</span>
+            <h3>Consulta cardiológica</h3>
+            <p>Valoración cardiovascular integral con enfoque preventivo y nutricional.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
+        </div>
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>
- 
