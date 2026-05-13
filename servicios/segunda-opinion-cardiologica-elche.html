@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cardiolopezclemente.com/servicios/segunda-opinion-cardiologica-elche" />
- 
+
     <title>Segunda Opinión Cardiológica en Elche | Dr. López Clemente</title>
-    <meta name="description" content="Segunda opinión cardiológica en Elche. Aclarar dudas, explicar informes, valorar alternativas terapéuticas. Consulta presencial en Clínica Elche Salud.">
- 
+    <meta name="description" content="Segunda opinión cardiológica en Elche. Aclarar dudas, explicar informes, entender tu situación cardiovascular con tiempo y detalle. Clínica Elche Salud.">
+
     <meta property="og:title" content="Segunda Opinión Cardiológica en Elche · Dr. López Clemente">
     <meta property="og:description" content="Revisión de informes cardiológicos, aclaración de dudas diagnósticas y valoración de opciones terapéuticas. Acompañamiento en decisiones complejas.">
     <meta property="og:url" content="https://cardiolopezclemente.com/servicios/segunda-opinion-cardiologica-elche">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://cardiolopezclemente.com/img/perfil.webp">
- 
+    <meta property="og:image" content="https://cardiolopezclemente.com/img/serv-segunda-opinion.webp">
+
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "Segunda opinión cardiológica - Dr. José Carlos López Clemente",
-      "description": "Consulta de segunda opinión en cardiología. Revisión de informes, aclaración de dudas y valoración de alternativas terapéuticas.",
+      "description": "Consulta de segunda opinión en cardiología. Revisión de informes, aclaración de dudas y valoración de opciones terapéuticas.",
       "provider": {
         "@type": "Physician",
         "name": "Dr. José Carlos López Clemente",
@@ -36,132 +38,345 @@
       }
     }
     </script>
+
+    <style>
+        .serv-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-lg);
+            display: block;
+            margin-bottom: 60px;
+        }
+
+        /* Grid situaciones */
+        .situaciones-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 28px 0 40px;
+        }
+
+        .situacion-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--gris-200);
+            border-right: 1px solid var(--gris-200);
+            background: var(--blanco);
+            transition: background 0.2s ease;
+        }
+
+        .situacion-item:hover { background: var(--crema); }
+        .situacion-item:nth-child(2n) { border-right: none; }
+        .situacion-item:nth-last-child(-n+2) { border-bottom: none; }
+
+        .sit-num {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--rojo);
+            opacity: 0.4;
+            line-height: 1;
+            flex-shrink: 0;
+            min-width: 28px;
+        }
+
+        .situacion-item p {
+            font-size: 0.92rem;
+            color: var(--gris-700);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .situacion-item p strong {
+            display: block;
+            color: var(--negro);
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 0.93rem;
+        }
+
+        @media (max-width: 600px) {
+            .situaciones-grid { grid-template-columns: 1fr; }
+            .situacion-item { border-right: none; }
+            .situacion-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--gris-200); }
+            .situacion-item:last-child { border-bottom: none; }
+        }
+
+        /* Pasos */
+        .pasos-lista {
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 28px 0 40px;
+        }
+
+        .paso {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            align-items: start;
+            border-bottom: 1px solid var(--gris-200);
+            background: var(--blanco);
+            transition: background 0.2s ease;
+        }
+
+        .paso:last-child { border-bottom: none; }
+        .paso:hover { background: var(--crema); }
+
+        .paso-num {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--rojo);
+            padding: 22px 0 22px 26px;
+            line-height: 1;
+        }
+
+        .paso-body {
+            padding: 20px 24px 20px 0;
+            border-left: 1px solid var(--gris-200);
+        }
+
+        .paso-body h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--negro);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .paso-body p {
+            font-size: 0.95rem;
+            color: var(--gris-700);
+            margin: 0 0 10px;
+            line-height: 1.7;
+        }
+
+        .paso-body p:last-child { margin-bottom: 0; }
+
+        @media (max-width: 500px) {
+            .paso { grid-template-columns: 56px 1fr; }
+            .paso-num { font-size: 1.3rem; padding: 18px 0 18px 18px; }
+            .paso-body { padding: 16px 16px 16px 0; }
+        }
+
+        /* Bloque colaborativo */
+        .colaborativo {
+            background: var(--crema);
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            padding: 32px 36px;
+            margin: 40px 0 0;
+        }
+
+        .colaborativo h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: var(--negro);
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .colaborativo p {
+            font-size: 0.97rem;
+            color: var(--gris-700);
+            margin-bottom: 14px;
+            line-height: 1.75;
+        }
+
+        .colaborativo p:last-child { margin-bottom: 0; }
+
+        @media (max-width: 480px) {
+            .colaborativo { padding: 22px 20px; }
+        }
+    </style>
 </head>
 <body>
- 
-    <nav>
-        <div class="nav-container container">
-            <a href="/" class="logo-area">
-                <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
-                <span class="logo-text">Dr. López Clemente</span>
-            </a>
-            <div class="menu">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/#servicios">Servicios</a>
-                <a href="/#blog">Blog</a>
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+
+<nav>
+    <div class="nav-container container">
+        <a href="/" class="logo-area">
+            <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+            <span class="logo-text">Dr. López Clemente</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú de navegación"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="menu" id="main-menu">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/#servicios">Servicios</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/#blog">Blog</a>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero hero-page">
+    <div class="hero-content container">
+        <p class="location-top">Elche · Clínica Elche Salud</p>
+        <h1>Segunda Opinión<br class="mobile-br"> <span class="text-red">Cardiológica</span></h1>
+        <p class="hero-p">Aclarar dudas · Explicar informes · Valorar opciones</p>
+    </div>
+</header>
+
+<section class="section container">
+    <div class="service-content">
+
+        <!-- ══════════════════════════════════
+             IMAGEN: ../img/serv-segunda-opinion.webp
+             Informes médicos sobre mesa cálida
+             ══════════════════════════════════ -->
+        <img src="../img/serv-segunda-opinion.webp"
+             alt="Segunda opinión cardiológica en Elche — revisión de informes y aclaración de dudas"
+             class="serv-img"
+             onerror="this.style.display='none';">
+
+        <h2 class="section-title">¿En qué consiste?</h2>
+        <p>La segunda opinión cardiológica es una consulta específica para revisar un diagnóstico, aclarar dudas sobre un tratamiento propuesto o entender mejor qué significa la información que has recibido. No se trata de cuestionar el trabajo de otros profesionales, sino de obtener otra perspectiva cuando te enfrentas a decisiones médicas complejas o cuando necesitas que alguien te explique con más detalle y tiempo qué está pasando con tu corazón.</p>
+        <p>Muchas veces los informes médicos están llenos de tecnicismos, las consultas son breves y quedan dudas sin resolver. Esta consulta existe precisamente para eso: para que puedas preguntar todo lo que necesites, entender lo que te han dicho y tomar decisiones informadas con tranquilidad.</p>
+
+        <!-- ══════════════════════════════════
+             GRID SITUACIONES
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Cuándo tiene sentido pedirla?</h2>
+        <p>Solicitar una segunda opinión es razonable y frecuente. Algunas situaciones habituales:</p>
+
+        <div class="situaciones-grid">
+            <div class="situacion-item">
+                <span class="sit-num">01</span>
+                <p><strong>Diagnóstico nuevo que no entiendes bien</strong>Te han diagnosticado una cardiopatía y quieres comprender qué implica realmente, cuál es el pronóstico y qué opciones de tratamiento existen.</p>
+            </div>
+            <div class="situacion-item">
+                <span class="sit-num">02</span>
+                <p><strong>Procedimiento propuesto</strong>Te han propuesto una cirugía, un cateterismo, una ablación o un dispositivo y quieres entender bien en qué consiste y si es la opción más adecuada para tu caso.</p>
+            </div>
+            <div class="situacion-item">
+                <span class="sit-num">03</span>
+                <p><strong>Informes que no entiendes</strong>Tienes resultados de ecocardiograma, Holter, TAC, resonancia u otras pruebas y nadie te ha explicado bien qué significan los hallazgos.</p>
+            </div>
+            <div class="situacion-item">
+                <span class="sit-num">04</span>
+                <p><strong>Tratamiento que no funciona</strong>Llevas tiempo con un tratamiento, no mejoras o tienes efectos secundarios y quieres saber si hay otras alternativas terapéuticas.</p>
+            </div>
+            <div class="situacion-item">
+                <span class="sit-num">05</span>
+                <p><strong>Diagnósticos contradictorios</strong>Has recibido información diferente de distintos médicos y necesitas aclarar cuál es realmente tu situación.</p>
+            </div>
+            <div class="situacion-item">
+                <span class="sit-num">06</span>
+                <p><strong>Necesitas tiempo para decidir</strong>Simplemente quieres hablar con calma antes de tomar una decisión importante sobre tu salud cardiovascular.</p>
             </div>
         </div>
-    </nav>
- 
-    <header class="hero hero-page">
-        <div class="hero-content container">
-            <p class="location-top">Elche · Clínica Elche Salud</p>
-            <h1>Segunda Opinión<br class="mobile-br"> <span class="text-red">Cardiológica</span></h1>
-            <p class="hero-p">Aclarar dudas · Explicar informes · Valorar opciones</p>
-        </div>
-    </header>
- 
-    <section class="section container">
-        <div class="service-content">
-            <h2 class="section-title">¿En qué consiste?</h2>
-            <p>La segunda opinión cardiológica es una consulta específica para revisar un diagnóstico, aclarar dudas sobre un tratamiento propuesto o entender mejor qué significa la información que has recibido. No se trata de cuestionar el trabajo de otros profesionales, sino de obtener otra perspectiva cuando te enfrentas a decisiones médicas complejas o cuando necesitas que alguien te explique con más detalle y tiempo qué está pasando con tu corazón.</p>
-            
-            <p>Muchas veces los informes médicos están llenos de tecnicismos, las consultas son breves y quedan dudas sin resolver. Esta consulta existe precisamente para eso: para que puedas preguntar todo lo que necesites, entender lo que te han dicho y tomar decisiones informadas con tranquilidad.</p>
- 
-            <h2 class="section-title">¿Cuándo está indicada?</h2>
-            <p>Solicitar una segunda opinión es razonable y frecuente en situaciones como:</p>
-            <ul class="service-list">
-                <li>Te han diagnosticado una cardiopatía y quieres entender mejor qué implica, cuál es el pronóstico y qué opciones de tratamiento existen</li>
-                <li>Te han propuesto una cirugía cardíaca o un procedimiento invasivo (cateterismo, ablación, implante de dispositivo) y quieres valorar si es la mejor opción o si existen alternativas</li>
-                <li>Tienes informes de pruebas diagnósticas (ecocardiograma, Holter, cateterismo, TAC, resonancia) y no entiendes bien qué significan los hallazgos</li>
-                <li>Llevas tiempo con tratamiento y no mejoras, o has tenido efectos secundarios y quieres saber si hay otras opciones terapéuticas</li>
-                <li>Has recibido diagnósticos diferentes de distintos médicos y necesitas aclarar cuál es realmente tu situación</li>
-                <li>Simplemente quieres tranquilidad antes de tomar una decisión importante sobre tu salud cardiovascular</li>
-            </ul>
- 
-            <h2 class="section-title">¿Cómo es la consulta?</h2>
-            <p>La consulta de segunda opinión está pensada específicamente para que salgas con las ideas claras, no con más dudas. El tiempo que necesites es el que se dedica. Habitualmente entre 45 y 60 minutos, pero si hace falta más para explicar algo con detalle, para revisar informes complejos o para responder todas tus preguntas, ese es el tiempo que se toma. La consulta no termina cuando acaba el reloj, sino cuando tú has entendido todo lo que necesitabas entender.</p>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Antes de la consulta</h3>
-                <p>Es importante que traigas toda la documentación disponible: informes médicos previos, resultados de analíticas, ECG, ecocardiogramas, Holter, pruebas de esfuerzo, cateterismos, TAC, resonancias, informes de hospitalización. Cuanta más información tenga, mejor podré entender tu caso y ofrecerte una valoración completa.</p>
+
+        <!-- ══════════════════════════════════
+             PASOS CÓMO ES LA CONSULTA
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Cómo es la consulta?</h2>
+        <p>Está pensada específicamente para que salgas con las ideas claras, no con más dudas. El tiempo que necesites es el que se dedica — habitualmente entre 45 y 60 minutos, pero si hace falta más para revisar informes complejos o responder todas tus preguntas, ese es el tiempo que se toma.</p>
+
+        <div class="pasos-lista">
+            <div class="paso">
+                <div class="paso-num">1</div>
+                <div class="paso-body">
+                    <h4>Antes de venir — trae tu documentación</h4>
+                    <p>Cuanta más información traigas, más completa será la valoración. Informes médicos previos, analíticas, ECG, ecocardiogramas, Holter, pruebas de esfuerzo, cateterismos, TAC, resonancias, informes de hospitalización.</p>
+                    <p>Trae también anotadas tus dudas o preguntas — aunque en la consulta habrá tiempo para todo, tenerlas escritas ayuda a no olvidar nada.</p>
+                </div>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Durante la consulta</h3>
-                <p>Revisamos juntos todos los informes. Te explico qué significan los hallazgos en lenguaje claro, qué implicaciones tienen, cuál es el pronóstico y qué opciones de tratamiento existen. Si hay algo que no entiendes, lo repito las veces que haga falta. Si considero que faltan pruebas para completar el estudio o que hay aspectos que requieren valoración adicional, te lo indico y te explico por qué.</p>
-                <p>Además de revisar la documentación que aportas, realizo historia clínica, exploración física y, si es necesario, ECG y ecocardiograma para tener una valoración directa actualizada.</p>
+            <div class="paso">
+                <div class="paso-num">2</div>
+                <div class="paso-body">
+                    <h4>Durante la consulta — revisamos juntos</h4>
+                    <p>Revisamos todos los informes. Se explica qué significan los hallazgos en lenguaje claro, qué implicaciones tienen, cuál es el pronóstico y qué opciones existen. Si hay algo que no queda claro, se repite las veces que haga falta.</p>
+                    <p>Además de la documentación aportada, se realiza historia clínica, exploración física y, si es necesario para actualizar la valoración, ECG y ecocardiograma.</p>
+                </div>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Al finalizar</h3>
-                <p>Te entrego un informe detallado con mi valoración, que incluye: resumen de tu situación cardiovascular, interpretación de las pruebas disponibles, valoración del tratamiento actual (si lo hay) y, si procede, alternativas terapéuticas que podríamos considerar. Este informe lo puedes compartir con tu cardiólogo habitual si lo deseas.</p>
-            </div>
- 
-            <h2 class="section-title">Relación con tu cardiólogo habitual</h2>
-            <p>La segunda opinión no sustituye ni interfiere con el seguimiento que llevas con tu cardiólogo de referencia. De hecho, en muchos casos, tras la consulta de segunda opinión, la recomendación es continuar con el plan terapéutico que te habían propuesto, simplemente porque ahora lo entiendes mejor y te sientes más seguro con la decisión.</p>
- 
-            <p>En otros casos, la segunda opinión puede aportar matices, sugerir pruebas adicionales o plantear alternativas terapéuticas que puedes comentar con tu médico habitual. El objetivo no es generar conflicto, sino darte información y tranquilidad para que tomes la mejor decisión para tu salud.</p>
- 
-            <h2 class="section-title">Por qué en esta consulta</h2>
-            <p>La formación completa en Cardiología y en Nutrición, junto con la actualización constante en evidencia científica, permite disponer de la mejor información disponible para valorar tu caso desde una perspectiva amplia. No se trata solo de revisar pruebas y medicación, sino de entender el contexto completo: el estilo de vida, la nutrición, los factores de riesgo modificables que muchas veces quedan fuera del foco en consultas más breves.</p>
- 
-            <p>El tiempo de consulta está diseñado específicamente para que puedas preguntar todo lo que necesites sin prisas. La capacidad de realizar ECG y ecocardiograma en la misma consulta permite una valoración actualizada sin depender exclusivamente de informes previos.</p>
- 
-            <p>La consulta se desarrolla en <strong>Clínica Elche Salud</strong>, con acceso directo a todas las pruebas diagnósticas si fueran necesarias para completar la valoración.</p>
-        </div>
-    </section>
- 
-    <section class="section bg-light cta-section">
-        <div class="container">
-            <h2 class="section-title">Solicita tu segunda opinión</h2>
-            <p class="lead">Consulta de segunda opinión en Elche. Trae tu documentación y tus dudas. Saldrás con las ideas claras. Reserva en Doctoralia.</p>
-            <div class="cta-group">
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
-                <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
+            <div class="paso">
+                <div class="paso-num">3</div>
+                <div class="paso-body">
+                    <h4>Al finalizar — informe escrito</h4>
+                    <p>Se entrega un informe con la valoración: resumen de la situación cardiovascular, interpretación de las pruebas disponibles y, si procede, consideraciones sobre el tratamiento actual o alternativas que podrían valorarse. Un documento que puedes compartir con tu cardiólogo habitual si lo deseas.</p>
+                </div>
             </div>
         </div>
-    </section>
- 
-    <section class="section container">
-        <h2 class="section-title">Otros servicios</h2>
-        <div class="articles-grid">
-            <a href="/servicios/consulta-cardiologica-elche" class="article-card">
-                <span class="category-tag">Consulta</span>
-                <h3>Consulta cardiológica</h3>
-                <p>Valoración cardiovascular integral con enfoque preventivo y nutricional.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/servicios/ecocardiograma-elche" class="article-card">
-                <span class="category-tag">Prueba diagnóstica</span>
-                <h3>Ecocardiograma Doppler</h3>
-                <p>Estudio de la estructura y función del corazón mediante ultrasonidos.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/servicios/riesgo-cardiovascular-elche" class="article-card">
-                <span class="category-tag">Prevención</span>
-                <h3>Valoración de riesgo cardiovascular</h3>
-                <p>Optimización de salud cardiovascular con abordaje global: nutrición, ejercicio y prevención.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
+
+        <!-- ══════════════════════════════════
+             BLOQUE COLABORATIVO
+             ══════════════════════════════════ -->
+        <div class="colaborativo">
+            <h3>La segunda opinión y tu cardiólogo habitual</h3>
+            <p>La segunda opinión no sustituye ni interfiere con el seguimiento que llevas con tu cardiólogo de referencia. En muchos casos, tras la consulta, la valoración confirma que el plan terapéutico propuesto es el adecuado — simplemente porque ahora lo entiendes mejor y te sientes más seguro con la decisión.</p>
+            <p>En otros casos puede aportar matices, sugerir pruebas adicionales o plantear alternativas que puedes comentar con tu médico habitual. El objetivo no es generar conflicto ni cuestionar, sino darte información y tranquilidad para que tomes la mejor decisión para tu salud.</p>
         </div>
-    </section>
- 
-    <footer>
-        <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <p style="font-size: 0.85rem; color: #666; margin: 8px 0 18px;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
-            <div class="footer-links">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/legal/aviso-legal.html">Aviso Legal</a>
-                <a href="/legal/privacidad.html">Privacidad</a>
-                <a href="/legal/cookies.html">Cookies</a>
-            </div>
-            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+
+        <h2 class="section-title" style="margin-top: 60px;">Por qué en esta consulta</h2>
+        <p>La formación en Cardiología y en Nutrición, junto con la actualización en evidencia científica, permite valorar el caso desde una perspectiva amplia. No se trata solo de revisar pruebas y medicación, sino de entender el contexto completo: el estilo de vida, los factores de riesgo modificables y el porqué de cada decisión clínica.</p>
+        <p>El tiempo de consulta está diseñado específicamente para que puedas preguntar todo lo que necesites sin prisas. La disponibilidad de ECG y ecocardiograma en la misma consulta permite una valoración actualizada sin depender exclusivamente de informes previos.</p>
+        <p>La consulta se desarrolla en <strong>Clínica Elche Salud</strong>, con acceso directo a todas las pruebas diagnósticas si fueran necesarias para completar la valoración.</p>
+
+    </div>
+</section>
+
+<section class="section bg-light cta-section">
+    <div class="container">
+        <h2 class="section-title">Solicita tu segunda opinión</h2>
+        <p class="lead">Consulta en Elche. Trae tu documentación y tus dudas. Saldrás con las ideas claras. Reserva en Doctoralia.</p>
+        <div class="cta-group">
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
+            <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
         </div>
-    </footer>
- 
+    </div>
+</section>
+
+<section class="section container">
+    <h2 class="section-title">Otros servicios</h2>
+    <div class="articles-grid">
+        <a href="/servicios/consulta-cardiologica-elche" class="article-card">
+            <span class="category-tag">Consulta</span>
+            <h3>Consulta cardiológica</h3>
+            <p>Valoración cardiovascular integral con enfoque preventivo y nutricional.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/servicios/ecocardiograma-elche" class="article-card">
+            <span class="category-tag">Prueba diagnóstica</span>
+            <h3>Ecocardiograma Doppler</h3>
+            <p>Estudio de la estructura y función del corazón mediante ultrasonidos.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/servicios/riesgo-cardiovascular-elche" class="article-card">
+            <span class="category-tag">Prevención</span>
+            <h3>Valoración de riesgo cardiovascular</h3>
+            <p>Screening preventivo completo con cálculo de riesgo y orientación personalizada.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
+        </div>
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>
- 
