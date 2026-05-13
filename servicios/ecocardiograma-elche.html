@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cardiolopezclemente.com/servicios/ecocardiograma-elche" />
- 
+
     <title>Ecocardiograma Doppler en Elche | Dr. López Clemente</title>
-    <meta name="description" content="Ecocardiograma Doppler color en Elche. Estudio completo de la estructura y función cardíaca. Informe inmediato. Clínica Elche Salud. Pide cita en Doctoralia.">
- 
+    <meta name="description" content="Ecocardiograma Doppler color en Elche. Estudio completo de la estructura y función cardíaca. Informe inmediato. Clínica Elche Salud.">
+
     <meta property="og:title" content="Ecocardiograma Doppler en Elche · Dr. López Clemente">
     <meta property="og:description" content="Ecocardiograma transtorácico con Doppler color. Valoración de función ventricular, válvulas y hemodinámica cardíaca.">
     <meta property="og:url" content="https://cardiolopezclemente.com/servicios/ecocardiograma-elche">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://cardiolopezclemente.com/img/perfil.webp">
- 
+    <meta property="og:image" content="https://cardiolopezclemente.com/img/serv-eco-1.webp">
+
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
- 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -27,142 +29,440 @@
       "bodyLocation": "Corazón",
       "preparation": "No requiere preparación específica. Ropa cómoda que facilite el acceso al tórax.",
       "followup": "Informe disponible de forma inmediata tras la prueba",
-      "howPerformed": "Estudio mediante ultrasonidos aplicados sobre el tórax. Indoloro, no invasivo, sin radiación."
+      "howPerformed": "Estudio mediante ultrasonidos aplicados sobre el tórax. Indoloro, no invasivo, sin radiación.",
+      "performer": {
+        "@type": "Physician",
+        "name": "Dr. José Carlos López Clemente",
+        "medicalSpecialty": "Cardiology"
+      }
     }
     </script>
+
+    <style>
+        /* ── Imagen banner ── */
+        .serv-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-lg);
+            display: block;
+            margin-bottom: 60px;
+        }
+
+        /* ── Grid usos (¿Para qué sirve?) ── */
+        .usos-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 28px 0 40px;
+        }
+
+        .uso-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 18px 22px;
+            border-bottom: 1px solid var(--gris-200);
+            border-right: 1px solid var(--gris-200);
+            background: var(--blanco);
+            transition: background 0.2s ease;
+        }
+
+        .uso-item:hover { background: var(--crema); }
+
+        /* Quitar borde derecho de columna derecha */
+        .uso-item:nth-child(2n) { border-right: none; }
+
+        /* Quitar borde inferior de los 2 últimos */
+        .uso-item:nth-last-child(-n+2) { border-bottom: none; }
+
+        /* Si hay número impar, el último ocupa fila completa */
+        .uso-item.full { grid-column: 1 / -1; border-right: none; }
+
+        .uso-dot {
+            width: 8px; height: 8px;
+            background: var(--rojo);
+            border-radius: 50%;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        .uso-item strong {
+            display: block;
+            color: var(--negro);
+            font-weight: 600;
+            font-size: 0.92rem;
+            margin-bottom: 3px;
+        }
+
+        .uso-item span {
+            font-size: 0.88rem;
+            color: var(--gris-700);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            .usos-grid { grid-template-columns: 1fr; }
+            .uso-item { border-right: none; }
+            .uso-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--gris-200); }
+            .uso-item:last-child { border-bottom: none; }
+            .uso-item.full { grid-column: auto; }
+        }
+
+        /* ── Badges cuándo se solicita ── */
+        .cuando-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 28px 0 40px;
+        }
+
+        .cuando-tag {
+            background: var(--blanco);
+            border: 1px solid var(--gris-200);
+            border-radius: 30px;
+            padding: 8px 18px;
+            font-size: 0.88rem;
+            color: var(--gris-700);
+            font-weight: 500;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cuando-tag::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: var(--rojo);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cuando-tag:hover {
+            border-color: var(--rojo);
+            color: var(--rojo);
+            background: var(--rojo-soft);
+        }
+
+        /* ── Pasos ¿Cómo se realiza? ── */
+        .pasos-lista {
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin: 28px 0 40px;
+        }
+
+        .paso {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            align-items: start;
+            border-bottom: 1px solid var(--gris-200);
+            background: var(--blanco);
+            transition: background 0.2s ease;
+        }
+
+        .paso:last-child { border-bottom: none; }
+        .paso:hover { background: var(--crema); }
+
+        .paso-num {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--rojo);
+            padding: 22px 0 22px 26px;
+            line-height: 1;
+        }
+
+        .paso-body {
+            padding: 20px 24px 20px 0;
+            border-left: 1px solid var(--gris-200);
+        }
+
+        .paso-body h4 {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--negro);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .paso-body p {
+            font-size: 0.95rem;
+            color: var(--gris-700);
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        /* ── Highlight "sin radiación" ── */
+        .prueba-badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px 0 36px;
+        }
+
+        .prueba-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--rojo-soft);
+            border: 1px solid var(--rojo-medium);
+            border-radius: 30px;
+            padding: 8px 18px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--rojo);
+        }
+
+        @media (max-width: 500px) {
+            .paso { grid-template-columns: 56px 1fr; }
+            .paso-num { font-size: 1.3rem; padding: 18px 0 18px 18px; }
+            .paso-body { padding: 16px 16px 16px 0; }
+        }
+    </style>
 </head>
 <body>
- 
-    <nav>
-        <div class="nav-container container">
-            <a href="/" class="logo-area">
-                <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
-                <span class="logo-text">Dr. López Clemente</span>
-            </a>
-            <div class="menu">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/#servicios">Servicios</a>
-                <a href="/#blog">Blog</a>
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+
+<nav>
+    <div class="nav-container container">
+        <a href="/" class="logo-area">
+            <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+            <span class="logo-text">Dr. López Clemente</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú de navegación"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="menu" id="main-menu">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/#servicios">Servicios</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/#blog">Blog</a>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero hero-page">
+    <div class="hero-content container">
+        <p class="location-top">Elche · Clínica Elche Salud</p>
+        <h1>Ecocardiograma<br class="mobile-br"> <span class="text-red">Doppler Color</span></h1>
+        <p class="hero-p">Estudio completo de la estructura y función del corazón</p>
+    </div>
+</header>
+
+<section class="section container">
+    <div class="service-content">
+
+        <!-- ══════════════════════════════════
+             IMAGEN: ../img/serv-eco-1.webp
+             Ecocardiógrafo real en consulta
+             (consulta-2.jpeg)
+             ══════════════════════════════════ -->
+        <img src="../img/serv-eco-1.webp"
+             alt="Ecocardiógrafo Doppler color en consulta cardiológica Elche — Clínica Elche Salud"
+             class="serv-img"
+             onerror="this.style.display='none';">
+
+        <h2 class="section-title">¿Qué es un ecocardiograma?</h2>
+        <p>El ecocardiograma es una prueba de imagen que utiliza ultrasonidos para crear una imagen en movimiento del corazón en tiempo real. Permite ver las cavidades cardíacas, las válvulas, el grosor de las paredes y el movimiento del músculo cardíaco.</p>
+        <p>La técnica <strong>Doppler color</strong> añade información sobre el flujo de sangre dentro del corazón y a través de las válvulas, permitiendo detectar obstrucciones, fugas valvulares y problemas de circulación intracardíaca. Es una de las pruebas más completas en cardiología y no requiere preparación especial.</p>
+
+        <!-- Badges de características -->
+        <div class="prueba-badges">
+            <span class="prueba-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Indoloro
+            </span>
+            <span class="prueba-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Sin radiación
+            </span>
+            <span class="prueba-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                No invasivo
+            </span>
+            <span class="prueba-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                ~15 minutos
+            </span>
+            <span class="prueba-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Informe inmediato
+            </span>
+        </div>
+
+        <!-- ══════════════════════════════════
+             GRID USOS (¿Para qué sirve?)
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Para qué sirve?</h2>
+        <p>Permite valorar múltiples aspectos del corazón en una sola exploración:</p>
+
+        <div class="usos-grid">
+            <div class="uso-item">
+                <span class="uso-dot"></span>
+                <div>
+                    <strong>Función ventricular</strong>
+                    <span>Capacidad de contracción del corazón. Fundamental para diagnosticar insuficiencia cardíaca.</span>
+                </div>
+            </div>
+            <div class="uso-item">
+                <span class="uso-dot"></span>
+                <div>
+                    <strong>Válvulas cardíacas</strong>
+                    <span>Detecta estenosis (estrechamiento) e insuficiencias (fugas) en cualquiera de las cuatro válvulas.</span>
+                </div>
+            </div>
+            <div class="uso-item">
+                <span class="uso-dot"></span>
+                <div>
+                    <strong>Tamaño y grosor de cavidades</strong>
+                    <span>Hipertrofia ventricular, dilatación de cavidades o anomalías estructurales.</span>
+                </div>
+            </div>
+            <div class="uso-item">
+                <span class="uso-dot"></span>
+                <div>
+                    <strong>Presión pulmonar</strong>
+                    <span>Estimación de la presión en las arterias pulmonares, útil en hipertensión pulmonar.</span>
+                </div>
+            </div>
+            <div class="uso-item">
+                <span class="uso-dot"></span>
+                <div>
+                    <strong>Derrame pericárdico</strong>
+                    <span>Detecta acúmulo de líquido alrededor del corazón (pericarditis con derrame).</span>
+                </div>
+            </div>
+            <div class="uso-item">
+                <span class="uso-dot"></span>
+                <div>
+                    <strong>Masas cardíacas</strong>
+                    <span>Identifica trombos (coágulos) o tumores intracardíacos.</span>
+                </div>
+            </div>
+            <div class="uso-item full">
+                <span class="uso-dot"></span>
+                <div>
+                    <strong>Anomalías congénitas</strong>
+                    <span>Comunicaciones entre cavidades, malformaciones estructurales o defectos de nacimiento que pueden pasar desapercibidos hasta la edad adulta.</span>
+                </div>
             </div>
         </div>
-    </nav>
- 
-    <header class="hero hero-page">
-        <div class="hero-content container">
-            <p class="location-top">Elche · Clínica Elche Salud</p>
-            <h1>Ecocardiograma<br class="mobile-br"> <span class="text-red">Doppler Color</span></h1>
-            <p class="hero-p">Estudio completo de la estructura y función del corazón</p>
+
+        <!-- ══════════════════════════════════
+             TAGS CUÁNDO SE SOLICITA
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Cuándo se solicita?</h2>
+
+        <div class="cuando-grid">
+            <span class="cuando-tag">Insuficiencia cardíaca</span>
+            <span class="cuando-tag">Soplo cardíaco</span>
+            <span class="cuando-tag">Estudio de arritmias</span>
+            <span class="cuando-tag">Seguimiento tras infarto</span>
+            <span class="cuando-tag">Enfermedad coronaria</span>
+            <span class="cuando-tag">HTA de larga evolución</span>
+            <span class="cuando-tag">Valvulopatía conocida o sospechada</span>
+            <span class="cuando-tag">Disnea de origen a estudio</span>
+            <span class="cuando-tag">Dolor torácico</span>
+            <span class="cuando-tag">Palpitaciones</span>
+            <span class="cuando-tag">Síncope</span>
+            <span class="cuando-tag">Valoración prequirúrgica</span>
+            <span class="cuando-tag">Seguimiento de cardiopatía</span>
         </div>
-    </header>
- 
-    <section class="section container">
-        <div class="service-content">
-            <h2 class="section-title">¿Qué es un ecocardiograma?</h2>
-            <p>El ecocardiograma es una prueba de imagen que utiliza ultrasonidos (ondas de sonido de alta frecuencia) para crear una imagen en movimiento del corazón. Permite ver las cavidades cardíacas, las válvulas, el grosor de las paredes del corazón y el movimiento del músculo cardíaco en tiempo real.</p>
-            
-            <p>La técnica Doppler color añade información sobre el flujo de sangre dentro del corazón y a través de las válvulas, lo que permite detectar obstrucciones, fugas valvulares y problemas de circulación intracardíaca. Es una de las pruebas diagnósticas más completas en cardiología y se realiza de forma rutinaria sin necesidad de preparación especial.</p>
- 
-            <h2 class="section-title">¿Para qué sirve?</h2>
-            <p>El ecocardiograma permite valorar múltiples aspectos del funcionamiento del corazón:</p>
-            <ul class="service-list">
-                <li><strong>Función ventricular:</strong> analiza la capacidad de contracción del corazón, fundamental para diagnosticar insuficiencia cardíaca</li>
-                <li><strong>Válvulas cardíacas:</strong> detecta estenosis (estrechamiento) o insuficiencias (fugas) valvulares</li>
-                <li><strong>Tamaño y grosor de las cavidades:</strong> permite detectar hipertrofia ventricular (crecimiento del músculo cardíaco), dilatación de cavidades o anomalías estructurales</li>
-                <li><strong>Anomalías congénitas:</strong> puede identificar comunicaciones entre cavidades o malformaciones estructurales</li>
-                <li><strong>Presión pulmonar:</strong> estima la presión en las arterias pulmonares, útil en hipertensión pulmonar</li>
-                <li><strong>Derrame pericárdico:</strong> detecta acúmulo de líquido alrededor del corazón</li>
-                <li><strong>Masas cardíacas:</strong> identifica trombos (coágulos) o tumores intracardíacos</li>
-            </ul>
- 
-            <h2 class="section-title">¿Cuándo se solicita?</h2>
-            <p>El ecocardiograma está indicado en situaciones como:</p>
-            <ul class="service-list">
-                <li>Diagnóstico o seguimiento de insuficiencia cardíaca</li>
-                <li>Soplo cardíaco detectado en la auscultación</li>
-                <li>Estudio de arritmias</li>
-                <li>Diagnóstico y seguimiento de enfermedad coronaria. Seguimiento tras un infarto</li>
-                <li>Hipertensión arterial de larga evolución o mal controlada</li>
-                <li>Valoración de valvulopatías conocidas o sospechadas</li>
-                <li>Síntomas como disnea (falta de aire), dolor torácico, palpitaciones o síncope</li>
-                <li>Antes de cirugía o como valoración prequirúrgica en pacientes de riesgo</li>
-                <li>Seguimiento de cardiopatías</li>
-            </ul>
- 
-            <h2 class="section-title">¿Cómo se realiza?</h2>
-            <p>La prueba es <strong>indolora, no invasiva y sin radiación</strong>. Se realiza en consulta y tiene una duración aproximada de 15 minutos.</p>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Preparación</h3>
-                <p>No requiere ayuno ni preparación específica. Se recomienda acudir con ropa cómoda que facilite el acceso al tórax. Puedes tomar tu medicación habitual.</p>
+
+        <!-- ══════════════════════════════════
+             PASOS ¿CÓMO SE REALIZA?
+             ══════════════════════════════════ -->
+        <h2 class="section-title">¿Cómo se realiza?</h2>
+
+        <div class="pasos-lista">
+            <div class="paso">
+                <div class="paso-num">1</div>
+                <div class="paso-body">
+                    <h4>Preparación</h4>
+                    <p>No requiere ayuno ni preparación específica. Acude con ropa cómoda que facilite el acceso al tórax. Puedes tomar tu medicación habitual.</p>
+                </div>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Procedimiento</h3>
-                <p>Te tumbarás en una camilla en decúbito lateral izquierdo (ligeramente de lado). Se aplica un gel conductor sobre el tórax y se desliza el transductor (sonda de ultrasonidos) por diferentes posiciones para obtener distintas vistas del corazón. El gel mejora el contacto y la calidad de la imagen.</p>
-                <p>Durante la exploración se te puede pedir que contengas la respiración brevemente o que respires de forma profunda para mejorar la visualización de ciertas estructuras.</p>
+            <div class="paso">
+                <div class="paso-num">2</div>
+                <div class="paso-body">
+                    <h4>Procedimiento (~15 minutos)</h4>
+                    <p>Te tumbarás en la camilla en decúbito lateral izquierdo (ligeramente de lado). Se aplica un gel conductor sobre el tórax y se desliza la sonda por diferentes posiciones para obtener distintas vistas del corazón. En algún momento se puede pedir que contengas la respiración brevemente para mejorar la imagen.</p>
+                </div>
             </div>
- 
-            <div class="info-card" style="margin-bottom: 20px;">
-                <h3>Después de la prueba</h3>
-                <p>No hay período de recuperación. Puedes reanudar tu actividad normal de inmediato. El informe está disponible al finalizar la exploración y se explica en consulta.</p>
-            </div>
- 
-            <h2 class="section-title">Por qué en esta consulta</h2>
-            <p>La realización e interpretación del ecocardiograma requiere formación específica y experiencia en imagen cardíaca. La exploración se ajusta a las recomendaciones de las guías clínicas europeas de ecocardiografía, garantizando valoraciones precisas de función ventricular, análisis de válvulas y cuantificación hemodinámica.</p>
-            
-            <p>La prueba se realiza en <strong>Clínica Elche Salud</strong> con equipamiento de última generación, lo que permite estudios avanzados con la calidad diagnóstica necesaria para la toma de decisiones clínicas.</p>
-        </div>
-    </section>
- 
-    <section class="section bg-light cta-section">
-        <div class="container">
-            <h2 class="section-title">Solicita tu ecocardiograma</h2>
-            <p class="lead">Prueba disponible en Elche. Informe inmediato tras la exploración. Reserva tu cita en Doctoralia.</p>
-            <div class="cta-group">
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
-                <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
+            <div class="paso">
+                <div class="paso-num">3</div>
+                <div class="paso-body">
+                    <h4>Informe inmediato</h4>
+                    <p>No hay periodo de recuperación. Puedes reanudar tu actividad normal de inmediato. El informe está disponible al finalizar la exploración y se explica en el mismo acto de consulta.</p>
+                </div>
             </div>
         </div>
-    </section>
- 
-    <section class="section container">
-        <h2 class="section-title">Otras pruebas diagnósticas</h2>
-        <div class="articles-grid">
-            <a href="/servicios/holter-ecg-elche" class="article-card">
-                <span class="category-tag">Prueba diagnóstica</span>
-                <h3>Holter de ECG</h3>
-                <p>Monitorización cardíaca de 24-48 horas para detectar arritmias.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/servicios/consulta-cardiologica-elche" class="article-card">
-                <span class="category-tag">Consulta</span>
-                <h3>Consulta cardiológica</h3>
-                <p>Valoración cardiovascular integral con enfoque preventivo y nutricional.</p>
-                <span class="read-more">Ver detalles →</span>
-            </a>
-            <a href="/sobre-mi" class="article-card">
-                <span class="category-tag">Sobre mí</span>
-                <h3>Formación y trayectoria</h3>
-                <p>Doctor en Ciencias de la Salud, especialista en Cardiología con formación en imagen cardíaca.</p>
-                <span class="read-more">Conocer más →</span>
-            </a>
+
+        <h2 class="section-title">Por qué en esta consulta</h2>
+        <p>La realización e interpretación del ecocardiograma requiere formación específica y experiencia en imagen cardíaca. La exploración se ajusta a las recomendaciones de las guías clínicas europeas de ecocardiografía, garantizando valoraciones precisas de función ventricular, análisis de válvulas y cuantificación hemodinámica.</p>
+        <p>La prueba se realiza en <strong>Clínica Elche Salud</strong> con equipamiento de última generación, lo que permite estudios avanzados con la calidad diagnóstica necesaria para la toma de decisiones clínicas.</p>
+
+    </div>
+</section>
+
+<section class="section bg-light cta-section">
+    <div class="container">
+        <h2 class="section-title">Solicita tu ecocardiograma</h2>
+        <p class="lead">Prueba disponible en Elche. Informe inmediato tras la exploración. Reserva tu cita en Doctoralia.</p>
+        <div class="cta-group">
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
+            <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
         </div>
-    </section>
- 
-    <footer>
-        <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <p style="font-size: 0.85rem; color: #666; margin: 8px 0 18px;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
-            <div class="footer-links">
-                <a href="/sobre-mi">Sobre mí</a>
-                <a href="/legal/aviso-legal.html">Aviso Legal</a>
-                <a href="/legal/privacidad.html">Privacidad</a>
-                <a href="/legal/cookies.html">Cookies</a>
-            </div>
-            <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</section>
+
+<section class="section container">
+    <h2 class="section-title">Otras pruebas diagnósticas</h2>
+    <div class="articles-grid">
+        <a href="/servicios/holter-ecg-elche" class="article-card">
+            <span class="category-tag">Prueba diagnóstica</span>
+            <h3>Holter de ECG</h3>
+            <p>Monitorización cardíaca de 24–48 horas para detectar arritmias intermitentes.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/servicios/consulta-cardiologica-elche" class="article-card">
+            <span class="category-tag">Consulta</span>
+            <h3>Consulta cardiológica</h3>
+            <p>Valoración cardiovascular integral con enfoque preventivo y nutricional.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/servicios/riesgo-cardiovascular-elche" class="article-card">
+            <span class="category-tag">Prevención</span>
+            <h3>Valoración de riesgo cardiovascular</h3>
+            <p>Estudio integral con abordaje de nutrición, ejercicio y prevención personalizada.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
         </div>
-    </footer>
- 
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>
