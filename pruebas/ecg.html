@@ -4,80 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cardiolopezclemente.com/pruebas/ecg.html" />
+
     <title>Electrocardiograma (ECG) en Elche | Dr. López Clemente</title>
-    <meta name="description" content="¿Te han realizado un electrocardiograma y tienes dudas? Descubre qué analiza el cardiólogo: ritmo, frecuencia cardíaca y salud de tu corazón en Elche.">
+    <meta name="description" content="Electrocardiograma (ECG) en Elche. Qué analiza el cardiólogo, para qué sirve y cuándo se solicita. Clínica Elche Salud.">
+
+    <meta property="og:title" content="Electrocardiograma (ECG) en Elche · Dr. López Clemente">
+    <meta property="og:description" content="La herramienta fundamental para valorar la actividad eléctrica del corazón de forma rápida y sin radiación.">
+    <meta property="og:url" content="https://cardiolopezclemente.com/pruebas/ecg.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://cardiolopezclemente.com/img/prueba-ecg.webp">
+
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "Electrocardiograma (ECG)",
+      "description": "Registro de la actividad eléctrica del corazón. Prueba rápida, indolora y sin radiación.",
+      "procedureType": "Electrocardiografía",
+      "bodyLocation": "Corazón",
+      "howPerformed": "Electrodos sobre piel del tórax, brazos y piernas. Registro en reposo de la actividad eléctrica cardíaca.",
+      "preparation": "No requiere preparación. Indoloro, sin radiación.",
+      "performer": {
+        "@type": "Physician",
+        "name": "Dr. José Carlos López Clemente",
+        "medicalSpecialty": "Cardiology"
+      }
+    }
+    </script>
+
+    <style>
+        .prueba-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--sombra-lg);
+            display: block;
+            margin-bottom: 56px;
+        }
+
+        .prueba-badges {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 0 0 48px;
+        }
+
+        .prueba-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--rojo-soft);
+            border: 1px solid var(--rojo-medium);
+            border-radius: 30px;
+            padding: 8px 18px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--rojo);
+        }
+
+        /* Grid qué evalúa */
+        .evalua-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 28px 0 40px;
+        }
+
+        .evalua-item {
+            background: var(--blanco);
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            transition: var(--transition-fast);
+        }
+
+        .evalua-item:hover {
+            border-color: var(--rojo-medium);
+            background: var(--crema);
+        }
+
+        .evalua-dot {
+            width: 8px; height: 8px;
+            background: var(--rojo);
+            border-radius: 50%;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+
+        .evalua-item strong {
+            display: block;
+            color: var(--negro);
+            font-size: 0.92rem;
+            margin-bottom: 3px;
+        }
+
+        .evalua-item span {
+            font-size: 0.87rem;
+            color: var(--gris-700);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 560px) {
+            .evalua-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-    <nav>
-        <div class="nav-container container">
-            <a href="/" class="logo-area">
-                <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
-                <span class="logo-text">Dr. López Clemente</span>
-            </a>
-            <div class="menu">
-                <a href="/#sobre-mi">Sobre mí</a>
-                <a href="/#servicios">Servicios</a>
-                <a href="/#blog">Blog</a>
-                <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
-            </div>
+<nav>
+    <div class="nav-container container">
+        <a href="/" class="logo-area">
+            <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+            <span class="logo-text">Dr. López Clemente</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú de navegación"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="menu" id="main-menu">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/#servicios">Servicios</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/#blog">Blog</a>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <article class="container section">
-        <header style="text-align: center; margin-bottom: 60px;">
-            <p style="color: var(--rojo); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Pruebas Diagnósticas</p>
-            <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-top: 10px;">Electrocardiograma (ECG)</h1>
-            <p style="font-size: 1.2rem; color: #666; max-width: 800px; margin: 20px auto;">La herramienta fundamental para valorar la actividad eléctrica de su corazón de forma rápida y precisa.</p>
-        </header>
+<header class="hero hero-page">
+    <div class="hero-content container">
+        <p class="location-top">Pruebas diagnósticas · Clínica Elche Salud</p>
+        <h1>Electrocardiograma<br class="mobile-br"> <span class="text-red">(ECG)</span></h1>
+        <p class="hero-p">Valoración rápida de la actividad eléctrica del corazón</p>
+    </div>
+</header>
 
-        <div class="bio-flex" style="align-items: flex-start; gap: 40px;">
-            <div class="bio-text">
-                <h2 class="section-title">¿Para qué sirve un ECG?</h2>
-                <p>El <strong>electrocardiograma (ECG)</strong> es la prueba diagnóstica más común en cardiología, pero no por ello menos importante. Se trata de un registro estandarizado que permite valorar los impulsos eléctricos y su recorrido por el corazón.</p>
-                <p>Para que la información sea fiable, el dispositivo, la colocación de los electrodos y, sobre todo, la <strong>interpretación médica</strong>, deben realizarse correctamente.</p>
-                
-                <h2 class="section-title" style="margin-top: 40px;">¿Cómo funciona su corazón?</h2>
-                <p>Su corazón funciona gracias a impulsos eléctricos que siguen un circuito específico para activarlo de forma ordenada:</p>
-                <ul style="margin-bottom: 20px; padding-left: 20px;">
-                    <li><strong>1º Las aurículas:</strong> Encargadas de recoger la sangre.</li>
-                    <li><strong>2º Los ventrículos:</strong> Encargadas de bombear la sangre al resto del cuerpo.</li>
-                </ul>
-                <p>El ECG captura este "viaje" eléctrico y nos dice si el motor de su vida está sincronizado.</p>
-            </div>
-            
-            <div class="service-block" style="flex: 1; padding: 30px; background: var(--gris-fondo);">
-                <h3 style="margin-bottom: 20px; color: var(--rojo);">¿Qué evalúa el cardiólogo?</h3>
-                <ul style="list-style: none;">
-                    <li style="margin-bottom: 15px;">✅ <strong>Ritmo:</strong> ¿Es regular? ¿Existe alguna arritmia?</li>
-                    <li style="margin-bottom: 15px;">✅ <strong>Frecuencia cardíaca:</strong> ¿Es adecuada para su edad y condición?</li>
-                    <li style="margin-bottom: 15px;">✅ <strong>Riego sanguíneo:</strong> Permite detectar datos de infarto nuevo o antiguo.</li>
-                    <li style="margin-bottom: 15px;">✅ <strong>Estructura y función:</strong> Indicios sobre si el tamaño del corazón es normal.</li>
-                    <li style="margin-bottom: 15px;">✅ <strong>Alteraciones metabólicas:</strong> Efecto de fármacos o niveles de electrolitos.</li>
-                </ul>
-            </div>
+<section class="section container">
+    <div class="service-content">
+
+        <!-- ══════════════════════════════════
+             IMAGEN: ../img/prueba-ecg.webp
+             ECG.png → renombrar a prueba-ecg.webp
+             ══════════════════════════════════ -->
+        <img src="../img/prueba-ecg.webp"
+             alt="Electrocardiógrafo con trazado ECG normal — prueba diagnóstica en Elche"
+             class="prueba-img"
+             onerror="this.style.display='none';">
+
+        <div class="prueba-badges">
+            <span class="prueba-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Indoloro</span>
+            <span class="prueba-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sin radiación</span>
+            <span class="prueba-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>~5 minutos</span>
+            <span class="prueba-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Resultado inmediato</span>
         </div>
 
-        <section style="margin-top: 80px; text-align: center; background: var(--negro); color: white; padding: 60px 40px; border-radius: 8px;">
-            <h2 style="font-family: 'Playfair Display', serif; color: white; margin-bottom: 20px;">Una información que puede ser VITAL</h2>
-            <p style="max-width: 700px; margin: 0 auto 30px; font-size: 1.1rem; opacity: 0.9;">Un electrocardiograma bien realizado e interpretado por un especialista proporciona datos críticos para su salud cardiovascular.</p>
-            <p style="margin-bottom: 40px;">¿Te has hecho un ECG recientemente? ¿Te quedaron dudas sobre el resultado?</p>
-            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main" style="border-color: var(--rojo);">Consultar mi caso ahora</a>
-        </section>
-    </article>
+        <h2 class="section-title">¿Para qué sirve un ECG?</h2>
+        <p>El electrocardiograma es la prueba diagnóstica más habitual en cardiología. Registra la actividad eléctrica del corazón a través de electrodos colocados sobre la piel del tórax, los brazos y las piernas, y proporciona información inmediata sobre el ritmo, la frecuencia y el estado del músculo cardíaco.</p>
+        <p>Para que la información sea fiable, tanto la técnica de realización como la <strong>interpretación médica</strong> deben ser correctas. Un ECG bien analizado por un especialista puede revelar alteraciones que pasan desapercibidas en una lectura rápida.</p>
 
-    <footer style="margin-top: 0;">
-        <div class="container">
-            <p><strong>Dr. José Carlos López Clemente</strong></p>
-            <p class="copyright" style="margin-top: 10px;">Especialista en Cardiología y Nutrición Humana.</p>
-            <div class="footer-links">
-                <a href="../legal/aviso-legal.html">Aviso Legal</a>
-                <a href="../legal/privacidad.html">Privacidad</a>
+        <h2 class="section-title">¿Qué evalúa el cardiólogo?</h2>
+
+        <div class="evalua-grid">
+            <div class="evalua-item">
+                <span class="evalua-dot"></span>
+                <div>
+                    <strong>Ritmo cardíaco</strong>
+                    <span>Si es regular o existen arritmias: fibrilación auricular, extrasístoles, bloqueos.</span>
+                </div>
+            </div>
+            <div class="evalua-item">
+                <span class="evalua-dot"></span>
+                <div>
+                    <strong>Frecuencia cardíaca</strong>
+                    <span>Si es adecuada para la edad y la situación clínica del paciente.</span>
+                </div>
+            </div>
+            <div class="evalua-item">
+                <span class="evalua-dot"></span>
+                <div>
+                    <strong>Riego coronario</strong>
+                    <span>Signos de isquemia activa o de infarto antiguo que pueda haber pasado desapercibido.</span>
+                </div>
+            </div>
+            <div class="evalua-item">
+                <span class="evalua-dot"></span>
+                <div>
+                    <strong>Estructura cardíaca</strong>
+                    <span>Indicios de hipertrofia ventricular o dilatación de cavidades.</span>
+                </div>
+            </div>
+            <div class="evalua-item">
+                <span class="evalua-dot"></span>
+                <div>
+                    <strong>Sistema de conducción</strong>
+                    <span>Alteraciones en la propagación del impulso eléctrico por el corazón.</span>
+                </div>
+            </div>
+            <div class="evalua-item">
+                <span class="evalua-dot"></span>
+                <div>
+                    <strong>Efectos de fármacos y electrolitos</strong>
+                    <span>Cambios producidos por medicación o alteraciones metabólicas.</span>
+                </div>
             </div>
         </div>
-    </footer>
+
+        <h2 class="section-title">¿Cómo funciona el corazón eléctricamente?</h2>
+        <p>El corazón funciona gracias a impulsos eléctricos que siguen un circuito específico. Primero se activan las aurículas —que recogen la sangre— y después los ventrículos, que la bombean al resto del cuerpo. El ECG captura este recorrido eléctrico latido a latido y permite detectar si el circuito funciona con normalidad o si hay alguna alteración en su origen, velocidad o propagación.</p>
+
+        <h2 class="section-title">¿Cuándo se solicita?</h2>
+        <p>El ECG es la primera prueba que se realiza ante cualquier síntoma cardiovascular: palpitaciones, dolor en el pecho, mareo, síncope o disnea. También forma parte de cualquier valoración cardiológica de rutina, del seguimiento de enfermedades cardíacas conocidas y de la valoración preoperatoria en pacientes de riesgo.</p>
+        <p>En la consulta, el ECG se realiza en el mismo acto — los resultados están disponibles de inmediato y se explican en la misma visita.</p>
+
+    </div>
+</section>
+
+<section class="section bg-light cta-section">
+    <div class="container">
+        <h2 class="section-title">¿Dudas sobre tu ECG?</h2>
+        <p class="lead">Si te han hecho un electrocardiograma y tienes preguntas sobre el resultado, podemos revisarlo juntos en consulta.</p>
+        <div class="cta-group">
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="btn-main">Pedir cita en Doctoralia</a>
+            <a href="/servicios/consulta-cardiologica-elche" class="btn-sub">Consulta cardiológica</a>
+        </div>
+    </div>
+</section>
+
+<section class="section container">
+    <h2 class="section-title">Otras pruebas diagnósticas</h2>
+    <div class="articles-grid">
+        <a href="/pruebas/ett.html" class="article-card">
+            <span class="category-tag">Prueba</span>
+            <h3>Ecocardiograma Doppler</h3>
+            <p>Estudio de la estructura y función del corazón mediante ultrasonidos.</p>
+            <span class="read-more">Ver más →</span>
+        </a>
+        <a href="/pruebas/holter.html" class="article-card">
+            <span class="category-tag">Prueba</span>
+            <h3>Holter de ECG</h3>
+            <p>Monitorización cardíaca continua de 24 horas para detectar arritmias.</p>
+            <span class="read-more">Ver más →</span>
+        </a>
+        <a href="/pruebas/esfuerzo.html" class="article-card">
+            <span class="category-tag">Prueba</span>
+            <h3>Prueba de esfuerzo</h3>
+            <p>Evaluación de la respuesta cardíaca bajo exigencia física controlada.</p>
+            <span class="read-more">Ver más →</span>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
+        </div>
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
 
 </body>
 </html>
