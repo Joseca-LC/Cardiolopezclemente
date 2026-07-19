@@ -1296,3 +1296,38 @@ footer p strong {
 
     .menu .nav-btn:hover { background: #8b0000; }
 }
+
+
+/* =========================================
+   23. CTA FLOTANTE MÓVIL (motivos y servicios)
+   ========================================= */
+.cta-movil { display: none; }
+
+@media (max-width: 768px) {
+    .cta-movil {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 950;
+        box-shadow: 0 -4px 16px rgba(15, 15, 15, 0.12);
+    }
+
+    .cta-movil a {
+        flex: 1;
+        text-align: center;
+        padding: 16px 10px;
+        font-family: var(--font-body);
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        letter-spacing: 0.01em;
+    }
+
+    .cta-movil-llamar { background: var(--negro); color: var(--blanco); }
+    .cta-movil-cita { background: var(--rojo); color: var(--blanco); }
+
+    /* Evita que la barra tape el final del footer */
+    body:has(.cta-movil) footer { padding-bottom: 130px; }
+}
