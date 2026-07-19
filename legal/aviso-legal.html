@@ -3,46 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviso Legal | Dr. López Clemente</title>
+    <link rel="canonical" href="https://cardiolopezclemente.com/legal/aviso-legal.html" />
+    <meta name="robots" content="noindex, follow">
+
+    <title>Aviso Legal | Dr. López Clemente · Cardiólogo Elche</title>
+    <meta name="description" content="Aviso legal de cardiolopezclemente.com: datos identificativos del titular, información profesional y condiciones de uso.">
+
     <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
-        .legal-content { max-width: 850px; margin: 60px auto; padding: 40px; background: #fff; line-height: 1.8; }
-        h1 { color: #1a1a1a; margin-bottom: 20px; border-bottom: 3px solid #b80101; display: inline-block; padding-bottom: 10px; }
-        h2 { color: #1a1a1a; margin-top: 30px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
-        p, li { color: #444; margin-bottom: 15px; }
-        .data-box { background: #f8f9fa; padding: 20px; border-left: 4px solid #b80101; margin: 20px 0; }
+        .legal-databox { background: var(--crema); border-left: 3px solid var(--rojo); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 22px 26px; margin: 24px 0; line-height: 1.9; color: var(--gris-700); }
+        .legal-updated { font-size: 0.85rem; color: var(--gris-500); margin-top: 40px; }
     </style>
 <script src="/consent.js" defer></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="../index.html" class="logo">Dr. López Clemente</a>
-            <a href="../index.html" class="nav-btn">Volver al inicio</a>
-        </div>
-    </nav>
 
-    <main class="legal-content">
-        <h1>Aviso Legal</h1>
+<nav>
+    <div class="nav-container container">
+        <a href="/" class="logo-area">
+            <img src="../img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
+            <span class="logo-text">Dr. López Clemente</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-menu"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open'); this.setAttribute('aria-expanded', this.classList.contains('active'));">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="menu" id="main-menu">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/#servicios">Servicios</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/#blog">Blog</a>
+            <a href="https://www.doctoralia.es/jose-carlos-lopez-clemente/cardiologo-dietista-nutricionista/elche" target="_blank" class="nav-btn">Pedir Cita</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero hero-page">
+    <div class="hero-content container">
+        <h1>Aviso <span class="text-red">Legal</span></h1>
+    </div>
+</header>
+
+<section class="section container">
+    <div class="service-content">
+
         <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se exponen los datos identificativos del titular:</p>
-        
-        <div class="data-box">
+
+        <div class="legal-databox">
             <strong>Titular:</strong> José Carlos López Clemente<br>
             <strong>NIF:</strong> 23060198F<br>
-            <strong>Domicilio Profesional:</strong> Pl. del Bisbe Siuri, Entresuelo B, 03201 Elche, Alicante (Clínica Elche Salud)<br>
+            <strong>Domicilio profesional:</strong> Pl. del Bisbe Siuri, Entresuelo B, 03201 Elche, Alicante (Clínica Elche Salud)<br>
             <strong>Email:</strong> doctor.lopez.cardiologia@gmail.com
         </div>
 
-        <h2>Información Profesional</h2>
-        <ul>
-            <li><strong>Número de Colegiado:</strong> 03/3009562 por el Ilustre Colegio Oficial de Médicos de Alicante.</li>
-            <li><strong>Titulación Universitaria:</strong> Graduado en Medicina por la Universidad de Murcia. Graduado en Nutrición Humana y Dietética por la Universidad Católica San Antonio de Murcia.</li>
+        <h2 class="section-title">Información profesional</h2>
+        <ul class="service-list">
+            <li><strong>Número de colegiado:</strong> 03/3009562 por el Ilustre Colegio Oficial de Médicos de Alicante.</li>
+            <li><strong>Titulación universitaria:</strong> Graduado en Medicina por la Universidad de Murcia. Graduado en Nutrición Humana y Dietética por la Universidad Católica San Antonio de Murcia.</li>
             <li><strong>Especialidad:</strong> Médico Especialista en Cardiología (sistema MIR, 2022).</li>
         </ul>
 
-        <h2>Finalidad de la Web</h2>
+        <h2 class="section-title">Finalidad de la web</h2>
         <p>Esta página web tiene un carácter puramente informativo y de divulgación médica en el ámbito de la cardiología y la nutrición. Su objetivo es facilitar el contacto con la consulta privada del Dr. López Clemente y promover la salud cardiovascular.</p>
-        <p><strong>Importante:</strong> La información contenida en este sitio web no sustituye en ningún caso la asesoría médica personalizada, el diagnóstico o el tratamiento por parte de un profesional de la salud.</p>
-    </main>
+        <p><strong>Importante:</strong> la información contenida en este sitio web no sustituye en ningún caso la asesoría médica personalizada, el diagnóstico o el tratamiento por parte de un profesional de la salud.</p>
+
+        <h2 class="section-title">Alojamiento</h2>
+        <p>Este sitio web está alojado en GitHub Pages, servicio prestado por GitHub, Inc., y utiliza los servicios de red de Cloudflare, Inc. para la gestión del dominio.</p>
+
+        <h2 class="section-title">Propiedad intelectual</h2>
+        <p>Los contenidos de esta web (textos, imágenes y diseño) son titularidad de su autor. No está permitida su reproducción con fines comerciales sin autorización expresa.</p>
+
+        <p class="legal-updated">Última actualización: julio de 2026.</p>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Dr. José Carlos López Clemente</strong></p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 6px 0 0;">Clínica Elche Salud · Pl. del Bisbe Siuri, Entresuelo B · 03201 Elche (Alicante) · <a href="tel:+34662637540" style="color: inherit; font-weight: 600; text-decoration: none;">662 63 75 40</a></p>
+        <div class="footer-links">
+            <a href="/sobre-mi">Sobre mí</a>
+            <a href="/preguntas-frecuentes">FAQ</a>
+            <a href="/legal/aviso-legal.html">Aviso Legal</a>
+            <a href="/legal/privacidad.html">Privacidad</a>
+            <a href="/legal/cookies.html">Cookies</a>
+        </div>
+        <p class="copyright">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>

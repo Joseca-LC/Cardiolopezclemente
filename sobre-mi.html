@@ -171,8 +171,8 @@
             <img src="img/logo.webp" alt="Logo Dr. López Clemente" class="logo-img" onerror="this.style.display='none';">
             <span class="logo-text">Dr. López Clemente</span>
         </a>
-        <button class="menu-btn" aria-label="Abrir menú de navegación"
-            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open');">
+        <button class="menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-menu"
+            onclick="this.classList.toggle('active'); document.getElementById('main-menu').classList.toggle('open'); this.setAttribute('aria-expanded', this.classList.contains('active'));">
             <span></span>
             <span></span>
             <span></span>
@@ -405,6 +405,7 @@
     <div class="container">
         <p><strong>Dr. José Carlos López Clemente</strong></p>
         <p style="font-size: 0.88rem; color: var(--gris-500); margin: 10px 0 0;">Cardiólogo · Doctor en Ciencias de la Salud · Colegiado nº 03/3009562</p>
+        <p style="font-size: 0.88rem; color: var(--gris-500); margin: 6px 0 0;">Clínica Elche Salud · Pl. del Bisbe Siuri, Entresuelo B · 03201 Elche (Alicante) · <a href="tel:+34662637540" style="color: inherit; font-weight: 600; text-decoration: none;">662 63 75 40</a></p>
         <div class="footer-links">
             <a href="/sobre-mi">Sobre mí</a>
             <a href="/preguntas-frecuentes">FAQ</a>
