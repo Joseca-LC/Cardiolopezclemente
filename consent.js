@@ -8,6 +8,18 @@
   function gtag() { dataLayer.push(arguments); }
   window.gtag = gtag;
 
+  // Medición de conversiones: clics en teléfono y Doctoralia.
+  // Los eventos solo llegan a GA4 si el usuario aceptó las cookies.
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a || !a.href) return;
+    if (a.href.indexOf('tel:') === 0) {
+      gtag('event', 'clic_llamar', { pagina: location.pathname });
+    } else if (a.href.indexOf('doctoralia.es') !== -1) {
+      gtag('event', 'clic_doctoralia', { pagina: location.pathname });
+    }
+  }, true);
+
   // Consent Mode v2: todo denegado por defecto
   gtag('consent', 'default', {
     analytics_storage: 'denied',
