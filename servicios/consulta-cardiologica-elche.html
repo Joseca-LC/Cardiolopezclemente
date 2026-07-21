@@ -27,8 +27,21 @@
       "description": "Consulta de cardiología en Elche con enfoque preventivo y nutricional. Valoración integral del riesgo cardiovascular.",
       "provider": {
         "@type": "Physician",
+        "@id": "https://cardiolopezclemente.com/#physician",
         "name": "Dr. José Carlos López Clemente",
-        "medicalSpecialty": "Cardiology"
+        "medicalSpecialty": "Cardiology",
+        "telephone": "+34662637540",
+        "priceRange": "€€",
+        "image": "https://cardiolopezclemente.com/img/perfil.webp",
+        "url": "https://cardiolopezclemente.com/sobre-mi",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Pl. del Bisbe Siuri, Entresuelo B",
+          "addressLocality": "Elche",
+          "postalCode": "03201",
+          "addressRegion": "Alicante",
+          "addressCountry": "ES"
+        }
       },
       "address": {
         "@type": "PostalAddress",
@@ -254,6 +267,53 @@
         @media (max-width: 640px) {
             .razones-grid { grid-template-columns: 1fr; }
         }
+    
+        /* ── Preparación de la visita ── */
+        .prep-wrap {
+            background: var(--crema);
+            border: 1px solid var(--gris-200);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            margin: 28px 0 40px;
+        }
+        .prep-intro {
+            font-size: 0.92rem;
+            color: var(--gris-500);
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--gris-200);
+            font-style: italic;
+        }
+        .prep-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .prep-item {
+            background: var(--blanco);
+            border-radius: var(--radius-md);
+            padding: 18px 20px;
+            border: 1px solid var(--gris-200);
+            display: flex; gap: 16px; align-items: flex-start;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .prep-item:hover { border-color: var(--rojo-medium); box-shadow: var(--sombra-sm); }
+        .prep-num {
+            width: 32px; height: 32px;
+            background: var(--rojo-soft);
+            border: 1.5px solid var(--rojo-medium);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            font-family: var(--font-display); font-weight: 700;
+            font-size: 0.9rem; color: var(--rojo);
+        }
+        .prep-body h4 {
+            font-family: var(--font-body); font-weight: 600;
+            font-size: 0.88rem; color: var(--negro);
+            margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.04em;
+        }
+        .prep-body p { font-size: 0.88rem; color: var(--gris-700); margin: 0; line-height: 1.55; }
+        @media (max-width: 640px) {
+            .prep-grid { grid-template-columns: 1fr; }
+            .prep-wrap { padding: 24px 18px; }
+        }
     </style>
 <script src="/consent.js" defer></script>
     <script type="application/ld+json">
@@ -391,7 +451,7 @@
              FASES DE LA CONSULTA (pasos)
              ══════════════════════════════════ -->
         <h2 class="section-title">¿Cómo es la consulta?</h2>
-        <p>La consulta presencial dura aproximadamente <strong>45–60 minutos</strong>, con el tiempo necesario para ti, sin prisa. Se estructura en cuatro fases:</p>
+        <p>La consulta presencial se programa con <strong>60 minutos</strong>, con el tiempo necesario para ti, sin prisa. Se estructura en cuatro fases:</p>
 
         <div class="fases-lista">
             <div class="fase-item">
@@ -423,6 +483,56 @@
                 </div>
             </div>
         </div>
+
+        <h2 class="section-title">Antes de venir</h2>
+
+        <p>No hace falta derivación ni volante. Es una consulta privada de acceso directo: puedes pedir cita tú mismo. Si vienes derivado por tu médico de familia u otro especialista, trae el informe: aporta contexto útil, pero no es un requisito.</p>
+
+        <p>Tampoco necesitas preparación especial. Puedes comer con normalidad y tomar tu medicación habitual como cualquier otro día.</p>
+
+        <div class="prep-wrap">
+            <p class="prep-intro">Qué conviene traer. No es imprescindible traerlo todo, pero cuanta más información haya, más completa será la valoración.</p>
+            <div class="prep-grid">
+                <div class="prep-item">
+                    <span class="prep-num">1</span>
+                    <div class="prep-body">
+                        <h4>Informes previos</h4>
+                        <p>Electrocardiogramas, ecocardiogramas, informes de ingreso o de otros especialistas.</p>
+                    </div>
+                </div>
+                <div class="prep-item">
+                    <span class="prep-num">2</span>
+                    <div class="prep-body">
+                        <h4>Analíticas recientes</h4>
+                        <p>Especialmente colesterol y glucosa, si las tienes de los últimos meses.</p>
+                    </div>
+                </div>
+                <div class="prep-item">
+                    <span class="prep-num">3</span>
+                    <div class="prep-body">
+                        <h4>Tu medicación</h4>
+                        <p>Listado con las dosis. Una foto de las cajas sirve perfectamente.</p>
+                    </div>
+                </div>
+                <div class="prep-item">
+                    <span class="prep-num">4</span>
+                    <div class="prep-body">
+                        <h4>Registro de tensión</h4>
+                        <p>Si la mides en casa, las cifras de las últimas semanas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Al terminar</h2>
+
+        <p>Recibes un informe con lo encontrado, el diagnóstico o la orientación diagnóstica, y el plan a seguir. Si hace falta seguimiento, se establece cuándo y para qué. Si no hace falta, también se dice claramente.</p>
+
+        <p>Que las pruebas se realicen e interpreten en el mismo acto significa que sales de la consulta con una orientación, no solo con una petición de pruebas para más adelante.</p>
+
+        <p>Y si algo no ha quedado claro, preguntarlo no es molestar: es exactamente para lo que está el tiempo de la consulta. Si te ayuda, apunta las dudas antes de venir — es fácil olvidarlas en el momento.</p>
+
+        <p>Puedes consultar más dudas habituales en la <a href="/preguntas-frecuentes">página de preguntas frecuentes</a>.</p>
 
     </div>
 </section>
