@@ -116,8 +116,11 @@ página más reciente y completa y funciona como plantilla:
   Excepciones vivas: `disnea-cansancio` y `dolor-toracico` cierran con `| Elche`.
 - `meta description`: 105–190 caracteres, en la práctica casi todas 130–160. Termina
   con `Cardiólogo en Elche.` o `Clínica Elche Salud.`
-- `og:image` siempre `https://cardiolopezclemente.com/img/og.jpg`. No hay imágenes OG
-  por página.
+- `og:image`: URL absoluta a un archivo real de `/img/`. La práctica del sitio es usar
+  **la imagen propia de la página cuando existe** — `/servicios/` y `/pruebas/` usan su
+  `serv-*.webp` / `prueba-*.webp`, y los artículos antiguos su `blog-*.webp` — y caer en
+  `img/og.jpg` cuando no hay una. `og.jpg` es el único JPEG del sitio, lo que le da mejor
+  compatibilidad al compartir en mensajería que un WebP.
 - `og:type` = `article` en todas las páginas de contenido; `website` solo en la home.
 - Todas las páginas de contenido llevan además `og:locale` (`es_ES`), `og:site_name`
   y `<meta name="twitter:card" content="summary_large_image">`. Las legales, el 404 y
@@ -360,6 +363,24 @@ Dos archivos markdown en la raíz, ambos de mantenimiento manual:
 
 ---
 
+## 10 bis. Validador
+
+`_tools/check.py` comprueba automáticamente casi todo lo de este documento:
+head completo y sin duplicados, canonical correcto, JSON-LD que parsea, fechas en
+artículos, `consent.js` presente y gtag suelto ausente, NAP exacto, un solo `<h1>`,
+etiquetas balanceadas, bloque de relacionados y su posición, `cta-movil` en motivos y
+servicios, rutas de un solo nivel, enlaces internos rotos, páginas huérfanas, atributos
+de `<img>`, peso de imágenes, sitemap sincronizado con los archivos y reglas editoriales.
+
+```
+python3 _tools/check.py
+```
+
+ERROR = incumple una regla, hay que arreglarlo. AVISO = revisar a criterio.
+Sale con código 1 si hay errores. Pasarlo **antes de entregar cualquier lote**.
+
+La carpeta `_tools/` empieza por guion bajo, así que GitHub Pages no la publica.
+
 ## 11. Checklist al publicar una página nueva
 
 1. Crear el HTML copiando `/articulos/tension-arterial-normal-por-edad.html` (o la
@@ -382,7 +403,8 @@ Dos archivos markdown en la raíz, ambos de mantenimiento manual:
     páginas existentes relacionadas.
 11. **Registro**: mover el tema a `## Publicados` en `articulos-web.md` con la fecha,
     o marcar `— USADO` en `posts-google.md`.
-12. Solicitar indexación de la URL nueva en Google Search Console.
+12. Pasar `python3 _tools/check.py` y dejarlo sin errores.
+13. Solicitar indexación de la URL nueva en Google Search Console.
 
 Las páginas legales **no** van al sitemap (son `noindex`).
 

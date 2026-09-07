@@ -27,3 +27,14 @@ editoriales y el checklist de publicación.
   Es la **única** vía de carga de GA4.
 - `sitemap.xml` — 29 URLs. Hay que actualizarlo en cada publicación.
 - `articulos-web.md` / `posts-google.md` — bancos de temas y registro de publicado.
+
+## Validación
+
+Antes de publicar un lote de cambios:
+
+```
+python3 _tools/check.py
+```
+
+Comprueba enlaces rotos, páginas huérfanas, JSON-LD, metadatos, sitemap,
+peso de imágenes y las reglas editoriales. Ver `CLAUDE.md`.
