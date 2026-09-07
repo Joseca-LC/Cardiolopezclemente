@@ -13,6 +13,9 @@
     <meta property="og:url" content="https://cardiolopezclemente.com/articulos/valvulopatias-estenosis-aortica">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://cardiolopezclemente.com/img/og.jpg">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Dr. López Clemente · Cardiólogo en Elche">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,6 +54,8 @@
         "name": "Estenosis aórtica"
       },
       "url": "https://cardiolopezclemente.com/articulos/valvulopatias-estenosis-aortica",
+      "datePublished": "2026-08-29",
+      "dateModified": "2026-09-06",
       "inLanguage": "es-ES",
       "isPartOf": {
         "@type": "WebSite",
@@ -340,6 +345,81 @@
             margin: 44px 0 16px;
             letter-spacing: -0.015em;
         }
+    
+        /* Instagram promo */
+        .ig-promo {
+            background: var(--negro);
+            border-radius: var(--radius-lg);
+            padding: 36px 40px;
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            margin: 48px 0;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ig-promo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 48px rgba(15,15,15,0.15);
+        }
+
+        .ig-promo-icon {
+            flex-shrink: 0;
+            width: 60px; height: 60px;
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ig-promo-icon svg { width: 28px; height: 28px; color: white; }
+        .ig-promo-body { flex: 1; }
+
+        .ig-promo-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 7px;
+            display: block;
+        }
+
+        .ig-promo-title {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: var(--blanco);
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        .ig-promo-desc {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.55);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .ig-promo-arrow {
+            flex-shrink: 0;
+            color: rgba(255,255,255,0.25);
+            font-size: 1.4rem;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .ig-promo:hover .ig-promo-arrow {
+            color: rgba(255,255,255,0.8);
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 768px) {
+            .ig-promo { flex-direction: column; gap: 18px; padding: 26px 22px; }
+            .ig-promo-arrow { display: none; }
+        }
     </style>
 <script src="/consent.js" defer></script>
 </head>
@@ -520,6 +600,21 @@
 
         <p>Si te han detectado un soplo o una alteración valvular y quieres saber su causa y su grado, el estudio puede completarse en una sola visita: exploración, electrocardiograma y ecocardiograma en el mismo acto, con explicación del resultado antes de salir. Si el caso llega a requerir valoración para tratamiento, se explica el proceso y se deriva para su evaluación por el equipo correspondiente.</p>
 
+        <a href="https://www.instagram.com/cardiolopezclemente/" target="_blank" rel="noopener" class="ig-promo">
+            <div class="ig-promo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+            </div>
+            <div class="ig-promo-body">
+                <span class="ig-promo-label">@cardiolopezclemente · Instagram</span>
+                <div class="ig-promo-title">Las válvulas del corazón, en imágenes</div>
+                <p class="ig-promo-desc">Cómo funciona una válvula, qué es un soplo y qué se ve en un ecocardiograma.</p>
+            </div>
+            <div class="ig-promo-arrow">→</div>
+        </a>
         <div class="referencias">
             <h2>Referencias</h2>
             <ol>
@@ -542,6 +637,29 @@
     </div>
 </section>
 
+<section class="section container">
+    <h2 class="section-title">Otros artículos</h2>
+    <div class="articles-grid">
+        <a href="/motivos/soplo-cardiaco-elche" class="article-card">
+            <span class="category-tag">Motivo de consulta</span>
+            <h3>Soplo cardíaco</h3>
+            <p>Qué significa un soplo, cuándo hay que estudiarlo y qué prueba lo resuelve.</p>
+            <span class="read-more">Ver más →</span>
+        </a>
+        <a href="/pruebas/ett" class="article-card">
+            <span class="category-tag">Prueba diagnóstica</span>
+            <h3>Ecocardiograma Doppler</h3>
+            <p>La prueba que mide cómo funcionan las válvulas. Indolora y sin radiación.</p>
+            <span class="read-more">Ver detalles →</span>
+        </a>
+        <a href="/motivos/disnea-cansancio-elche" class="article-card">
+            <span class="category-tag">Motivo de consulta</span>
+            <h3>Disnea y cansancio</h3>
+            <p>Falta de aire al esforzarte: cuándo tiene origen cardíaco y cómo se estudia.</p>
+            <span class="read-more">Ver más →</span>
+        </a>
+    </div>
+</section>
 <footer>
     <div class="container">
         <p><strong>Dr. José Carlos López Clemente</strong></p>

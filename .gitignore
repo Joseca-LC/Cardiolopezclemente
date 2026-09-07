@@ -1,0 +1,7 @@
+# Basura de macOS
+.DS_Store
+**/.DS_Store
+
+# Registros de trabajo internos (no se publican)
+articulos-web.md
+posts-google.md
