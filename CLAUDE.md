@@ -33,7 +33,7 @@ la estructura de carpetas ya montada y sin ediciones manuales pendientes.
 /motivos/               9 páginas   — síntoma o diagnóstico por el que el paciente busca
 /servicios/             6 páginas   — lo que se ofrece y se cobra
 /pruebas/               4 páginas   — ecg · ett · holter · esfuerzo
-/articulos/             7 páginas   — blog
+/articulos/             9 páginas   — blog
 /legal/                 aviso-legal.html · privacidad.html · cookies.html
 /img/                   todas las imágenes
 ```
@@ -228,7 +228,7 @@ Equivalentes por carpeta: `Otros motivos de consulta`, `Otras pruebas diagnósti
 ## 5. Nav y footer
 
 Se copian tal cual desde cualquier página existente. El footer es byte a byte
-idéntico en las 33 páginas con nav; el NAP no varía **ni un carácter**:
+idéntico en las 35 páginas con nav; el NAP no varía **ni un carácter**:
 
 ```
 Clínica Elche Salud · Pl. del Bisbe Siuri, Entresuelo B · 03201 Elche (Alicante) · 662 63 75 40
@@ -328,7 +328,7 @@ divulgación técnica ni contenido científico.
 - Sección de 3 tarjetas relacionadas al final de motivos, servicios, pruebas y
   artículos.
 - La home lista **todas** las páginas de las cuatro carpetas: 6 servicios,
-  9 motivos, 4 pruebas y los 7 artículos. Publicar algo nuevo implica añadir su
+  9 motivos, 4 pruebas y los 9 artículos. Publicar algo nuevo implica añadir su
   tarjeta a `index.html`.
 - Nada debe quedar con 0 enlaces entrantes fuera del nav y el footer.
 
