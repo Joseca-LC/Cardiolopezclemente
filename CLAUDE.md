@@ -360,6 +360,9 @@ Dos archivos markdown en la raíz, ambos de mantenimiento manual:
   material en la web` y `## Pendientes — hay que generar el contenido`.
 - **`posts-google.md`** — banco de temas de Google Business Profile, con marca
   `— USADO (DD/MM/AAAA)`.
+- **`_fuentes-articulos/`** — artículos densos/técnicos que JC escribe para el blog
+  colectivo de divulgación, dejados como material de base para adaptarlos a la
+  versión breve de esta web. Fuera del repo público.
 
 ---
 
