@@ -33,6 +33,8 @@ def E(f, m): errores.append(f"{f}: {m}")
 def A(f, m): avisos.append(f"{f}: {m}")
 
 paginas = sorted(glob.glob("**/*.html", recursive=True))
+# _pendiente/ guarda lotes preparados y todavía sin publicar (está en .gitignore)
+paginas = [f for f in paginas if not f.startswith("_pendiente/")]
 contenido = [f for f in paginas if f not in ESPECIALES and not LEGALES(f)]
 docs = {}
 for f in paginas:

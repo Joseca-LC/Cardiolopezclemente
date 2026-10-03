@@ -291,6 +291,7 @@ Usar siempre las variables, nunca el hex literal.
 | Stats negras / macro grid % | `articulos/dieta-japonesa.html`, `articulos/dieta-dash.html` |
 | Bloque destacado con borde rojo | `articulos/taquicardia-en-reposo.html` (`.destacado`) |
 | `ig-promo` | `articulos/tension-arterial-normal-por-edad.html` |
+| `ig-promo` con portada de píldora | `articulos/smartwatch-fibrilacion-auricular.html` (`.ig-promo-cover`) |
 | Sección Instagram de la home | `index.html` |
 
 ---

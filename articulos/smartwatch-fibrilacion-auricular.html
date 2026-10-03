@@ -240,6 +240,15 @@
         .ig-promo-icon svg { width: 28px; height: 28px; color: white; }
         .ig-promo-body { flex: 1; }
 
+        .ig-promo-cover {
+            flex-shrink: 0;
+            width: 104px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: var(--radius-md, 10px);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+        }
+
         .ig-promo-label {
             font-size: 0.7rem;
             font-weight: 600;
@@ -282,6 +291,7 @@
         @media (max-width: 580px) {
             .ig-promo { flex-direction: column; gap: 18px; padding: 26px 22px; }
             .ig-promo-arrow { display: none; }
+            .ig-promo-cover { width: 80px; height: 100px; }
         }
 
         /* ── Referencias ── */
@@ -448,18 +458,13 @@
 
         <p>La regla práctica es sencilla: <strong>úsalos como una señal que te lleva a consultar, no como un sustituto de la consulta</strong>. Un reloj no diagnostica, pero puede ser el motivo por el que llegues a tiempo.</p>
 
-<a href="https://www.instagram.com/cardiolopezclemente/" target="_blank" rel="noopener" class="ig-promo">
-            <div class="ig-promo-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                </svg>
-            </div>
+<a href="https://www.instagram.com/p/Dd9gNbMARtf/" target="_blank" rel="noopener" class="ig-promo">
+            <img loading="lazy" width="320" height="400" src="../img/pildora-reloj.webp"
+                 alt="Portada de la publicación de Instagram sobre el reloj y la fibrilación auricular" class="ig-promo-cover">
             <div class="ig-promo-body">
                 <span class="ig-promo-label">@cardiolopezclemente · Instagram</span>
-                <div class="ig-promo-title">Arritmias y wearables, en imágenes</div>
-                <p class="ig-promo-desc">Contenido visual sobre ritmo cardíaco, fibrilación auricular y qué miden de verdad los relojes.</p>
+                <div class="ig-promo-title">«Me ha avisado el reloj de que puedo tener fibrilación auricular»</div>
+                <p class="ig-promo-desc">Qué mide el reloj, por qué avisa de más y qué hacer con una alerta. En siete imágenes.</p>
             </div>
             <div class="ig-promo-arrow">→</div>
         </a>
