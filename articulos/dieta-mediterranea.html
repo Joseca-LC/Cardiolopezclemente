@@ -315,6 +315,15 @@
         .ig-promo-icon svg { width: 28px; height: 28px; color: white; }
         .ig-promo-body { flex: 1; }
 
+        .ig-promo-cover {
+            flex-shrink: 0;
+            width: 104px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: var(--radius-md, 10px);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+        }
+
         .ig-promo-label {
             font-size: 0.7rem;
             font-weight: 600;
@@ -357,6 +366,7 @@
         @media (max-width: 768px) {
             .ig-promo { flex-direction: column; gap: 18px; padding: 26px 22px; }
             .ig-promo-arrow { display: none; }
+            .ig-promo-cover { width: 80px; height: 100px; }
         }
 
         /* Subheadings dentro de sección */
@@ -500,18 +510,13 @@
 
         <p>En la <a href="/servicios/riesgo-cardiovascular-elche">valoración de riesgo cardiovascular</a>, la orientación nutricional forma parte del abordaje: revisar tu patrón de alimentación actual, identificar qué cambios tendrían más impacto en tu caso —por ejemplo, si tienes el <a href="/motivos/colesterol-alto-elche">colesterol elevado</a>— y resolver dudas concretas sobre cómo aplicarlos, siempre integrado con el resto de factores de riesgo.</p>
 
-        <a href="https://www.instagram.com/cardiolopezclemente/" target="_blank" rel="noopener" class="ig-promo">
-            <div class="ig-promo-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                </svg>
-            </div>
+        <a href="https://www.instagram.com/p/DeHzZGQjoDN/" target="_blank" rel="noopener" class="ig-promo">
+            <img loading="lazy" width="320" height="400" src="../img/pildora-mediterranea.webp"
+                 alt="Portada de la publicación de Instagram sobre la dieta mediterránea" class="ig-promo-cover">
             <div class="ig-promo-body">
                 <span class="ig-promo-label">@cardiolopezclemente · Instagram</span>
-                <div class="ig-promo-title">Nutrición cardiovascular explicada</div>
-                <p class="ig-promo-desc">Divulgación diaria sobre alimentación y salud del corazón.</p>
+                <div class="ig-promo-title">«Yo ya como mediterráneo»</div>
+                <p class="ig-promo-desc">Qué es de verdad el patrón mediterráneo, qué demostró PREDIMED y los cuatro gestos que lo completan. En siete imágenes.</p>
             </div>
             <div class="ig-promo-arrow">→</div>
         </a>

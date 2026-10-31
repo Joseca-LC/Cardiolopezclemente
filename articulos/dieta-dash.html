@@ -275,6 +275,15 @@
         .ig-promo-icon svg { width: 28px; height: 28px; color: white; }
         .ig-promo-body { flex: 1; }
 
+        .ig-promo-cover {
+            flex-shrink: 0;
+            width: 104px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: var(--radius-md, 10px);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+        }
+
         .ig-promo-label {
             font-size: 0.7rem;
             font-weight: 600;
@@ -317,6 +326,7 @@
         @media (max-width: 580px) {
             .ig-promo { flex-direction: column; gap: 18px; padding: 26px 22px; }
             .ig-promo-arrow { display: none; }
+            .ig-promo-cover { width: 80px; height: 100px; }
         }
 
         /* ── Referencias ── */
@@ -558,18 +568,13 @@
         <!-- ══════════════════════════════════
              INSTAGRAM
              ══════════════════════════════════ -->
-        <a href="https://www.instagram.com/p/DUq0VckiP86/" target="_blank" rel="noopener" class="ig-promo">
-            <div class="ig-promo-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                </svg>
-            </div>
+        <a href="https://www.instagram.com/p/DeucMx7CHYS/" target="_blank" rel="noopener" class="ig-promo">
+            <img loading="lazy" width="320" height="400" src="../img/pildora-dash.webp"
+                 alt="Portada de la publicación de Instagram sobre la dieta DASH" class="ig-promo-cover">
             <div class="ig-promo-body">
                 <span class="ig-promo-label">@cardiolopezclemente · Instagram</span>
-                <div class="ig-promo-title">Dieta DASH en imágenes</div>
-                <p class="ig-promo-desc">Resumen visual de los principios y aplicación práctica del patrón DASH para el control de la hipertensión arterial.</p>
+                <div class="ig-promo-title">«¿Y la DASH qué es, otra dieta de moda?»</div>
+                <p class="ig-promo-desc">De dónde salió, cuánto bajó la tensión en el ensayo y cómo se reparten las raciones. En siete imágenes.</p>
             </div>
             <div class="ig-promo-arrow">→</div>
         </a>

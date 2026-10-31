@@ -236,6 +236,80 @@
         }
 
         .alarma-item strong { color: var(--negro); }
+
+        /* ── Instagram ── */
+        .ig-promo {
+            background: var(--negro);
+            border-radius: var(--radius-lg);
+            padding: 36px 40px;
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            margin: 48px 0;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ig-promo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 48px rgba(15,15,15,0.15);
+        }
+
+        .ig-promo-body { flex: 1; }
+
+        .ig-promo-cover {
+            flex-shrink: 0;
+            width: 104px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: var(--radius-md, 10px);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+        }
+
+        .ig-promo-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 7px;
+            display: block;
+        }
+
+        .ig-promo-title {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: var(--blanco);
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        .ig-promo-desc {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.55);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .ig-promo-arrow {
+            flex-shrink: 0;
+            color: rgba(255,255,255,0.25);
+            font-size: 1.4rem;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .ig-promo:hover .ig-promo-arrow {
+            color: rgba(255,255,255,0.8);
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 580px) {
+            .ig-promo { flex-direction: column; gap: 18px; padding: 26px 22px; }
+            .ig-promo-arrow { display: none; }
+            .ig-promo-cover { width: 80px; height: 100px; }
+        }
     </style>
 <script src="/consent.js" defer></script>
 </head>
@@ -400,6 +474,17 @@
         <p>Si te han diagnosticado fibrilación auricular y quieres entender bien tu situación, o si tienes síntomas que hacen sospecharla, la consulta permite hacer el estudio completo en el mismo acto: electrocardiograma y ecocardiograma, y colocación de Holter si hace falta.</p>
 
         <p>Salir de la consulta sabiendo qué tienes, por qué se trata así y qué esperar es el objetivo.</p>
+
+        <a href="https://www.instagram.com/p/Dd4Wn3aCBZS/" target="_blank" rel="noopener" class="ig-promo">
+            <img loading="lazy" width="320" height="400" src="../img/pildora-fibrilacion.webp"
+                 alt="Portada de la publicación de Instagram que explica qué es la fibrilación auricular" class="ig-promo-cover">
+            <div class="ig-promo-body">
+                <span class="ig-promo-label">@cardiolopezclemente · Instagram</span>
+                <div class="ig-promo-title">«Me han dicho que tengo fibrilación auricular»</div>
+                <p class="ig-promo-desc">Qué pasa dentro del corazón, por qué el riesgo es el ictus y los tres tipos que existen. En siete imágenes.</p>
+            </div>
+            <div class="ig-promo-arrow">→</div>
+        </a>
 
     </div>
 </section>

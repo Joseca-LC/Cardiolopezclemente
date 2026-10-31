@@ -340,6 +340,15 @@
         .ig-promo-icon svg { width: 28px; height: 28px; color: white; }
         .ig-promo-body { flex: 1; }
 
+        .ig-promo-cover {
+            flex-shrink: 0;
+            width: 104px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: var(--radius-md, 10px);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+        }
+
         .ig-promo-label {
             font-size: 0.7rem;
             font-weight: 600;
@@ -382,6 +391,7 @@
         @media (max-width: 580px) {
             .ig-promo { flex-direction: column; gap: 18px; padding: 26px 22px; }
             .ig-promo-arrow { display: none; }
+            .ig-promo-cover { width: 80px; height: 100px; }
         }
 
         /* ── Referencias ── */
@@ -602,18 +612,13 @@
 
         <p>Nota: todo lo anterior se refiere a <strong>adultos no embarazadas</strong>. En la infancia los valores dependen de la edad y la talla, y en el embarazo se aplican criterios específicos.</p>
 
-<a href="https://www.instagram.com/p/DTqdYtMiHKC/" target="_blank" rel="noopener" class="ig-promo">
-            <div class="ig-promo-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                </svg>
-            </div>
+<a href="https://www.instagram.com/p/DeXQLNCAfMr/" target="_blank" rel="noopener" class="ig-promo">
+            <img loading="lazy" width="320" height="400" src="../img/pildora-tension-objetivo.webp"
+                 alt="Portada de la publicación de Instagram sobre el objetivo de tensión arterial" class="ig-promo-cover">
             <div class="ig-promo-body">
                 <span class="ig-promo-label">@cardiolopezclemente · Instagram</span>
-                <div class="ig-promo-title">La presión arterial, en imágenes</div>
-                <p class="ig-promo-desc">Resumen visual de cómo medirla bien en casa y qué cifras importan.</p>
+                <div class="ig-promo-title">«Mientras esté por debajo de 14, yo estoy bien»</div>
+                <p class="ig-promo-desc">La cifra que diagnostica no es la que marca el objetivo del tratamiento. En siete imágenes.</p>
             </div>
             <div class="ig-promo-arrow">→</div>
         </a>
